@@ -19,7 +19,7 @@
                         <li class="menu-item"><a href="home-video-bg.html">VIDEO HOME</a></li>
                     </ul>
                 </li>
-                <li class="menu-item"><a href="#about">ABOUT</a></li>
+                <li class="menu-item"><a href="">ABOUT</a></li>
                 <li class="menu-item"><a href="#service">SERVICE</a></li>
                 <li class="menu-item"><a href="#cause">CAUSES</a></li>
                 <li class="menu-item"><a href="#gallery">GALLERY</a></li>

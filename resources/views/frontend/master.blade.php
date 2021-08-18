@@ -17,6 +17,8 @@
 	<link rel="stylesheet" href="css/plugins.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/gallery.css">
+
 	<!-- Modernizr -->
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
@@ -52,5 +54,8 @@
 	<script src="js/vendor/jquery-3.2.0.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
+
+    <!-- Gallery -->
+    <script src="js/gallery.js"></script>
   </body>
 </html>

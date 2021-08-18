@@ -1,4 +1,4 @@
-@extends('frontend.app')
+@extends('frontend.master')
 
 @section('title')
     {{ 'Home' }}
