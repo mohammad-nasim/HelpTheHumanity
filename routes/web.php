@@ -87,3 +87,24 @@ Route::get('/cause', function () {
 
 
 /// Backend Controllers ////////////////////////////////////////////////////
+
+//CustomAuthConfig
+
+Route::get('/login2', function(){
+    return view('auth.customauth.login');
+});
+
+Route::get('/forgotpass', function(){
+    return view('auth.customauth.forgotpassword');
+});
+
+Route::get('/register2', function(){
+    return view('auth.customauth.register');
+});
+
+
+//CustomDashboardConfig
+
+Route::get('/dashboard', function(){
+    return view('backend.master');
+});
