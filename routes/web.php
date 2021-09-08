@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -105,6 +106,9 @@ Route::get('/register2', function(){
 
 //CustomDashboardConfig
 
-Route::get('/dashboard', function(){
-    return view('backend.master');
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/dashboard', function(){
+        return view('backend.pages.dashboard');
+    });
 });
+
