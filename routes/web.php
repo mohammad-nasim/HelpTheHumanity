@@ -26,7 +26,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
     return view('frontend.pages.home');
-});
+})->name('webhome');
 
 Route::get('/gallery', function () {
     return view('frontend.pages.gallery');
@@ -104,11 +104,13 @@ Route::get('/register2', function(){
 });
 
 
-//CustomDashboardConfig
+//
 
-Route::group(['middleware' => 'auth'], function(){
-    Route::get('/dashboard', function(){
+Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
+    Route::get('dashboard', function(){
         return view('backend.pages.dashboard');
     });
+
+    Route::resource('herosection', 'Backend\HeroSectionController');
 });
 
