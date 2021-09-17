@@ -42,6 +42,8 @@ class HeroSectionController extends Controller
         //     'title' => 'unique:hero_sections,title'
         // ]);
 
+        //dd($request->all());
+
         $data = HeroSection::create([
             'title'    => $request->title,
             'slogan_1' => $request->slogan_1,
