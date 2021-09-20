@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Feature;
+use App\AdditionalFeature;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class FeatureController extends Controller
+class AdditionalFeatureController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class FeatureController extends Controller
      */
     public function index()
     {
-        $this->data['alldata'] = Feature::all();
-        return view('backend.pages.feature.index', $this->data);
+        $this->data['alldata'] = AdditionalFeature::all();
+        return view('backend.pages.additionalfeature.index', $this->data);
     }
 
     /**
@@ -26,7 +26,7 @@ class FeatureController extends Controller
      */
     public function create()
     {
-        return view('backend.pages.feature.create');
+        return view('backend.pages.additionalfeature.create');
     }
 
     /**
@@ -37,10 +37,9 @@ class FeatureController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
+         //dd($request->all());
 
-        $data = Feature::create([
-            'icon'        => $request->title,
+         $data = AdditionalFeature::create([
             'title'       => $request->title,
             'description' => $request->description
         ]);
@@ -48,8 +47,9 @@ class FeatureController extends Controller
         if($request->has('image')){
             $image = $request->image;
             $image_new_name = date('YmdHi').$image->getClientOriginalName();
-            $image->move(public_path('backend/img/app_image/feature_section'), $image_new_name);
-            $data->image = $image_new_name;
+            $image->move(public_path('backend/img/app_image/add_feature_section'), $image_new_name);
+
+            $data->cover_image = $image_new_name;
         }
         else{
             echo "Not ulpaddd";
@@ -58,7 +58,7 @@ class FeatureController extends Controller
         if($data->save()){
             //Session::flash('Success', 'Data Insert Successful');
 
-            return redirect()->route('feature.index')->with('message','Data added Successfully');
+            return redirect()->route('additionalfeature.index')->with('message','Data added Successfully');
         }
     }
 
@@ -70,9 +70,9 @@ class FeatureController extends Controller
      */
     public function show($id)
     {
-        $this->data['show'] = Feature::find($id);
+        $this->data['show'] = AdditionalFeature::find($id);
 
-        return view('backend.pages.feature.show', $this->data);
+        return view('backend.pages.additionalfeature.show', $this->data);
     }
 
     /**
@@ -83,9 +83,9 @@ class FeatureController extends Controller
      */
     public function edit($id)
     {
-        $this->data['show'] = Feature::find($id);
+        $this->data['show'] = AdditionalFeature::find($id);
 
-        return view('backend.pages.feature.edit', $this->data);
+        return view('backend.pages.additionalfeature.edit', $this->data);
     }
 
     /**
@@ -97,25 +97,23 @@ class FeatureController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = Feature::find($id);
+        $data = AdditionalFeature::find($id);
 
         if($request->file('image')){
 
-            $data->icon        = $request->icon;
             $data->title     = $request->title;
             $data->description     = $request->description;
 
-
             $file = $request->file('image');
-            @unlink(public_path('backend/img/app_image/feature_section/'.$data->image));
+
+            @unlink(public_path('backend/img/app_image/add_feature_section/'.$data->cover_image));
+
             $file_name = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('backend/img/app_image/feature_section'), $file_name);
-            $data->image = $file_name;
+            $file->move(public_path('backend/img/app_image/add_feature_section'), $file_name);
+            $data->cover_image = $file_name;
 
         }
         else{
-
-            $data->icon        = $request->icon;
             $data->title     = $request->title;
             $data->description     = $request->description;
         }
@@ -123,7 +121,7 @@ class FeatureController extends Controller
         if($data->save()){
             //Session::flash('Success', 'Data Insert Successful');
 
-            return redirect()->route('feature.index')->with('message','Data Updated Successfully');
+            return redirect()->route('additionalfeature.index')->with('message','Data Updated Successfully');
         }
     }
 
@@ -135,8 +133,14 @@ class FeatureController extends Controller
      */
     public function destroy($id)
     {
-        if(Feature::find($id)->delete()){
-            return redirect()->route('feature.index')->with('error','Data Deleted Successfully');
+
+        if($data = AdditionalFeature::find($id)){
+
+            @unlink(public_path('backend/img/app_image/add_feature_section/'.$data->cover_image));
+
+            $data->delete();
+
+            return redirect()->route('additionalfeature.index')->with('error','Data Deleted Successfully');
         }
     }
 }

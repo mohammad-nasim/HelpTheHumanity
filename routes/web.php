@@ -113,5 +113,6 @@ Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
 
     Route::resource('herosection', 'Backend\HeroSectionController');
     Route::resource('feature', 'Backend\FeatureController');
+    Route::resource('additionalfeature', 'Backend\AdditionalFeatureController');
 });
 

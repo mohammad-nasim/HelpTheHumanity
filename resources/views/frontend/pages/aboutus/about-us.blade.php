@@ -19,8 +19,13 @@
     <!-- End Hero Section -->
 
     <!-- Start site-content -->
+
     <div class="site-content section blog-details-left-sidebar">
         <div class="container">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes.</p>
+            </div><!-- .section-header -->
             <main class="site-main">
                 <article class="post post-details">
                     <header class="entry-header">
