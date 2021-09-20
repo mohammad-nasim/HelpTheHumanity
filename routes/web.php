@@ -114,5 +114,7 @@ Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
     Route::resource('herosection', 'Backend\HeroSectionController');
     Route::resource('feature', 'Backend\FeatureController');
     Route::resource('additionalfeature', 'Backend\AdditionalFeatureController');
+    Route::resource('aboutus','Backend\AboutUsController');
+    Route::resource('additionalaboutus', 'Backend\AdditionalAboutUsController', ['except' => ['create', 'store' ]]);
 });
 

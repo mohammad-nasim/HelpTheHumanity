@@ -29,7 +29,7 @@
             <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Hero Sections
+                Hero Section
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -67,6 +67,29 @@
                 <a href="{{ route('additionalfeature.index') }}" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Additional Features</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item ">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                About Us Section
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('aboutus.index') }}" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Section</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('additionalaboutus.index') }}" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Addtional Section</p>
                 </a>
               </li>
             </ul>
