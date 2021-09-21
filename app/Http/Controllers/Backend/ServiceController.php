@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\AdditionalAboutUs;
+use App\Feature;
 use App\Http\Controllers\Controller;
+use App\Service;
 use Illuminate\Http\Request;
 
-class AdditionalAboutUsController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * AdditionalServiceController
+     *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $this->data['alldata'] = AdditionalAboutUs::all();
-        return view('backend.pages.additionalaboutus.index', $this->data);
+        $this->data['alldata'] = Service::all();
+        return view('backend.pages.service.index', $this->data);
     }
 
     /**
@@ -26,7 +27,7 @@ class AdditionalAboutUsController extends Controller
      */
     public function create()
     {
-        return view('backend.pages.additionalaboutus.create');
+        return view('backend.pages.service.create');
     }
 
     /**
@@ -37,9 +38,10 @@ class AdditionalAboutUsController extends Controller
      */
     public function store(Request $request)
     {
-         //dd($request->all());
+        //dd($request->image);
 
-         $data = AdditionalFeature::create([
+        $data = Service::create([
+            'icon'        => $request->title,
             'title'       => $request->title,
             'description' => $request->description
         ]);
@@ -47,9 +49,9 @@ class AdditionalAboutUsController extends Controller
         if($request->has('image')){
             $image = $request->image;
             $image_new_name = date('YmdHi').$image->getClientOriginalName();
-            $image->move(public_path('backend/img/app_image/add_feature_section'), $image_new_name);
+            $image->move(public_path('backend/img/app_image/service'), $image_new_name);
 
-            $data->cover_image = $image_new_name;
+            $data->image = $image_new_name;
         }
         else{
             echo "Not ulpaddd";
@@ -58,7 +60,7 @@ class AdditionalAboutUsController extends Controller
         if($data->save()){
             //Session::flash('Success', 'Data Insert Successful');
 
-            return redirect()->route('additionalaboutus.index')->with('message','Data added Successfully');
+            return redirect()->route('service.index')->with('message','Data added Successfully');
         }
     }
 
@@ -70,9 +72,9 @@ class AdditionalAboutUsController extends Controller
      */
     public function show($id)
     {
-        $this->data['show'] = AdditionalAboutUs::find($id);
+        $this->data['show'] = Service::find($id);
 
-        return view('backend.pages.additionalaboutus.show', $this->data);
+        return view('backend.pages.service.show', $this->data);
     }
 
     /**
@@ -83,9 +85,9 @@ class AdditionalAboutUsController extends Controller
      */
     public function edit($id)
     {
-        $this->data['show'] = AdditionalAboutUs::find($id);
+        $this->data['show'] = Service::find($id);
 
-        return view('backend.pages.additionalaboutus.edit', $this->data);
+        return view('backend.pages.service.edit', $this->data);
     }
 
     /**
@@ -97,33 +99,33 @@ class AdditionalAboutUsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //dd($request->all());
-
-        $data = AdditionalAboutUs::find($id);
+        $data = Service::find($id);
 
         if($request->file('image')){
 
-            $data->title     = $request->title;
+            $data->icon            = $request->icon;
+            $data->title           = $request->title;
             $data->description     = $request->description;
 
+
             $file = $request->file('image');
-
-            @unlink(public_path('backend/img/app_image/add_about_us/'.$data->cover_image));
-
+            @unlink(public_path('backend/img/app_image/service/'.$data->image));
             $file_name = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('backend/img/app_image/add_about_us/'), $file_name);
-            $data->cover_image = $file_name;
+            $file->move(public_path('backend/img/app_image/service'), $file_name);
+            $data->image = $file_name;
 
         }
         else{
-            $data->title     = $request->title;
+
+            $data->icon            = $request->icon;
+            $data->title           = $request->title;
             $data->description     = $request->description;
         }
 
         if($data->save()){
             //Session::flash('Success', 'Data Insert Successful');
 
-            return redirect()->route('additionalaboutus.index')->with('message','Data Updated Successfully');
+            return redirect()->route('service.index')->with('message','Data Updated Successfully');
         }
     }
 
@@ -135,14 +137,13 @@ class AdditionalAboutUsController extends Controller
      */
     public function destroy($id)
     {
+        if($data = Service::find($id)){
 
-        if($data = AdditionalFeature::find($id)){
-
-            @unlink(public_path('backend/img/app_image/add_feature_section/'.$data->cover_image));
+            @unlink(public_path('backend/img/app_image/service/'.$data->image));
 
             $data->delete();
 
-            return redirect()->route('additionalfeature.index')->with('error','Data Deleted Successfully');
+            return redirect()->route('service.index')->with('error','Data Deleted Successfully');
         }
     }
 }

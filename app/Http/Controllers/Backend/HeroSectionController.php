@@ -121,13 +121,13 @@ class HeroSectionController extends Controller
 
 
             $file = $request->file('image_1');
-            @unlink(public_path('backend/img/app_image//hero_section'.$data->image_1));
+            @unlink(public_path('backend/img/app_image/hero_section/'.$data->image_1));
             $file_name = date('YmdHi').$file->getClientOriginalName();
             $file->move(public_path('backend/img/app_image/hero_section'), $file_name);
             $data->image_1 = $file_name;
 
             $file = $request->file('image_2');
-            @unlink(public_path('backend/img/app_image//hero_section'.$data->image_2));
+            @unlink(public_path('backend/img/app_image/hero_section/'.$data->image_2));
             $file_name = date('YmdHi').$file->getClientOriginalName();
             $file->move(public_path('backend/img/app_image/hero_section'), $file_name);
             $data->image_2 = $file_name;
@@ -140,7 +140,7 @@ class HeroSectionController extends Controller
             $data->slogan_2     = $request->slogan_2;
 
             $file = $request->file('image_1');
-            @unlink(public_path('backend/img/app_image//hero_section'.$data->image_1));
+            @unlink(public_path('backend/img/app_image/hero_section/'.$data->image_1));
             $file_name = date('YmdHi').$file->getClientOriginalName();
             $file->move(public_path('backend/img/app_image/hero_section'), $file_name);
             $data->image_1 = $file_name;
@@ -153,7 +153,7 @@ class HeroSectionController extends Controller
             $data->slogan_2     = $request->slogan_2;
 
             $file = $request->file('image_2');
-            @unlink(public_path('backend/img/app_image//hero_section'.$data->image_2));
+            @unlink(public_path('backend/img/app_image/hero_section/'.$data->image_2));
             $file_name = date('YmdHi').$file->getClientOriginalName();
             $file->move(public_path('backend/img/app_image/hero_section'), $file_name);
             $data->image_2 = $file_name;
@@ -179,7 +179,14 @@ class HeroSectionController extends Controller
      */
     public function destroy($id)
     {
-        if(HeroSection::find($id)->delete()){
+        if($data = HeroSection::find($id)){
+
+            @unlink(public_path('backend/img/app_image/hero_section/'.$data->image_1));
+
+            @unlink(public_path('backend/img/app_image/hero_section/'.$data->image_2));
+
+            $data->delete();
+
             return redirect()->route('herosection.index')->with('error','Data Deleted Successfully');
         }
     }

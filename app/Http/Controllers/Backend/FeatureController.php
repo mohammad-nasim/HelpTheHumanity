@@ -135,7 +135,12 @@ class FeatureController extends Controller
      */
     public function destroy($id)
     {
-        if(Feature::find($id)->delete()){
+        if($data = Feature::find($id)){
+
+            @unlink(public_path('backend/img/app_image/feature_section/'.$data->image));
+
+            $data->delete();
+
             return redirect()->route('feature.index')->with('error','Data Deleted Successfully');
         }
     }

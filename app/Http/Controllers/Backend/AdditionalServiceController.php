@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\AdditionalAboutUs;
+use App\AdditionalService;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AdditionalAboutUsController extends Controller
+class AdditionalServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * AdditionalServiceController
+     *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $this->data['alldata'] = AdditionalAboutUs::all();
-        return view('backend.pages.additionalaboutus.index', $this->data);
+        $this->data['alldata'] = AdditionalService::all();
+        return view('backend.pages.additionalservice.index', $this->data);
     }
 
     /**
@@ -70,9 +70,9 @@ class AdditionalAboutUsController extends Controller
      */
     public function show($id)
     {
-        $this->data['show'] = AdditionalAboutUs::find($id);
+        $this->data['show'] = AdditionalService::find($id);
 
-        return view('backend.pages.additionalaboutus.show', $this->data);
+        return view('backend.pages.additionalservice.show', $this->data);
     }
 
     /**
@@ -83,9 +83,9 @@ class AdditionalAboutUsController extends Controller
      */
     public function edit($id)
     {
-        $this->data['show'] = AdditionalAboutUs::find($id);
+        $this->data['show'] = AdditionalService::find($id);
 
-        return view('backend.pages.additionalaboutus.edit', $this->data);
+        return view('backend.pages.additionalservice.edit', $this->data);
     }
 
     /**
@@ -99,31 +99,31 @@ class AdditionalAboutUsController extends Controller
     {
         //dd($request->all());
 
-        $data = AdditionalAboutUs::find($id);
+        $data = AdditionalService::find($id);
 
         if($request->file('image')){
 
-            $data->title     = $request->title;
+            $data->title           = $request->title;
             $data->description     = $request->description;
 
             $file = $request->file('image');
 
-            @unlink(public_path('backend/img/app_image/add_about_us/'.$data->cover_image));
+            @unlink(public_path('backend/img/app_image/add_service/'.$data->cover_image));
 
             $file_name = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('backend/img/app_image/add_about_us/'), $file_name);
+            $file->move(public_path('backend/img/app_image/add_service/'), $file_name);
             $data->cover_image = $file_name;
 
         }
         else{
-            $data->title     = $request->title;
+            $data->title           = $request->title;
             $data->description     = $request->description;
         }
 
         if($data->save()){
             //Session::flash('Success', 'Data Insert Successful');
 
-            return redirect()->route('additionalaboutus.index')->with('message','Data Updated Successfully');
+            return redirect()->route('additionalservice.index')->with('message','Data Updated Successfully');
         }
     }
 
