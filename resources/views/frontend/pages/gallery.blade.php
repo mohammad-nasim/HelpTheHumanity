@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-
     <!-- Start Hero Section -->
     <section class="other-hero">
         <div class="container other-hero-text">
@@ -17,11 +16,16 @@
         </div>
     </section>
 
-    <div class="container-fluid">
+    <div class="container mt-5" style="padding-top: 40px; padding-bottom: 40px">
+        <div class="header ">
+            <div class="section-header">
+                <h2>GALLERY</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes.</p>
+            </div><!-- .section-header -->
+        </div>
         <!-- Page Content -->
-        <div class="container">
-
-            <h2 class="fw-light text-center text-lg-start mt-4 mb-0 pt-4 " style="padding-top: 4%; font-family: 'cabin';">Thumbnail Gallery</h2>
+        <div class="container ">
+            <h2 class="fw-light text-center text-lg-start mt-4 mb-0 pt-4 " style="padding-top: 1%; font-family: 'cabin';">Thumbnail Gallery</h2>
 
             <hr class="mt-2 mb-5">
 
