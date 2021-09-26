@@ -10,7 +10,7 @@ class AdditionalFeatureController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     *AdditionalGalleryController
      * @return \Illuminate\Http\Response
      */
     public function index()

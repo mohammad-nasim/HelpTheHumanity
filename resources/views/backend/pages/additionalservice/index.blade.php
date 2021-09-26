@@ -71,18 +71,6 @@ Data List - Additional Service Section
                                     <td class="d-flex" style="width: 120px">
                                         <a href="{{ route('additionalservice.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
 
-                                         {{-- <a href="{{ route('herosection.destroy', $data->id) }}" class="fa fa-trash text-danger"></a> --}}
-
-                                         <form action="{{ route('additionalservice.destroy', $data->id) }}" method="POST" >
-                                            @csrf
-                                            @method('DELETE')
-
-                                            <button type="submit" class="btn btn-sm btn-danger"
-
-                                            onclick="return confirm('Are you sure you want to delete this item')"">
-                                                <i class=" fa fa-trash text-white"></i>
-                                            </button>
-                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach

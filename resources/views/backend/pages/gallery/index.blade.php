@@ -19,7 +19,7 @@ Data List - Gallery
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Gallery Section</h1>
+                <h1 class="m-0"></h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -39,9 +39,9 @@ Data List - Gallery
                     <div class="card-header ">
                         <div class="d-flex justify-content-between ">
                             <h3 class="card-title"><strong>Data List</strong></h3>
-                            <a target="_self"  href="{{ route('aboutus.create') }}" class="btn btn-primary">
+                            <a target="_self"  href="{{ route('gallery.create') }}" class="btn btn-primary">
                             <i class="fa fa-plus"></i>
-                                Create Data</a>
+                               Add Images</a>
                         </div>
                     </div>
                     <!-- /.card-header -->
@@ -49,37 +49,30 @@ Data List - Gallery
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th style="width: 10px">SL</th>
-                                    <th>Title</th>
+                                    <th style="width:">SL</th>
                                     <th>Image</th>
-                                    <th>Description</th>
-                                    <th style="width: 20px">Actions</th>
+                                    <th style="width: " class="text-right">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ( $alldata as $key => $data )
                                 <tr>
                                     <td>{{ $key+1 }}</td>
-                                    <td>{{ $data->title }}</td>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/about_us/'.$data->image)}}" style="width:60px;height:30px" alt="">
+                                        <img src="{{asset('backend/img/app_image/gallery/'.$data->images)}}" style="width:200px;height:100px" alt="">
                                     </td>
-                                    <td>{{ $data->description }}</td>
-                                    <td class="d-flex" style="width: 120px">
-                                        <a href="{{ route('aboutus.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
-
-                                        <a href="{{ route('aboutus.edit',$data->id) }}" class="btn btn-sm btn-success fa fa-edit text-white mr-1"></a>
+                                    <td class="d-flex justify-content-end  " style="">
 
                                          {{-- <a href="{{ route('herosection.destroy', $data->id) }}" class="fa fa-trash text-danger"></a> --}}
 
-                                         <form action="{{ route('aboutus.destroy', $data->id) }}" method="POST" >
+                                         <form action="{{ route('gallery.destroy', $data->id) }}" method="POST" >
                                             @csrf
                                             @method('DELETE')
 
                                             <button type="submit" class="btn btn-sm btn-danger"
 
                                             onclick="return confirm('Are you sure you want to delete this item')"">
-                                                <i class=" fa fa-trash text-white"></i>
+                                                <i class=" fa fa-trash text-white"> Delete</i>
                                             </button>
                                         </form>
                                     </td>
@@ -87,6 +80,9 @@ Data List - Gallery
                                 @endforeach
                             </tbody>
                         </table>
+                        <div class="d-flex justify-content-center">
+                            {{ $alldata->links() }}
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>

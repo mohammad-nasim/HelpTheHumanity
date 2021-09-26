@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Gallery;
 
 class GalleryController extends Controller
 {
@@ -14,7 +15,8 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+        $this->data['alldata'] = Gallery::latest()->paginate(10);
+        return view('backend.pages.gallery.index', $this->data);
     }
 
     /**
@@ -24,7 +26,7 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.gallery.create');
     }
 
     /**
@@ -35,7 +37,25 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+
+        $image = $request->file('image');
+
+        foreach($image as $multi_image){
+            $image_new_name = date('YmdHi').$multi_image->getClientOriginalName();
+            $multi_image->move(public_path('backend/img/app_image/gallery'), $image_new_name);
+
+            $upload = $image_new_name;
+
+            Gallery::create([
+                'images'   =>  $upload
+            ]);
+        }
+
+        return redirect()->route('gallery.index')->with('message','Image Uploaded Successfully');
+
+
+
     }
 
     /**
@@ -80,6 +100,13 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if($data = Gallery::find($id)){
+
+            @unlink(public_path('backend/img/app_image/gallery/'.$data->images));
+
+            $data->delete();
+
+            return redirect()->route('gallery.index')->with('error','Data Deleted Successfully');
+        }
     }
 }

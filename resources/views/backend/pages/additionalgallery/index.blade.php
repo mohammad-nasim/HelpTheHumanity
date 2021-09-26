@@ -1,7 +1,7 @@
 @extends('backend.master')
 
 @section('title')
-Data List - Additional Features Section
+Data List - Additional Gallery Section
 @endsection
 
 @section('css')
@@ -24,7 +24,7 @@ Data List - Additional Features Section
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('webhome') }}">Home</a></li>
-                    <li class="breadcrumb-item active">Additional Features Section</li>
+                    <li class="breadcrumb-item active">Additional Gallery Section</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -40,9 +40,11 @@ Data List - Additional Features Section
                         <div class="d-flex justify-content-between ">
                             <h3 class="card-title"><strong>Data List</strong>
                             </h3>
-                            <a target="_self"  href="{{ route('additionalfeature.create') }}" class="btn btn-primary">
+                            @foreach ( $alldata as $key => $data )
+                            <a target="_self"  href="{{ route('additionalgallery.edit',$data->id) }}" class="btn btn-success">
                             <i class="fa fa-plus"></i>
-                                Create Feature</a>
+                                Update Data</a>
+                            @endforeach
                         </div>
                     </div>
                     <!-- /.card-header -->
@@ -52,8 +54,7 @@ Data List - Additional Features Section
                                 <tr>
                                     <th style="width: 10px">SL</th>
                                     <th>Title</th>
-                                    <th>Image</th>
-                                    <th>Description</th>
+                                    <th>Cover Image</th>
                                     <th style="width: 20px">Actions</th>
                                 </tr>
                             </thead>
@@ -63,13 +64,14 @@ Data List - Additional Features Section
                                     <td>{{ $key+1 }}</td>
                                     <td>{{ $data->title }}</td>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/add_feature_section/'.$data->cover_image)}}" style="width:60px;height:30px" alt="">
+                                        <img src="{{asset('backend/img/app_image/add_gallery/'.$data->cover_image)}}" style="width:60px;height:30px" alt="">
                                     </td>
-                                    <td>{{ $data->description }}</td>
-                                    <td class="d-flex" style="width: 120px">
-                                        <a href="{{ route('additionalfeature.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
 
-                                        <a href="{{ route('additionalfeature.edit',$data->id) }}" class="btn btn-sm btn-success fa fa-edit text-white mr-1"></a>
+                                    <td class="d-flex" style="width: 120px">
+                                        <a href="{{ route('additionalgallery.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
+
+                                         {{-- <a href="{{ route('herosection.destroy', $data->id) }}" class="fa fa-trash text-danger"></a> --}}
+
                                     </td>
                                 </tr>
                                 @endforeach

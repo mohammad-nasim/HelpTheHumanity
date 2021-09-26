@@ -123,5 +123,6 @@ Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
     Route::resource('additionalservice', 'Backend\AdditionalServiceController', ['except' => ['create', 'store' ]]);
 
     Route::resource('gallery', 'Backend\GalleryController');
+    Route::resource('additionalgallery', 'Backend\AdditionalGalleryController', ['except' => ['create', 'store' ]]);
 });
 

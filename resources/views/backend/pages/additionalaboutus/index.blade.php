@@ -69,20 +69,8 @@ Data List - Additional About Section
                                     </td>
                                     <td>{{ $data->description }}</td>
                                     <td class="d-flex" style="width: 120px">
-                                        <a href="{{ route('additionalaboutus.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
-
-                                         {{-- <a href="{{ route('herosection.destroy', $data->id) }}" class="fa fa-trash text-danger"></a> --}}
-
-                                         <form action="{{ route('additionalfeature.destroy', $data->id) }}" method="POST" >
-                                            @csrf
-                                            @method('DELETE')
-
-                                            <button type="submit" class="btn btn-sm btn-danger"
-
-                                            onclick="return confirm('Are you sure you want to delete this item')"">
-                                                <i class=" fa fa-trash text-white"></i>
-                                            </button>
-                                        </form>
+                                        <a href="{{ route('additionalaboutus.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1">
+                                        </a>
                                     </td>
                                 </tr>
                                 @endforeach

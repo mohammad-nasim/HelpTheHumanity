@@ -16,7 +16,7 @@
         </div>
     </section>
 
-    <div class="container mt-5" style="padding-top: 40px; padding-bottom: 40px">
+    <div class="container mt-5" style="padding-top: 60px; padding-bottom: 40px">
         <div class="header ">
             <div class="section-header">
                 <h2>GALLERY</h2>
@@ -25,12 +25,8 @@
         </div>
         <!-- Page Content -->
         <div class="container ">
-            <h2 class="fw-light text-center text-lg-start mt-4 mb-0 pt-4 " style="padding-top: 1%; font-family: 'cabin';">Thumbnail Gallery</h2>
-
             <hr class="mt-2 mb-5">
-
             <div class="row text-center text-lg-start mb-5">
-
             <div class="col-lg-3 col-md-4 col-6">
                 <a href="#" class="d-block mb-4 h-100">
                 <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
