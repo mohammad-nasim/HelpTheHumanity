@@ -124,5 +124,7 @@ Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
 
     Route::resource('gallery', 'Backend\GalleryController');
     Route::resource('additionalgallery', 'Backend\AdditionalGalleryController', ['except' => ['create', 'store' ]]);
+
+    Route::resource('funfactor', 'Backend\FunFactorController', ['except' => ['create', 'store', 'destroy' ]]);
 });
 

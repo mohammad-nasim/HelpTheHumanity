@@ -319,11 +319,11 @@ textarea {
 input:focus, textarea:focus {
 	border-color: #FFC206;
 }
-h1, 
-h2, 
-h3, 
-h4, 
-h3, 
+h1,
+h2,
+h3,
+h4,
+h3,
 h5,
 h6 {
     clear: both;
@@ -392,14 +392,14 @@ a {
     color: #505050;
     background-color: transparent;
 }
-a:hover, 
-a:focus, 
+a:hover,
+a:focus,
 a:active {
     color: #FFC206;
     text-decoration: none;
 }
 a:focus,
-a:hover, 
+a:hover,
 a:active {
     outline: none;
 }
@@ -407,7 +407,7 @@ a:active {
 /*--------------------------------------------------------------
 5. Transition
 --------------------------------------------------------------*/
-a, input, select, textarea, 
+a, input, select, textarea,
 .t-btn, .portfolio-item a:before,
 .member-social {
     -webkit-transition: all 0.3s ease;
@@ -495,7 +495,7 @@ html {
     left:0;
     right:0;
     bottom:0;
-    background-color: #222 ; 
+    background-color: #222 ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -523,7 +523,7 @@ html {
   height: 100%;
   width: 6px;
   display: inline-block;
-  
+
   -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
   animation: stretchdelay 1.2s infinite ease-in-out;
 }
@@ -544,14 +544,14 @@ html {
   animation-delay: -0.8s;
 }
 @-webkit-keyframes stretchdelay {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
   20% { -webkit-transform: scaleY(1.0) }
 }
 @keyframes stretchdelay {
-  0%, 40%, 100% { 
+  0%, 40%, 100% {
     transform: scaleY(0.4);
     -webkit-transform: scaleY(0.4);
-  }  20% { 
+  }  20% {
     transform: scaleY(1.0);
     -webkit-transform: scaleY(1.0);
   }
@@ -703,7 +703,7 @@ html {
 .primary-nav-list .menu-item > a {
     color: #fff;
 }
-.primary-nav-list .active > a, 
+.primary-nav-list .active > a,
 .primary-nav-list .menu-item > a:hover {
     color: #FFC206;
     background-color: transparent;
@@ -793,18 +793,18 @@ html {
     margin: 0 auto;
     position: relative;
     top: 12px;
-    -webkit-transition-duration: 0s; 
+    -webkit-transition-duration: 0s;
     transition-duration: 0s;
-    -webkit-transition-delay: 0.2s; 
+    -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
 }
-.m-menu-btn span:before, 
+.m-menu-btn span:before,
 .m-menu-btn span:after {
     position: absolute;
     content: '';
 }
-.m-menu-btn span, 
-.m-menu-btn span:before, 
+.m-menu-btn span,
+.m-menu-btn span:before,
 .m-menu-btn span:after {
     width: 25px;
     height: 2px;
@@ -831,21 +831,21 @@ html {
 }
 .m-menu-btn-ext span {
     background-color: rgba(0,0,0,0.0);
-    -webkit-transition-delay: 0.2s; 
+    -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
 }
 .m-menu-btn-ext span:before {
     margin-top: 0;
-    -webkit-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    -webkit-transition-delay: 0s, 0.2s; 
+    -webkit-transition-delay: 0s, 0.2s;
     transition-delay: 0s, 0.2s;
 }
 .m-menu-btn-ext span:after {
     margin-top: 0;
-    -webkit-transform: rotate(-45deg); 
+    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    -webkit-transition-delay: 0s, 0.2s; 
+    -webkit-transition-delay: 0s, 0.2s;
     transition-delay: 0s, 0.2s;
 }
 .m-dropdown {
@@ -1288,9 +1288,9 @@ html {
 .mfp-with-zoom.mfp-bg {
     opacity: 0;
     -webkit-backface-visibility: hidden;
-    -webkit-transition: all 0.3s ease-out; 
-    -moz-transition: all 0.3s ease-out; 
-    -o-transition: all 0.3s ease-out; 
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 .mfp-with-zoom.mfp-ready .mfp-container {
@@ -1299,13 +1299,13 @@ html {
 .mfp-with-zoom.mfp-ready.mfp-bg {
         opacity: 0.8;
 }
-.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
     opacity: 0;
 }
 /*Fun Factor*/
 .fun-factor {
-    background-image: url(../img/fun-fact-bg.jpg);
+    /* background-image: url(../img/fun-fact-bg.jpg); */
     background-position: center center;
     position: relative;
     background-repeat: no-repeat;
@@ -1867,14 +1867,14 @@ html {
 .comment-form p {
     margin: 0;
 }
-.comment-form textarea, 
+.comment-form textarea,
 .comment-form input {
     border: 1px solid #cacaca;
     padding: 10px;
     width: 100%;
     background-color: transparent;
 }
-.comment-form textarea:focus, 
+.comment-form textarea:focus,
 .comment-form input:focus {
     border-color: #FFC206;
 }

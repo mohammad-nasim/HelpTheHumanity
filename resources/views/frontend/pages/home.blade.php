@@ -281,7 +281,7 @@
 <!-- End Gallery Section -->
 
 <!-- Start Fun Factor Section -->
-<section class="fun-factor section text-center">
+<section class="fun-factor section text-center" style="background-image: url(img/fun-fact-bg.jpg);">
     <div class="container">
         <div class="row flex">
             <div class="col-sm-3">
@@ -384,6 +384,7 @@
         </div>
     </div>
 </section>
+
 <!-- End Team Section -->
 
 <!-- Start Event Section -->

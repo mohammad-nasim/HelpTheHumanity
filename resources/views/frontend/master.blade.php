@@ -8,7 +8,10 @@
 	<meta name="author" content="Awesome Themez">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
+
     <base href="{{  asset('frontend') }}/ "  target="_blank">
+
+
 	<!-- Page Title -->
 	<title>@yield('title') - Help The Humanity Foundation</title>
     <!-- Favicon Icon -->
@@ -18,6 +21,9 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/gallery.css">
+
+    <!-- Owl Carosel -->
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
 	<!-- Modernizr -->
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -57,5 +63,9 @@
 
     <!-- Gallery -->
     <script src="js/gallery.js"></script>
+
+
+    <!--Owl Carosel-->
+
   </body>
 </html>
