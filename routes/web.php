@@ -140,5 +140,8 @@ Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
 
     Route::resource('partner', 'Backend\PartnerController');
 
+    Route::resource('news', 'Backend\NewsController');
+    Route::resource('additionalnews', 'Backend\AdditionalNewsController', ['except' => ['create', 'store', 'destroy' ]]);
+
 });
 
