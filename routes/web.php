@@ -85,6 +85,11 @@ Route::get('/cause', function () {
     return view('frontend.pages.causes.cause');
 });
 
+//Our Team
+Route::get('/ourteam', function(){
+    return view('frontend.pages.ourteam');
+});
+
 
 
 /// Backend Controllers ////////////////////////////////////////////////////
@@ -126,5 +131,9 @@ Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
     Route::resource('additionalgallery', 'Backend\AdditionalGalleryController', ['except' => ['create', 'store' ]]);
 
     Route::resource('funfactor', 'Backend\FunFactorController', ['except' => ['create', 'store', 'destroy' ]]);
+
+    Route::resource('ourteam', 'Backend\OurTeamController');
+    Route::resource('additionalourteam', 'Backend\AdditionalOurTeamController', ['except' => ['create', 'store', 'destroy' ]]);
+
 });
 

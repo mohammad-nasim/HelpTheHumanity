@@ -381,6 +381,9 @@
                     <span class="designation">Volunteer</span>
                 </div>
             </div><!-- .col -->
+            <div class="ourteam-btn-group">
+                <a href="" class="t-our-btn our-btn-1 " >More About Team</a>
+            </div>
         </div>
     </div>
 </section>

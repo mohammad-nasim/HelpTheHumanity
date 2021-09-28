@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\AdditionalGallery;
+use App\AdditionalOurTeam;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AdditionalGalleryController extends Controller
+class AdditionalOurTeamController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class AdditionalGalleryController extends Controller
      */
     public function index()
     {
-        $this->data['alldata'] = AdditionalGallery::all();
-        return view('backend.pages.additionalgallery.index', $this->data);
+        $this->data['alldata'] = AdditionalOurTeam::all();
+        return view('backend.pages.additionalourteam.index', $this->data);
     }
 
     /**
@@ -49,9 +49,9 @@ class AdditionalGalleryController extends Controller
      */
     public function show($id)
     {
-        $this->data['show'] = AdditionalGallery::find($id);
+        $this->data['show'] = AdditionalOurTeam::find($id);
 
-        return view('backend.pages.additionalgallery.show', $this->data);
+        return view('backend.pages.additionalourteam.show', $this->data);
     }
 
     /**
@@ -62,9 +62,9 @@ class AdditionalGalleryController extends Controller
      */
     public function edit($id)
     {
-        $this->data['show'] = AdditionalGallery::find($id);
+        $this->data['show'] = AdditionalOurTeam::find($id);
 
-        return view('backend.pages.additionalgallery.edit', $this->data);
+        return view('backend.pages.additionalourteam.edit', $this->data);
     }
 
     /**
@@ -76,7 +76,7 @@ class AdditionalGalleryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = AdditionalGallery::find($id);
+        $data = AdditionalOurTeam::find($id);
 
         if($request->file('image')){
 
@@ -84,10 +84,10 @@ class AdditionalGalleryController extends Controller
 
             $file = $request->file('image');
 
-            @unlink(public_path('backend/img/app_image/add_gallery/'.$data->cover_image));
+            @unlink(public_path('backend/img/app_image/add_our_team/'.$data->cover_image));
 
             $file_name = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('backend/img/app_image/add_gallery'), $file_name);
+            $file->move(public_path('backend/img/app_image/add_our_team'), $file_name);
 
             $data->cover_image = $file_name;
 
@@ -99,7 +99,7 @@ class AdditionalGalleryController extends Controller
         if($data->save()){
             //Session::flash('Success', 'Data Insert Successful');
 
-            return redirect()->route('additionalgallery.index')->with('message','Data Updated Successfully');
+            return redirect()->route('additionalourteam.index')->with('message','Data Updated Successfully');
         }
     }
 

@@ -15,6 +15,12 @@ class CreateOurTeamsTable extends Migration
     {
         Schema::create('our_teams', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable();
+            $table->string('position')->nullable();
+            $table->string('image')->nullable();
+            $table->string('linkone')->nullable();
+            $table->string('linktwo')->nullable();
+            $table->string('linkthree')->nullable();
             $table->timestamps();
         });
     }
