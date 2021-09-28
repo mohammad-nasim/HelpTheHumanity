@@ -135,5 +135,10 @@ Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
     Route::resource('ourteam', 'Backend\OurTeamController');
     Route::resource('additionalourteam', 'Backend\AdditionalOurTeamController', ['except' => ['create', 'store', 'destroy' ]]);
 
+    Route::resource('event', 'Backend\EventController');
+    Route::resource('additionalevent', 'Backend\AdditionalEventController', ['except' => ['create', 'store', 'destroy' ]]);
+
+    Route::resource('partner', 'Backend\PartnerController');
+
 });
 

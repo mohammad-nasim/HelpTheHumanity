@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\AdditionalOurTeam;
+use App\AdditionalEvent;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AdditionalOurTeamController extends Controller
+class AdditionalEventController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * PartnerController
+     * AdditionalEventController
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $this->data['alldata'] = AdditionalOurTeam::all();
-        return view('backend.pages.additionalourteam.index', $this->data);
+        $this->data['alldata'] = AdditionalEvent::all();
+        return view('backend.pages.additionalevent.index', $this->data);
     }
 
     /**
@@ -49,9 +49,9 @@ class AdditionalOurTeamController extends Controller
      */
     public function show($id)
     {
-        $this->data['show'] = AdditionalOurTeam::find($id);
+        $this->data['show'] = AdditionalEvent::find($id);
 
-        return view('backend.pages.additionalourteam.show', $this->data);
+        return view('backend.pages.additionalevent.show', $this->data);
     }
 
     /**
@@ -62,9 +62,9 @@ class AdditionalOurTeamController extends Controller
      */
     public function edit($id)
     {
-        $this->data['show'] = AdditionalOurTeam::find($id);
+        $this->data['show'] = AdditionalEvent::find($id);
 
-        return view('backend.pages.additionalourteam.edit', $this->data);
+        return view('backend.pages.additionalevent.edit', $this->data);
     }
 
     /**
@@ -76,7 +76,7 @@ class AdditionalOurTeamController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = AdditionalOurTeam::find($id);
+        $data = AdditionalEvent::find($id);
 
         if($request->file('image')){
 
@@ -84,10 +84,10 @@ class AdditionalOurTeamController extends Controller
 
             $file = $request->file('image');
 
-            @unlink(public_path('backend/img/app_image/add_our_team/'.$data->cover_image));
+            @unlink(public_path('backend/img/app_image/add_event/'.$data->cover_image));
 
             $file_name = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('backend/img/app_image/add_our_team'), $file_name);
+            $file->move(public_path('backend/img/app_image/add_event'), $file_name);
 
             $data->cover_image = $file_name;
 
@@ -99,7 +99,7 @@ class AdditionalOurTeamController extends Controller
         if($data->save()){
             //Session::flash('Success', 'Data Insert Successful');
 
-            return redirect()->route('additionalourteam.index')->with('message','Data Updated Successfully');
+            return redirect()->route('additionalevent.index')->with('message','Data Updated Successfully');
         }
     }
 

@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\AdditionalService;
+use App\Event;
+use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AdditionalServiceController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * PartnerController
+     *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $this->data['alldata'] = AdditionalService::all();
-        return view('backend.pages.additionalservice.index', $this->data);
+        $this->data['alldata'] = Event::all();
+        return view('backend.pages.event.index', $this->data);
     }
 
     /**
@@ -26,7 +27,7 @@ class AdditionalServiceController extends Controller
      */
     public function create()
     {
-        return view('backend.pages.additionalaboutus.create');
+        return view('backend.pages.event.create');
     }
 
     /**
@@ -37,19 +38,19 @@ class AdditionalServiceController extends Controller
      */
     public function store(Request $request)
     {
-         //dd($request->all());
+        //dd($request->all());
 
-         $data = AdditionalFeature::create([
-            'title'       => $request->title,
-            'description' => $request->description
+        $data = Event::create([
+            'title'        => $request->title,
+            'date'         =>  $request->date ,
+            'description'  => $request->description
         ]);
 
         if($request->has('image')){
             $image = $request->image;
             $image_new_name = date('YmdHi').$image->getClientOriginalName();
-            $image->move(public_path('backend/img/app_image/add_feature_section'), $image_new_name);
-
-            $data->cover_image = $image_new_name;
+            $image->move(public_path('backend/img/app_image/event'), $image_new_name);
+            $data->image = $image_new_name;
         }
         else{
             echo "Not ulpaddd";
@@ -58,7 +59,7 @@ class AdditionalServiceController extends Controller
         if($data->save()){
             //Session::flash('Success', 'Data Insert Successful');
 
-            return redirect()->route('additionalaboutus.index')->with('message','Data added Successfully');
+            return redirect()->route('event.index')->with('message','Data added Successfully');
         }
     }
 
@@ -70,9 +71,9 @@ class AdditionalServiceController extends Controller
      */
     public function show($id)
     {
-        $this->data['show'] = AdditionalService::find($id);
+        $this->data['show'] = Event::find($id);
 
-        return view('backend.pages.additionalservice.show', $this->data);
+        return view('backend.pages.event.show', $this->data);
     }
 
     /**
@@ -83,9 +84,9 @@ class AdditionalServiceController extends Controller
      */
     public function edit($id)
     {
-        $this->data['show'] = AdditionalService::find($id);
+        $this->data['show'] = Event::find($id);
 
-        return view('backend.pages.additionalservice.edit', $this->data);
+        return view('backend.pages.event.edit', $this->data);
     }
 
     /**
@@ -97,33 +98,33 @@ class AdditionalServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //dd($request->all());
-
-        $data = AdditionalService::find($id);
+        $data = Event::find($id);
 
         if($request->file('image')){
 
             $data->title           = $request->title;
+            $data->date            = $request->date;
             $data->description     = $request->description;
 
+
             $file = $request->file('image');
-
-            @unlink(public_path('backend/img/app_image/add_service/'.$data->cover_image));
-
+            @unlink(public_path('backend/img/app_image/event/'.$data->image));
             $file_name = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('backend/img/app_image/add_service/'), $file_name);
-            $data->cover_image = $file_name;
+            $file->move(public_path('backend/img/app_image/event'), $file_name);
+            $data->image = $file_name;
 
         }
         else{
-            $data->title           = $request->title;
-            $data->description     = $request->description;
+
+            $data->title            = $request->title;
+            $data->date             = $request->date;
+            $data->description      = $request->description;
         }
 
         if($data->save()){
             //Session::flash('Success', 'Data Insert Successful');
 
-            return redirect()->route('additionalservice.index')->with('message','Data Updated Successfully');
+            return redirect()->route('event.index')->with('message','Data Updated Successfully');
         }
     }
 
@@ -135,14 +136,13 @@ class AdditionalServiceController extends Controller
      */
     public function destroy($id)
     {
+        if($data = Event::find($id)){
 
-        if($data = AdditionalFeature::find($id)){
-
-            @unlink(public_path('backend/img/app_image/add_feature_section/'.$data->cover_image));
+            @unlink(public_path('backend/img/app_image/event/'.$data->image));
 
             $data->delete();
 
-            return redirect()->route('additionalfeature.index')->with('error','Data Deleted Successfully');
+            return redirect()->route('event.index')->with('error','Data Deleted Successfully');
         }
     }
 }

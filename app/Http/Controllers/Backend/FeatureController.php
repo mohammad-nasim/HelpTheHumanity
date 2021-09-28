@@ -10,7 +10,7 @@ class FeatureController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     * EventController
      * @return \Illuminate\Http\Response
      */
     public function index()
