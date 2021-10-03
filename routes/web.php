@@ -109,7 +109,8 @@ Route::get('/register2', function(){
 });
 
 
-//
+//Backend-Contact
+Route::post('message', 'Backend\MsgController@store')->name('contact.message');
 
 Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
     Route::get('dashboard', function(){
@@ -143,5 +144,7 @@ Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
     Route::resource('news', 'Backend\NewsController');
     Route::resource('additionalnews', 'Backend\AdditionalNewsController', ['except' => ['create', 'store', 'destroy' ]]);
 
+    Route::resource('contact', 'Backend\ContactController');
+    Route::resource('additionalcontact', 'Backend\AdditionalContactController', ['except' => ['create', 'store', 'destroy' , 'show']]);
 });
 

@@ -1,7 +1,7 @@
 @extends('backend.master')
 
 @section('title')
-View Single Data - Contact Section
+View Single Data - Additional About Us
 @endsection
 
 @section('content')
@@ -9,8 +9,8 @@ View Single Data - Contact Section
     <div class="container-fluid">
         <div class="row mb-2 ">
             <div class="col-12 d-flex justify-content-between ">
-                <h1 class="m-0">View Message</h1>
-                <a href="{{ route('contact.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
+                <h1 class="m-0">View Additiona Data</h1>
+                <a href="{{ route('additionalfeature.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
@@ -25,24 +25,18 @@ View Single Data - Contact Section
                         <div class=" table-responsive">
                            <table class="table table-striped">
                                 <tr>
-                                    <th >First Name </th>
-                                    <td>{{ $show->first_name}}</td>
+                                    <th >Image : </th>
+                                    <td>
+                                        <img src="{{asset('backend/img/app_image/add_about_us/'.$show->cover_image)}}" style="width:230px;height:150px" alt="">
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <th >Last Name </th>
-                                    <td>{{ $show->last_name}}</td>
+                                    <th >Title : </th>
+                                    <td>{{ $show->title }}</td>
                                 </tr>
                                 <tr>
-                                    <th >Email </th>
-                                    <td>{{ $show->email}}</td>
-                                </tr>
-                                <tr>
-                                    <th >Phone</th>
-                                    <td>{{ $show->phone}}</td>
-                                </tr>
-                                <tr>
-                                    <th >Message : </th>
-                                    <td>{{ $show->message }}</td>
+                                    <th >Description : </th>
+                                    <td>{{ $show->description }}</td>
                                 </tr>
                            </table>
                         </div>

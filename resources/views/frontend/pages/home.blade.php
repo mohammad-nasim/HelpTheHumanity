@@ -506,22 +506,23 @@
             <h2>CONTACT</h2>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes.</p>
         </div><!-- .section-header -->
-        <form action="#">
+        <form action="{{ route('contact.message') }}" method="post">
+            @csrf
             <div class="row">
                 <div class="col-sm-6">
-                    <input type="text" placeholder="Enter Name">
+                    <input type="text" name="first_name" placeholder="First Name">
                 </div>
                 <div class="col-sm-6">
-                    <input type="text" placeholder="Skype ID">
+                    <input type="text" name="last_name"  placeholder="Last Name">
                 </div>
                 <div class="col-sm-6">
-                    <input type="email" placeholder="Enter Email">
+                    <input type="email" name="email"  placeholder="Enter Email">
                 </div>
                 <div class="col-sm-6">
-                    <input type="tel" placeholder="Mobile No.">
+                    <input type="text" name="phone"  placeholder="Mobile No.">
                 </div>
                 <div class="col-sm-12">
-                    <textarea cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+                    <textarea cols="30" name="message"  rows="10" placeholder="Enter Your Message"></textarea>
                 </div>
                 <div class="col-sm-12 text-center">
                     <button type="submit" class="t-btn submit-btn">Send Message</button>

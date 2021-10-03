@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\AdditionalAboutUs;
+use App\AdditionalContact;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AdditionalAboutUsController extends Controller
+class AdditionalContactController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * AdditionalContactController
+     *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $this->data['alldata'] = AdditionalAboutUs::all();
-        return view('backend.pages.additionalaboutus.index', $this->data);
+        $this->data['alldata'] = AdditionalContact::all();
+        return view('backend.pages.additionalcontact.index', $this->data);
     }
 
     /**
@@ -39,27 +39,27 @@ class AdditionalAboutUsController extends Controller
     {
          //dd($request->all());
 
-         $data = AdditionalFeature::create([
-            'title'       => $request->title,
-            'description' => $request->description
-        ]);
+        //  $data = AdditionalFeature::create([
+        //     'title'       => $request->title,
+        //     'description' => $request->description
+        // ]);
 
-        if($request->has('image')){
-            $image = $request->image;
-            $image_new_name = date('YmdHi').$image->getClientOriginalName();
-            $image->move(public_path('backend/img/app_image/add_feature_section'), $image_new_name);
+        // if($request->has('image')){
+        //     $image = $request->image;
+        //     $image_new_name = date('YmdHi').$image->getClientOriginalName();
+        //     $image->move(public_path('backend/img/app_image/add_feature_section'), $image_new_name);
 
-            $data->cover_image = $image_new_name;
-        }
-        else{
-            echo "Not ulpaddd";
-        }
+        //     $data->cover_image = $image_new_name;
+        // }
+        // else{
+        //     echo "Not ulpaddd";
+        // }
 
-        if($data->save()){
-            //Session::flash('Success', 'Data Insert Successful');
+        // if($data->save()){
+        //     //Session::flash('Success', 'Data Insert Successful');
 
-            return redirect()->route('additionalaboutus.index')->with('message','Data added Successfully');
-        }
+        //     return redirect()->route('additionalaboutus.index')->with('message','Data added Successfully');
+        // }
     }
 
     /**
@@ -70,9 +70,7 @@ class AdditionalAboutUsController extends Controller
      */
     public function show($id)
     {
-        $this->data['show'] = AdditionalAboutUs::find($id);
 
-        return view('backend.pages.additionalaboutus.show', $this->data);
     }
 
     /**
@@ -83,9 +81,9 @@ class AdditionalAboutUsController extends Controller
      */
     public function edit($id)
     {
-        $this->data['show'] = AdditionalAboutUs::find($id);
+        $this->data['show'] = AdditionalContact::find($id);
 
-        return view('backend.pages.additionalaboutus.edit', $this->data);
+        return view('backend.pages.additionalcontact.edit', $this->data);
     }
 
     /**
@@ -99,31 +97,14 @@ class AdditionalAboutUsController extends Controller
     {
         //dd($request->all());
 
-        $data = AdditionalAboutUs::find($id);
-
-        if($request->file('image')){
+        $data = AdditionalContact::find($id);
 
             $data->title     = $request->title;
-            $data->description     = $request->description;
-
-            $file = $request->file('image');
-
-            @unlink(public_path('backend/img/app_image/add_about_us/'.$data->cover_image));
-
-            $file_name = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('backend/img/app_image/add_about_us/'), $file_name);
-            $data->cover_image = $file_name;
-
-        }
-        else{
-            $data->title     = $request->title;
-            $data->description     = $request->description;
-        }
 
         if($data->save()){
             //Session::flash('Success', 'Data Insert Successful');
 
-            return redirect()->route('additionalaboutus.index')->with('message','Data Updated Successfully');
+            return redirect()->route('additionalcontact.index')->with('message','Data Updated Successfully');
         }
     }
 
