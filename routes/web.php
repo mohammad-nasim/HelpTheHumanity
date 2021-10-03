@@ -146,5 +146,7 @@ Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
 
     Route::resource('contact', 'Backend\ContactController');
     Route::resource('additionalcontact', 'Backend\AdditionalContactController', ['except' => ['create', 'store', 'destroy' , 'show']]);
+
+    Route::resource('footer', 'Backend\FooterController', ['except' => ['create', 'store', 'destroy' ]]);
 });
 
