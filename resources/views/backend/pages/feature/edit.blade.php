@@ -8,7 +8,7 @@ Update Data - Feature Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-12 d-flex justify-content-between">
-                <h1 class="m-0">Feature Seciton</h1>
+                <h1 class="m-0 lead">Update Feature Seciton</h1>
                 <a href="{{ route('feature.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -20,8 +20,13 @@ Update Data - Feature Section
             <div class="col-12">
                 <!-- /.card -->
                 <div class="card card-white">
-                    <div class="card-header">
-                      <h3 class="card-title text-dark strong"><strong>Update Data</strong></h3>
+                    <div class="card-header ">
+                        <div class="d-flex justify-content-between">
+                            <span class=" text-dark strong"><strong>Update Data</strong></span>
+
+                            <span class=" text-dark strong"><a href="https://fontawesome.com/v5.15/icons"><strong>Click me for select an Icon <i class="fas fa-toolbox"></i></strong> </a></span>
+                        </div>
+
                     </div>
                     <!-- /.card-header -->
                     <div class="row">

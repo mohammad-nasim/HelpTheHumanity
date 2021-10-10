@@ -131,7 +131,12 @@ class AboutUsController extends Controller
      */
     public function destroy($id)
     {
-        if(AboutUs::find($id)->delete()){
+        if($data = AboutUs::find($id)){
+
+            @unlink(public_path('backend/img/app_image/about_us/'.$data->image));
+
+            $data->delete();
+
             return redirect()->route('aboutus.index')->with('error','Data Deleted Successfully');
         }
     }

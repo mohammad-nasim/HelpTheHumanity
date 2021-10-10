@@ -35,18 +35,22 @@ Update Data - Footer Section
                             <label for="">Footer Text</label>
                             <input type="text" class="form-control" name="footer_text" id="" value="{{ $show->footer_text }}">
                           </div>
+
                           <div class="form-group">
                             <label for="">Link One</label>
                             <input type="text" class="form-control" name="link_one" id="" value="{{ $show->link_one }}">
                           </div>
+
                           <div class="form-group">
                             <label for="">Link Two</label>
                             <input type="text" class="form-control" name="link_two" id="" value="{{ $show->link_two }}">
                           </div>
+
                           <div class="form-group">
                             <label for="">Link Three</label>
                             <input type="text" class="form-control" name="link_three" id="" value="{{ $show->link_three }}">
                           </div>
+
                           <div class="form-group">
                             <label for="">Link Four</label>
                             <input type="text" class="form-control" name="link_four" id="" value="{{ $show->link_four }}">

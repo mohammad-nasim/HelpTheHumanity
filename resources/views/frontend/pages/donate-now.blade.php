@@ -14,13 +14,20 @@
         </ul>
     </div>
 </section>
-<div class="container-fluid">
-    <section class="donate-now" style="margin-bottom: 30px; margin-top: 20px">
+<div class="container">
+    <section class="donate-now" style="margin-bottom: 10px; margin-top: 40px">
+        <div class="section-header">
+            <h2>OUR NEWS</h2>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes.</p>
+        </div>
+        <!-- .section-header -->
         <div class="card text-center mb-5">
             <div class="card-header">
             </div>
             <div class="card-body">
-                <h2 class="card-title " style="padding:20px">Special title treatment</h2>
+                <h2 class="card-title " style="padding:0px">Special title treatment</h2>
+                <h5> Cause: <strong>General</strong></h5>
+                <div class="post-thumbnail py-5"><img src="img/blog-2.jpg" alt=""></div>
                 <p class="card-text text-center">With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus delectus pariatur ratione. Provident placeat dolorem quam ea officiis. Delectus repellendus consequuntur sit dicta, ea, in placeat cum ipsa dolore voluptatum deserunt dolores explicabo. Dolorem quo architecto quaerat molestias. Minima illum numquam velit enim dolore quibusdam consectetur minus rerum placeat perferendis aliquid adipisci neque maxime quos, iusto quod consequuntur veritatis vel quam, sequi porro. Iste, tempora nisi porro nesciunt dolor magni nemo doloribus cupiditate! Aut quos molestias sed qui minus a tenetur, quo nostrum laudantium veniam labore eius cumque praesentium dolores eaque esse quam illo cum quisquam inventore? Corrupti dicta officiis debitis. Ut cupiditate ullam voluptatum sequi eveniet suscipit assumenda. Perferendis corrupti recusandae totam similique, labore quam, neque eum amet, nulla incidunt eligendi ad iusto veritatis fugiat consequatur consectetur distinctio illo? Non, officiis ad! Minima, repellendus. Ducimus magnam alias eligendi laboriosam. Nemo, hic. Animi nam odit tempore quibusdam dignissimos voluptates aliquam reprehenderit eaque, quis rerum corporis magni, vel reiciendis in quam saepe expedita aperiam sequi illum aliquid sapiente voluptatum. Facilis, cumque! Distinctio ipsum rem, deleniti similique hic tempora, blanditiis beatae molestias suscipit labore corporis veniam recusandae culpa, soluta porro praesentium voluptatibus ullam amet voluptate ea! Error sint voluptates reiciendis illum voluptate.</p>
             </div>
             <div class="container">

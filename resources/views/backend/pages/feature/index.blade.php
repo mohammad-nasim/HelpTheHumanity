@@ -19,7 +19,7 @@ Data List - Features Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Features Section</h1>
+                <h1 class="m-0 lead">Features Section</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -49,7 +49,7 @@ Data List - Features Section
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th style="width: 10px">#</th>
+                                    <th style="width: 10px">SL</th>
                                     <th>Icon</th>
                                     <th>Title</th>
                                     <th>Image</th>

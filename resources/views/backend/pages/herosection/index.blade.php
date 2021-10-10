@@ -19,12 +19,12 @@ Data List - Hero Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Hero Section</h1>
+                <h1 class="m-0 lead">Hero Section</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('webhome') }}">Home</a></li>
-                    <li class="breadcrumb-item active">Hero Section</li>
+                    <li class="breadcrumb-item active ">Hero Section</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -39,7 +39,7 @@ Data List - Hero Section
                     <div class="card-header ">
                         <div class="d-flex justify-content-between ">
                             <h3 class="card-title"><strong>Data List</strong></h3>
-                            <a target="_self"  href="{{ route('herosection.create') }}" class="btn btn-primary">Create Data</a>
+                            {{-- <a target="_self"  href="{{ route('herosection.create') }}" class="btn btn-primary">Create Data</a> --}}
                         </div>
                     </div>
                     <!-- /.card-header -->
@@ -47,12 +47,12 @@ Data List - Hero Section
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th style="width: 10px">#</th>
+                                    <th style="width: 10px">SL</th>
                                     <th>Title</th>
                                     <th>Slogan One</th>
                                     <th>Slogan Two</th>
-                                    <th>Image One</th>
-                                    <th>Image Two</th>
+                                    <th>Background Image One</th>
+                                    <th>Background Image Two</th>
                                     <th style="width: 20px">Actions</th>
                                 </tr>
                             </thead>
@@ -62,7 +62,7 @@ Data List - Hero Section
                                     <td>{{ $key+1 }}</td>
                                     <td>{{ $data->title }}</td>
                                     <td>{{ substr($data->slogan_1, 0, 29) }}</td>
-                                    <td>{{ substr($data->slogan_1, 0, 29) }}</td>
+                                    <td>{{ $data->slogan_2 }}</td>
                                     <td>
                                         <img src="{{asset('backend/img/app_image/hero_section/'.$data->image_1)}}" style="width:60px;height:30px" alt="">
                                     </td>
@@ -75,7 +75,7 @@ Data List - Hero Section
                                         <a href="{{ route('herosection.edit',$data->id) }}" class="btn btn-sm btn-success fa fa-edit text-white mr-1"></a>
 
                                          {{-- <a href="{{ route('herosection.destroy', $data->id) }}" class="fa fa-trash text-danger"></a> --}}
-
+{{--
                                          <form action="{{ route('herosection.destroy', $data->id) }}" method="POST" >
                                             @csrf
                                             @method('DELETE')
@@ -85,7 +85,7 @@ Data List - Hero Section
                                             onclick="return confirm('Are you sure you want to delete this item')"">
                                                 <i class=" fa fa-trash text-white"></i>
                                             </button>
-                                        </form>
+                                        </form> --}}
                                     </td>
                                 </tr>
                                 @endforeach

@@ -9,7 +9,7 @@ View Single Data - About Us Section
     <div class="container-fluid">
         <div class="row mb-2 ">
             <div class="col-12 d-flex justify-content-between ">
-                <h1 class="m-0">View Data</h1>
+                <h1 class="m-0 lead">View About Us Data</h1>
                 <a href="{{ route('aboutus.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -35,7 +35,7 @@ View Single Data - About Us Section
                                     <td>{{ $show->title }}</td>
                                 </tr>
                                 <tr>
-                                    <th >Slider Image One : </th>
+                                    <th >Description : </th>
                                     <td>{{ $show->description }}</td>
                                 </tr>
                            </table>

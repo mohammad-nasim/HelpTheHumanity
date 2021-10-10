@@ -19,7 +19,7 @@ Data List - Additional Features Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0"></h1>
+                <h1 class="m-0 lead">Additional Features Section</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -40,9 +40,6 @@ Data List - Additional Features Section
                         <div class="d-flex justify-content-between ">
                             <h3 class="card-title"><strong>Data List</strong>
                             </h3>
-                            <a target="_self"  href="{{ route('additionalfeature.create') }}" class="btn btn-primary">
-                            <i class="fa fa-plus"></i>
-                                Create Feature</a>
                         </div>
                     </div>
                     <!-- /.card-header -->

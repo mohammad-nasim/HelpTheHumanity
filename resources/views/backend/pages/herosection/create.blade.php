@@ -9,8 +9,8 @@ Create Data - Hero Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-12 d-flex justify-content-between ">
-                <h1 class="m-0">View Title-Slogans & Slider Images</h1>
-                <a href="{{ route('herosection.index') }}" class="btn btn-primary">Back</a>
+                <h1 class="m-0"></h1>
+                <a href="{{ route('herosection.index') }}" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->

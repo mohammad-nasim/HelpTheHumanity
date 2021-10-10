@@ -9,7 +9,7 @@ Create Data - About Us Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-12 d-flex justify-content-between ">
-                <h1 class="m-0">Create About Data</h1>
+                <h1 class="m-0 lead">Create About Us Data</h1>
                 <a href="{{ route('aboutus.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i>  Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -22,7 +22,7 @@ Create Data - About Us Section
                 <!-- /.card -->
                 <div class="card card-white">
                     <div class="card-header">
-                      <h3 class="card-title text-dark strong"><strong>Insert About Data</strong></h3>
+                      <h3 class="card-title text-dark strong"><strong>Insert Data</strong></h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="row">

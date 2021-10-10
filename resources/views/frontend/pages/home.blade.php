@@ -456,7 +456,8 @@
         <div class="section-header">
             <h2>OUR NEWS</h2>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes.</p>
-        </div><!-- .section-header -->
+        </div>
+        <!-- .section-header -->
         <div class="row flex">
             <div class="col-sm-6">
                 <div class="post">

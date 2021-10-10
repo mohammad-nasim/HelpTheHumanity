@@ -114,6 +114,80 @@
                     <a href="#" class="nav-link ">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
+                            Payment Method
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('paymentmethod.index') }}" class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>All Data</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('additionalservice.index') }}" class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Addtional Services</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item ">
+                    <a href="#" class="nav-link ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Donate Now Section
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('donatenow.index') }}" class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Data List</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('additionaldonatenow.index') }}" class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Additional Section </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item ">
+                    <a href="#" class="nav-link ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Cause Section
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('cause.index') }}" class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Data List</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('additionaldonatenow.index') }}" class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Additional Section </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="#" class="nav-link ">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
                             Gallery Section
                             <i class="right fas fa-angle-left"></i>
                         </p>
@@ -267,7 +341,7 @@
                     <a href="#" class="nav-link ">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Contact Section
+                            Footer Section
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -275,11 +349,12 @@
                         <li class="nav-item">
                             <a href="{{ route('footer.index') }}" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Footer Section</p>
+                                <p>Footer Data</p>
                             </a>
                         </li>
                     </ul>
                 </li>
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

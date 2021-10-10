@@ -17,6 +17,7 @@ class HeroSectionController extends Controller
     public function index()
     {
         $this->data['alldata'] = HeroSection::all();
+        $this->data['hero'] = 'hero';
         return view('backend.pages.herosection.index', $this->data);
     }
 

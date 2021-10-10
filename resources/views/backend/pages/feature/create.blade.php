@@ -9,8 +9,8 @@ Create Data - Hero Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-12 d-flex justify-content-between ">
-                <h1 class="m-0">Create Features Data</h1>
-                <a href="{{ route('feature.index') }}" class="btn btn-primary"> <i class="fa fa-back" ></i> Back</a>
+                <h1 class="m-0 lead">Create Features Data</h1>
+                <a href="{{ route('feature.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
@@ -20,9 +20,13 @@ Create Data - Hero Section
         <div class="row">
             <div class="col-12">
                 <!-- /.card -->
-                <div class="card card-white">
+                <div class="card card-white ">
                     <div class="card-header">
-                      <h3 class="card-title text-dark strong"><strong>Insert Feature Data</strong></h3>
+                        <div class="d-flex justify-content-between">
+                            <span class=" text-dark strong"><strong>Insert Data</strong></span>
+
+                            <span class=" text-dark strong"><a href="https://fontawesome.com/v5.15/icons"><strong>Click me for select an Icon <i class="fas fa-toolbox"></i></strong> </a></span>
+                        </div>
                     </div>
                     <!-- /.card-header -->
                     <div class="row">

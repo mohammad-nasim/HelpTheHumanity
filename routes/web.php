@@ -148,5 +148,13 @@ Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
     Route::resource('additionalcontact', 'Backend\AdditionalContactController', ['except' => ['create', 'store', 'destroy' , 'show']]);
 
     Route::resource('footer', 'Backend\FooterController', ['except' => ['create', 'store', 'destroy' ]]);
+
+    Route::resource('donatenow', 'Backend\DonateNowController', ['except' => ['create', 'store', 'destroy' ]]);
+    Route::resource('additionaldonatenow', 'Backend\AdditionalDonateNowController', ['except' => ['create', 'store', 'destroy' ]]);
+
+    Route::resource('cause', 'Backend\CauseController');
+
+    Route::resource('paymentmethod', 'Backend\PaymentMethodController');
+
 });
 
