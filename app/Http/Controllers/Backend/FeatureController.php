@@ -15,7 +15,7 @@ class FeatureController extends Controller
      */
     public function index()
     {
-        $this->data['alldata'] = Feature::all();
+        $this->data['alldata'] = Feature::latest()->get();
         return view('backend.pages.feature.index', $this->data);
     }
 
@@ -40,7 +40,7 @@ class FeatureController extends Controller
         //dd($request->all());
 
         $data = Feature::create([
-            'icon'        => $request->title,
+            'icon'        => $request->icon,
             'title'       => $request->title,
             'description' => $request->description
         ]);

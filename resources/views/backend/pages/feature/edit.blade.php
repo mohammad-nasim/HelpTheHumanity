@@ -59,7 +59,7 @@ Update Data - Feature Section
                               <label for="">Description</label>
                               <div class="form-group">
                                <textarea name="description" class="form-control" id="" cols="30" rows="10">
-                                {{ $show->icon }}
+                                {{ $show->description }}
                                </textarea>
                               </div>
                           </div>

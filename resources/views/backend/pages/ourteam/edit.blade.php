@@ -8,7 +8,7 @@ Update Data - Our Team Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-12 d-flex justify-content-between">
-                <h1 class="m-0">Out Team Seciton</h1>
+                <h1 class="m-0 lead">Out Team Seciton</h1>
                 <a href="{{ route('ourteam.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->

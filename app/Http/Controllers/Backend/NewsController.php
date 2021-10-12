@@ -16,7 +16,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $this->data['alldata'] = News::all();
+        $this->data['alldata'] = News::latest()->get();
         return view('backend.pages.news.index', $this->data);
     }
 
@@ -71,9 +71,9 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        $this->data['show'] = Event::find($id);
+        $this->data['show'] = News::find($id);
 
-        return view('backend.pages.event.show', $this->data);
+        return view('backend.pages.news.show', $this->data);
     }
 
     /**
@@ -84,9 +84,9 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        $this->data['show'] = Event::find($id);
+        $this->data['show'] = News::find($id);
 
-        return view('backend.pages.event.edit', $this->data);
+        return view('backend.pages.news.edit', $this->data);
     }
 
     /**
@@ -98,33 +98,31 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = Event::find($id);
+        $data = News::find($id);
 
         if($request->file('image')){
 
             $data->title           = $request->title;
-            $data->date            = $request->date;
             $data->description     = $request->description;
 
 
             $file = $request->file('image');
-            @unlink(public_path('backend/img/app_image/event/'.$data->image));
+            @unlink(public_path('backend/img/app_image/news/'.$data->image));
             $file_name = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('backend/img/app_image/event'), $file_name);
+            $file->move(public_path('backend/img/app_image/news/'), $file_name);
             $data->image = $file_name;
 
         }
         else{
 
             $data->title            = $request->title;
-            $data->date             = $request->date;
             $data->description      = $request->description;
         }
 
         if($data->save()){
             //Session::flash('Success', 'Data Insert Successful');
 
-            return redirect()->route('event.index')->with('message','Data Updated Successfully');
+            return redirect()->route('news.index')->with('message','Data Updated Successfully');
         }
     }
 
@@ -136,13 +134,13 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        if($data = Event::find($id)){
+        if($data = News::find($id)){
 
-            @unlink(public_path('backend/img/app_image/event/'.$data->image));
+            @unlink(public_path('backend/img/app_image/news/'.$data->image));
 
             $data->delete();
 
-            return redirect()->route('event.index')->with('error','Data Deleted Successfully');
+            return redirect()->route('news.index')->with('error','Data Deleted Successfully');
         }
     }
 }

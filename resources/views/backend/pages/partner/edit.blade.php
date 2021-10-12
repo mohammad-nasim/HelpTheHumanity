@@ -8,7 +8,7 @@ Update Data - Partners
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-12 d-flex justify-content-between">
-                <h1 class="m-0"></h1>
+                <h1 class="m-0 lead">Update Partner's logo</h1>
                 <a href="{{ route('partner.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -30,7 +30,7 @@ Update Data - Partners
                     <form action="{{ route('partner.update', $show->id) }}" method="post" enctype="multipart/form-data" id="form-id">
                         @csrf
                         @method('put')
-                        <div class="form-group">
+                        <div class="form-group mb-5">
                             <div class="mb-4">
                                 <label for="">Background Image</label><br>
                                 <img src="{{asset('backend/img/app_image/partner/'.$show->bg_image)}}" style="width:360px;height:180px" alt="">
@@ -45,7 +45,7 @@ Update Data - Partners
                             <div class="col-md-6 ">
                                 <div class="form-group  ">
                                     <div class="mb-4 ">
-                                        <label for="">Previous Image 1</label><br>
+                                        <label for="">Previous Logo 1</label><br>
                                         <img src="{{asset('backend/img/app_image/partner/'.$show->image_one)}}" style="width:310px;height:180px" alt="">
                                     </div>
                                     <div class="form-group">
@@ -57,7 +57,7 @@ Update Data - Partners
                             <div class="col-md-6 ">
                                 <div class="form-group">
                                     <div class="mb-4 ml-1 ">
-                                        <label for="">Previous Image 2</label><br>
+                                        <label for="">Previous Logo 2</label><br>
                                         <img src="{{asset('backend/img/app_image/partner/'.$show->image_two)}}" style="width:310px;height:180px" alt="">
                                     </div>
                                     <div class="form-group">
@@ -71,7 +71,7 @@ Update Data - Partners
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="mb-4 ">
-                                        <label for="">Previous Image 3</label><br>
+                                        <label for="">Previous Logo 3</label><br>
                                         <img src="{{asset('backend/img/app_image/partner/'.$show->image_three)}}" style="width:310px;height:180px" alt="">
                                     </div>
                                     <div class="form-group">
@@ -83,7 +83,7 @@ Update Data - Partners
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <div class="mb-4 ml-1">
-                                        <label for="">Previous Image 4</label><br>
+                                        <label for="">Previous Logo 4</label><br>
                                         <img src="{{asset('backend/img/app_image/partner/'.$show->image_four)}}" style="width:310px;height:180px" alt="">
                                     </div>
                                     <div class="form-group">

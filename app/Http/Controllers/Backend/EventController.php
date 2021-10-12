@@ -16,7 +16,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $this->data['alldata'] = Event::all();
+        $this->data['alldata'] = Event::latest()->get();
         return view('backend.pages.event.index', $this->data);
     }
 

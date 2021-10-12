@@ -1,7 +1,7 @@
 @extends('backend.master')
 
 @section('title')
-View Single Data - Event Section
+View Single Data - News Section
 @endsection
 
 @section('content')
@@ -9,8 +9,8 @@ View Single Data - Event Section
     <div class="container-fluid">
         <div class="row mb-2 ">
             <div class="col-12 d-flex justify-content-between ">
-                <h1 class="m-0">View Event</h1>
-                <a href="{{ route('event.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
+                <h1 class="m-0 lead">View News Data</h1>
+                <a href="{{ route('news.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
@@ -27,7 +27,7 @@ View Single Data - Event Section
                                 <tr>
                                     <th >Image : </th>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/event/'.$show->image)}}" style="width:230px;height:150px" alt="">
+                                        <img src="{{asset('backend/img/app_image/news/'.$show->image)}}" style="width:230px;height:150px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
@@ -36,7 +36,8 @@ View Single Data - Event Section
                                 </tr>
                                 <tr>
                                     <th >Date : </th>
-                                    <td>{{ $show->date }}</td>
+                                    <td>{{ Carbon\Carbon::parse( $show->post_time )->toFormattedDateString() }}
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th >Description : </th>

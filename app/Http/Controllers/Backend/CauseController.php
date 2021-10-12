@@ -16,7 +16,7 @@ class CauseController extends Controller
      */
     public function index()
     {
-        $this->data['alldata'] = Cause::all();
+        $this->data['alldata'] = Cause::latest()->get();
         return view('backend.pages.cause.index', $this->data);
     }
 

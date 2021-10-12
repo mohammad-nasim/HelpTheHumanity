@@ -133,6 +133,7 @@ Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
 
     Route::resource('funfactor', 'Backend\FunFactorController', ['except' => ['create', 'store', 'destroy' ]]);
 
+
     Route::resource('ourteam', 'Backend\OurTeamController');
     Route::resource('additionalourteam', 'Backend\AdditionalOurTeamController', ['except' => ['create', 'store', 'destroy' ]]);
 

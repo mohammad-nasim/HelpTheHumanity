@@ -16,7 +16,7 @@ class HeroSectionController extends Controller
      */
     public function index()
     {
-        $this->data['alldata'] = HeroSection::all();
+        $this->data['alldata'] = HeroSection::latest()->get();
         $this->data['hero'] = 'hero';
         return view('backend.pages.herosection.index', $this->data);
     }
@@ -28,7 +28,7 @@ class HeroSectionController extends Controller
      */
     public function create()
     {
-        return view('backend.pages.herosection.create');
+
     }
 
     /**
@@ -39,39 +39,7 @@ class HeroSectionController extends Controller
      */
     public function store(Request $request)
     {
-        // $this->validate($request, [
-        //     'title' => 'unique:hero_sections,title'
-        // ]);
 
-        //dd($request->all());
-
-        $data = HeroSection::create([
-            'title'    => $request->title,
-            'slogan_1' => $request->slogan_1,
-            'slogan_2' => $request->slogan_2,
-            'image_1'  => $request->image_1,
-            'image_2'  => $request->image_2
-        ]);
-
-        if($request->has('image_1')){
-            $image = $request->image_1;
-            $image_new_name = date('YmdHi').$image->getClientOriginalName();
-            $image->move(public_path('backend/img/app_image/hero_section'), $image_new_name);
-            $data->image_1 = $image_new_name;
-        }
-
-        if($request->has('image_2')){
-            $image = $request->image_2;
-            $image_new_name = date('YmdHi').$image->getClientOriginalName();
-            $image->move(public_path('backend/img/app_image/hero_section'), $image_new_name);
-            $data->image_2 = $image_new_name;
-        }
-
-        if($data->save()){
-            //Session::flash('Success', 'Data Insert Successful');
-
-            return redirect()->route('herosection.index')->with('message','Data added Successfully');
-        }
 
     }
 
@@ -180,15 +148,6 @@ class HeroSectionController extends Controller
      */
     public function destroy($id)
     {
-        if($data = HeroSection::find($id)){
 
-            @unlink(public_path('backend/img/app_image/hero_section/'.$data->image_1));
-
-            @unlink(public_path('backend/img/app_image/hero_section/'.$data->image_2));
-
-            $data->delete();
-
-            return redirect()->route('herosection.index')->with('error','Data Deleted Successfully');
-        }
     }
 }

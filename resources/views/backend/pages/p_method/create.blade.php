@@ -9,7 +9,7 @@ Create Data - Payment Method
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-12 d-flex justify-content-between ">
-                <h1 class="m-0">Nasim</h1>
+                <h1 class="m-0 lead">Create Payment Method</h1>
                 <a href="{{ route('paymentmethod.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->

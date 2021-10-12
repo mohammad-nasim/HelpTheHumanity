@@ -15,7 +15,7 @@ class AboutUsController extends Controller
      */
     public function index()
     {
-        $this->data['alldata'] = AboutUs::all();
+        $this->data['alldata'] = AboutUs::latest()->get();
         return view('backend.pages.aboutus.index', $this->data);
     }
 

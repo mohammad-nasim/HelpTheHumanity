@@ -9,7 +9,7 @@ Add Images - Gallery Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-12 d-flex justify-content-between ">
-                <h1 class="m-0"></h1>
+                <h1 class="m-0 lead">Upload Your Pictures</h1>
                 <a href="{{ route('gallery.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left" ></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->

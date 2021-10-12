@@ -16,7 +16,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $this->data['alldata'] = Service::all();
+        $this->data['alldata'] = Service::latest()->get();
         return view('backend.pages.service.index', $this->data);
     }
 
@@ -41,7 +41,7 @@ class ServiceController extends Controller
         //dd($request->image);
 
         $data = Service::create([
-            'icon'        => $request->title,
+            'icon'        => $request->icon,
             'title'       => $request->title,
             'description' => $request->description
         ]);

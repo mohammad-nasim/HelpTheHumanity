@@ -9,7 +9,7 @@ View Single Data - Partners
     <div class="container-fluid">
         <div class="row mb-2 ">
             <div class="col-12 d-flex justify-content-between ">
-                <h1 class="m-0">View Additiona Data</h1>
+                <h1 class="m-0 lead">View Partner's Logo</h1>
                 <a href="{{ route('partner.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -31,25 +31,25 @@ View Single Data - Partners
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Image One : </th>
+                                    <th >Logo One : </th>
                                     <td>
                                         <img src="{{asset('backend/img/app_image/partner/'.$show->image_one)}}" style="width:230px;height:150px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Image Two : </th>
+                                    <th >Logo Two : </th>
                                     <td>
                                         <img src="{{asset('backend/img/app_image/partner/'.$show->image_two)}}" style="width:230px;height:150px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Image Three : </th>
+                                    <th >Logo Three : </th>
                                     <td>
                                         <img src="{{asset('backend/img/app_image/partner/'.$show->image_three)}}" style="width:230px;height:150px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Image Four : </th>
+                                    <th >Logo Four : </th>
                                     <td>
                                         <img src="{{asset('backend/img/app_image/partner/'.$show->image_four)}}" style="width:230px;height:150px" alt="">
                                     </td>

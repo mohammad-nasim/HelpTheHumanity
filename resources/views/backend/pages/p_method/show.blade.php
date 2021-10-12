@@ -9,7 +9,7 @@ View Single Data - Payment Method Section
     <div class="container-fluid">
         <div class="row mb-2 ">
             <div class="col-12 d-flex justify-content-between ">
-                <h1 class="m-0">View Payment Mehtod</h1>
+                <h1 class="m-0 lead">View Payment Mehtod Data</h1>
                 <a href="{{ route('paymentmethod.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->

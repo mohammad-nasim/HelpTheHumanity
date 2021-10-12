@@ -16,7 +16,10 @@ class FunFactorController extends Controller
      */
     public function index()
     {
+        $id = 1;
+
         $this->data['alldata'] = FunFactor::all();
+        $this->data['bgimg'] = FunFactor::where('id', $id)->first();
         return view('backend.pages.funfactor.index', $this->data);
     }
 
@@ -106,6 +109,11 @@ class FunFactorController extends Controller
 
             return redirect()->route('funfactor.index')->with('message','Data Updated Successfully');
         }
+    }
+
+
+    public function imgedit(Request $request, $id){
+        dd('hi');
     }
 
     /**

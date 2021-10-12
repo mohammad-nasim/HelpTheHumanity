@@ -19,12 +19,12 @@ Data List - News Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">News Section</h1>
+                <h1 class="m-0 lead">News Section</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('webhome') }}">Home</a></li>
-                    <li class="breadcrumb-item active">Event Section</li>
+                    <li class="breadcrumb-item active">News Section</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -53,7 +53,7 @@ Data List - News Section
                                     <th>Title</th>
                                     <th>Image</th>
                                     <th>Description</th>
-                                    <th>Date</th>
+                                    <th>Created At</th>
                                     <th style="width: 20px">Actions</th>
                                 </tr>
                             </thead>
@@ -67,7 +67,7 @@ Data List - News Section
                                     </td>
                                     <td>{{ $data->description }}</td>
 
-                                    <td>{{ Carbon\Carbon::parse( $data->created_at )->toFormattedDateString() }}
+                                    <td>{{ Carbon\Carbon::parse( $data->post_time )->toFormattedDateString() }}
                                     </td>
 
                                     <td class="d-flex" style="width: 120px">
