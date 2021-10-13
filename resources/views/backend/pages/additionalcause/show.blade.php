@@ -1,7 +1,7 @@
 @extends('backend.master')
 
 @section('title')
-View Single Data - Additional Services
+View Single Data - Additional Cause
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@ View Single Data - Additional Services
         <div class="row mb-2 ">
             <div class="col-12 d-flex justify-content-between ">
                 <h1 class="m-0 lead">View Additiona Data</h1>
-                <a href="{{ route('additionalservice.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
+                <a href="{{ route('additionalcause.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
@@ -27,16 +27,12 @@ View Single Data - Additional Services
                                 <tr>
                                     <th >Image : </th>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/add_service/'.$show->cover_image)}}" style="width:230px;height:150px" alt="">
+                                        <img src="{{asset('backend/img/app_image/add_cause/'.$show->cover_image)}}" style="width:230px;height:150px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th >Title : </th>
                                     <td>{{ $show->title }}</td>
-                                </tr>
-                                <tr>
-                                    <th >Description : </th>
-                                    <td>{{ $show->description }}</td>
                                 </tr>
                            </table>
                         </div>

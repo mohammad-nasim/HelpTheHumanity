@@ -8,7 +8,7 @@ Update Data - Additional Gallery
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-12 d-flex justify-content-between">
-                <h1 class="m-0"></h1>
+                <h1 class="m-0 lead">Update Addtional Data</h1>
                 <a href="{{ route('additionalgallery.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -38,7 +38,7 @@ Update Data - Additional Gallery
                           <div class="form-group">
                             <div class="mb-4">
                                 <label for="">Previous Image</label><br>
-                                <img src="{{asset('backend/img/app_image/add_service/'.$show->cover_image)}}" style="width:360px;height:180px" alt="">
+                                <img src="{{asset('backend/img/app_image/add_gallery/'.$show->cover_image)}}" style="width:360px;height:180px" alt="">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlFile1">Update Image </label>

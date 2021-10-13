@@ -19,7 +19,7 @@ Data List - Additional Service Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0"></h1>
+                <h1 class="m-0 lead">Addtional Service Section</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -54,7 +54,7 @@ Data List - Additional Service Section
                                 <tr>
                                     <th style="width: 10px">SL</th>
                                     <th>Title</th>
-                                    <th>Image</th>
+                                    <th>Cover Image</th>
                                     <th>Description</th>
                                     <th style="width: 20px">Actions</th>
                                 </tr>

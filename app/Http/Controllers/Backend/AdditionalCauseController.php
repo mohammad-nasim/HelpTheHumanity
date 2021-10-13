@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\AdditionalNews;
+use App\AdditionalCause;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AdditionalNewsController extends Controller
+class AdditionalCauseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class AdditionalNewsController extends Controller
      */
     public function index()
     {
-        $this->data['alldata'] = AdditionalNews::all();
-        return view('backend.pages.additionalnews.index', $this->data);
+        $this->data['alldata'] = AdditionalCause::all();
+        return view('backend.pages.additionalcause.index', $this->data);
     }
 
     /**
@@ -49,9 +49,9 @@ class AdditionalNewsController extends Controller
      */
     public function show($id)
     {
-        $this->data['show'] = AdditionalNews::find($id);
+        $this->data['show'] = AdditionalCause::find($id);
 
-        return view('backend.pages.additionalnews.show', $this->data);
+        return view('backend.pages.additionalcause.show', $this->data);
     }
 
     /**
@@ -62,9 +62,9 @@ class AdditionalNewsController extends Controller
      */
     public function edit($id)
     {
-        $this->data['show'] = AdditionalNews::find($id);
+        $this->data['show'] = AdditionalCause::find($id);
 
-        return view('backend.pages.additionalnews.edit', $this->data);
+        return view('backend.pages.additionalcause.edit', $this->data);
     }
 
     /**
@@ -76,7 +76,7 @@ class AdditionalNewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = AdditionalNews::find($id);
+        $data = AdditionalCause::find($id);
 
         if($request->file('image')){
 
@@ -84,10 +84,10 @@ class AdditionalNewsController extends Controller
 
             $file = $request->file('image');
 
-            @unlink(public_path('backend/img/app_image/add_news/'.$data->cover_image));
+            @unlink(public_path('backend/img/app_image/add_cause/'.$data->cover_image));
 
             $file_name = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('backend/img/app_image/add_news'), $file_name);
+            $file->move(public_path('backend/img/app_image/add_cause'), $file_name);
 
             $data->cover_image = $file_name;
 
@@ -99,7 +99,7 @@ class AdditionalNewsController extends Controller
         if($data->save()){
             //Session::flash('Success', 'Data Insert Successful');
 
-            return redirect()->route('additionalnews.index')->with('message','Data Updated Successfully');
+            return redirect()->route('additionalcause.index')->with('message','Data Updated Successfully');
         }
     }
 

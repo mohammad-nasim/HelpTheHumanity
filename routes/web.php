@@ -154,6 +154,7 @@ Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
     Route::resource('additionaldonatenow', 'Backend\AdditionalDonateNowController', ['except' => ['create', 'store', 'destroy' ]]);
 
     Route::resource('cause', 'Backend\CauseController');
+    Route::resource('additionalcause', 'Backend\AdditionalCauseController', ['except' => ['create', 'store', 'destroy' ]]);
 
     Route::resource('paymentmethod', 'Backend\PaymentMethodController');
 

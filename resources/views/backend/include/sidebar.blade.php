@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="{{ url('admin/dashboard') }}" class="brand-link">
         <img src="{{asset('backend/img/app_image/logo/logo.png')}}" alt="AdminLTE Logo"
             class="brand-image img-circle elevation-3" style="opacity: .8">
 
@@ -59,7 +59,7 @@
                         <li class="nav-item">
                             <a href="{{ route('additionalfeature.index') }}" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Additional Features</p>
+                                <p>Additional Section</p>
                             </a>
                         </li>
                     </ul>
@@ -105,7 +105,7 @@
                         <li class="nav-item">
                             <a href="{{ route('additionalservice.index') }}" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Addtional Services</p>
+                                <p>Addtional Section</p>
                             </a>
                         </li>
                     </ul>
@@ -123,12 +123,6 @@
                             <a href="{{ route('paymentmethod.index') }}" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>All Data</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('additionalservice.index') }}" class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Addtional Services</p>
                             </a>
                         </li>
                     </ul>
@@ -176,7 +170,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('additionaldonatenow.index') }}" class="nav-link ">
+                            <a href="{{ route('additionalcause.index') }}" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Additional Section </p>
                             </a>
@@ -202,7 +196,7 @@
                         <li class="nav-item">
                             <a href="{{ route('additionalgallery.index') }}" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Addtional Services</p>
+                                <p>Addtional Section</p>
                             </a>
                         </li>
                     </ul>
@@ -265,7 +259,7 @@
                         <li class="nav-item">
                             <a href="{{ route('additionalevent.index') }}" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Addtional Event</p>
+                                <p>Addtional Section</p>
                             </a>
                         </li>
                     </ul>
@@ -307,7 +301,7 @@
                         <li class="nav-item">
                             <a href="{{ route('additionalnews.index') }}" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Additional News Data </p>
+                                <p>Additional Section </p>
                             </a>
                         </li>
                     </ul>
@@ -325,14 +319,6 @@
                             <a href="{{ route('contact.index') }}" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Contact Details</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('additionalcontact.index') }}" class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Additional Contact </p>
                             </a>
                         </li>
                     </ul>

@@ -1,7 +1,7 @@
 @extends('backend.master')
 
 @section('title')
-Update Data - Additional Event
+Update Data - Additional Cause
 @endsection
 @section('content')
 <div class="content-header">
@@ -9,7 +9,7 @@ Update Data - Additional Event
         <div class="row mb-2">
             <div class="col-12 d-flex justify-content-between">
                 <h1 class="m-0 lead">Update Addtional Data</h1>
-                <a href="{{ route('additionalevent.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
+                <a href="{{ route('additionalcause.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
@@ -27,7 +27,7 @@ Update Data - Additional Event
                     <div class="row">
                         <div class="col-12 col-md-8 col-md-6 offset-lg-2 offset-md-2">
                     <!-- form start -->
-                    <form action="{{ route('additionalevent.update', $show->id) }}" method="post" enctype="multipart/form-data" id="form-id">
+                    <form action="{{ route('additionalcause.update', $show->id) }}" method="post" enctype="multipart/form-data" id="form-id">
                         @csrf
                         @method('put')
                         <div class="card-body">
@@ -38,7 +38,7 @@ Update Data - Additional Event
                           <div class="form-group">
                             <div class="mb-4">
                                 <label for="">Previous Image</label><br>
-                                <img src="{{asset('backend/img/app_image/add_event/'.$show->cover_image)}}" style="width:360px;height:180px" alt="">
+                                <img src="{{asset('backend/img/app_image/add_cause/'.$show->cover_image)}}" style="width:360px;height:180px" alt="">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlFile1">Update Image </label>

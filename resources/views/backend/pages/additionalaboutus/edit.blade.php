@@ -1,14 +1,14 @@
 @extends('backend.master')
 
 @section('title')
-Update Data - Additional Feature Section
+Update Data - Additional About Us Section
 @endsection
 @section('content')
 <div class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-12 d-flex justify-content-between">
-                <h1 class="m-0"></h1>
+                <h1 class="m-0 lead">Update Addtional Data</h1>
                 <a href="{{ route('additionalaboutus.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -38,7 +38,7 @@ Update Data - Additional Feature Section
                           <div class="form-group">
                             <div class="mb-4">
                                 <label for="">Previous Image</label><br>
-                                <img src="{{asset('backend/img/app_image/add_feature_section/'.$show->cover_image)}}" style="width:360px;height:180px" alt="">
+                                <img src="{{asset('backend/img/app_image/add_about_us/'.$show->cover_image)}}" style="width:360px;height:180px" alt="">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlFile1">Update Image </label>

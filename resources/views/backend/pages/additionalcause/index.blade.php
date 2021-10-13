@@ -1,7 +1,7 @@
 @extends('backend.master')
 
 @section('title')
-Data List - Additional About Section
+Data List - Additional Cause Section
 @endsection
 
 @section('css')
@@ -19,12 +19,12 @@ Data List - Additional About Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 lead">Addtion About Us Section</h1>
+                <h1 class="m-0 lead">Additional Cause Section</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('webhome') }}">Home</a></li>
-                    <li class="breadcrumb-item active">Additional About Section</li>
+                    <li class="breadcrumb-item active">Additional Cause Section</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -41,7 +41,7 @@ Data List - Additional About Section
                             <h3 class="card-title"><strong>Data List</strong>
                             </h3>
                             @foreach ( $alldata as $key => $data )
-                            <a target="_self"  href="{{ route('additionalaboutus.edit',$data->id) }}" class="btn btn-success">
+                            <a target="_self"  href="{{ route('additionalcause.edit',$data->id) }}" class="btn btn-success">
                             <i class="fa fa-plus"></i>
                                 Update Data</a>
                             @endforeach
@@ -54,8 +54,7 @@ Data List - Additional About Section
                                 <tr>
                                     <th style="width: 10px">SL</th>
                                     <th>Title</th>
-                                    <th>Image</th>
-                                    <th>Description</th>
+                                    <th>Cover Image</th>
                                     <th style="width: 20px">Actions</th>
                                 </tr>
                             </thead>
@@ -65,12 +64,11 @@ Data List - Additional About Section
                                     <td>{{ $key+1 }}</td>
                                     <td>{{ $data->title }}</td>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/add_about_us/'.$data->cover_image)}}" style="width:60px;height:30px" alt="">
+                                        <img src="{{asset('backend/img/app_image/add_cause/'.$data->cover_image)}}" style="width:60px;height:30px" alt="">
                                     </td>
-                                    <td>{{ $data->description }}</td>
+
                                     <td class="d-flex" style="width: 120px">
-                                        <a href="{{ route('additionalaboutus.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1">
-                                        </a>
+                                        <a href="{{ route('additionalcause.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
                                     </td>
                                 </tr>
                                 @endforeach
