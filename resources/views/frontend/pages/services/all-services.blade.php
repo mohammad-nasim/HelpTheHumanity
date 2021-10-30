@@ -43,7 +43,7 @@
             <img class="card-img-top" src="{{asset('backend/img/app_image/service/'.$data->image)}}" alt="Card image cap">
             <div class="card-body " style="padding-top: 20px">
                 <h5 class="card-title ">{{ $data->title }}</h5>
-                <p class="card-text">{{ $data->description }}</p>
+                <p class="card-text">{{ \Illuminate\Support\Str::limit($data->description, 260)  }}</p>
             </div>
             <div class="button mt-3">
                 <a href="{{ route('service', $data->id) }}" class="btn btn-primary">Read Service</a>

@@ -156,13 +156,13 @@
                             <span>{{ $cause_data->target }} Tk</span>
                         </div>
                     </div><!-- .donate-status -->
-                    <a href="#" class="t-btn t-btn-ex-small">DONATE NOW</a>
+                    <a href="{{ route('cause', $cause_data->id) }}" class="t-btn t-btn-ex-small">DONATE NOW</a>
                 </div>
             </div><!-- .col -->
             @endforeach
         </div>
         <div class="hero-btn-group pt-5">
-            <a href="" class="t-btn donate-btn">All Causes</a>
+            <a href="{{ route('all-cause') }}" class="t-btn donate-btn">All Causes</a>
         </div>
     </div>
 </section>

@@ -6,11 +6,23 @@
 
 @section('content')
 <div class="content">
-    <section class="other-hero mb-4">
+    <section class="other-hero mb-4" style="
+    background-color: #000;
+    background-image:url({{asset('backend/img/app_image/add_cause/'.$add_cause->cover_image)}});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 290px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;">
         <div class="container other-hero-text">
-            <h1>All Causes</h1>
+            <h1></h1>
             <ul class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{{ route('webhome') }}">Home</a></li>
                 <li>All Causes</li>
             </ul>
         </div>
@@ -19,45 +31,25 @@
     <div class="container mt-5" style="padding-top: 30px">
         <div class="section-header ">
             <h2>Important Causes</h2>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                rem aperiam, eaque ipsa quaes.</p>
+            <p>{{ $add_cause->title }}</p>
         </div><!-- .section-header -->
     </div>
 
     <div class="container" style="padding-top: 30px; margin-bottom: 30px ">
+        @foreach ($allcause as $data )
         <div class="card mb-3 " style="margin: 0 auto; margin-bottom:30px">
-            <img class="card-img-top" src="img/gallary-4.jpg" alt="Card image cap">
+            <img class="card-img-top" src="{{asset('backend/img/app_image/cause/'.$data->image)}}" alt="Card image cap">
             <div class="card-body " style="padding-top: 20px">
-                <h5 class="card-title ">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
+                <h5 class="card-title ">{{ $data->cause }}</h5>
+                <p class="card-text">{{ \Illuminate\Support\Str::limit($data->description, 260)  }}</p>
             </div>
             <div class="button mt-3">
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="{{ route('cause', $data->id) }}" class="btn btn-primary">Read Cause</a>
             </div>
         </div>
-        <div class="card mb-3" style="margin-bottom:30px">
-            <img class="card-img-top" src="img/gallary-4.jpg" alt="Card image cap">
-            <div class="card-body" style="padding-top: 20px; ">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-            </div>
-            <div class="button mt-3">
-                <a href="#" class="btn btn-primary">Go Nasimwhere</a>
-            </div>
-        </div>
-        <div class="card mb-3">
-            <img class="card-img-top" src="img/gallary-4.jpg" alt="Card image cap">
-            <div class="card-body" style="padding-top: 20px">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-            </div>
-            <div class="button mt-3">
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
+        @endforeach
+
+        <span>{{ $allcause->links() }}</span>
     </div>
 </div>
 @endsection

@@ -40,6 +40,13 @@ Route::get('/service/{id}', 'Frontend\ServiceController@singleservice')->name('s
 //Donate-Now Controller
 Route::get('/donate-now', 'Frontend\DonateNowController@donatenow')->name('donate-now');
 
+//Cause Controller Controller
+Route::get('/all-cause', 'Frontend\CauseController@allcause')->name('all-cause');
+Route::get('/cause/{id}', 'Frontend\CauseController@singlecause')->name('cause');
+
+
+
+
 Route::get('/gallery', function () {
     return view('frontend.pages.gallery');
 });
@@ -47,13 +54,7 @@ Route::get('/gallery', function () {
 
 
 //subfolders - services
-Route::get('/all-services', function () {
-    return view('frontend.pages.services.all-services');
-});
 
-Route::get('/service', function () {
-    return view('frontend.pages.services.service');
-});
 
 //subfolders - news
 Route::get('/all-news', function () {
@@ -65,13 +66,7 @@ Route::get('/news', function () {
 });
 
 //subfolders - features
-// Route::get('/all-features', function () {
-//     return view('frontend.pages.features.all-features');
-// });
 
-Route::get('/feature', function () {
-    return view('frontend.pages.features.feature');
-});
 
 //subfolders - events
 Route::get('/all-events', function () {
@@ -82,14 +77,7 @@ Route::get('/event', function () {
     return view('frontend.pages.events.event');
 });
 
-//subfolders - causes
-Route::get('/all-causes', function () {
-    return view('frontend.pages.causes.all-causes');
-});
 
-Route::get('/cause', function () {
-    return view('frontend.pages.causes.cause');
-});
 
 //Our Team
 Route::get('/ourteam', function(){
