@@ -38,6 +38,10 @@ View Single Data - Additional About Us
                                     <th >Description : </th>
                                     <td>{{ $show->description }}</td>
                                 </tr>
+                                <tr>
+                                    <th >Video Link : </th>
+                                    <td>{{ $show->video_link }}</td>
+                                </tr>
                            </table>
                         </div>
                     </div>

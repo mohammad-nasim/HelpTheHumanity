@@ -24,9 +24,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 /// Frontend Controllers ////////////////////////////////////////////////////
 
-Route::get('/', function () {
-    return view('frontend.pages.home');
-})->name('webhome');
+Route::get('/', 'Frontend\FrontendController@index')->name('webhome');
+
+//Feature Section
+Route::get('/all-feature', 'Frontend\FeatureController@allfeature')->name('allfeature');
+Route::get('/feature/{id}', 'Frontend\FeatureController@singlefeature')->name('feature');
+
 
 Route::get('/gallery', function () {
     return view('frontend.pages.gallery');
@@ -59,9 +62,9 @@ Route::get('/news', function () {
 });
 
 //subfolders - features
-Route::get('/all-features', function () {
-    return view('frontend.pages.features.all-features');
-});
+// Route::get('/all-features', function () {
+//     return view('frontend.pages.features.all-features');
+// });
 
 Route::get('/feature', function () {
     return view('frontend.pages.features.feature');
@@ -158,5 +161,12 @@ Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
 
     Route::resource('paymentmethod', 'Backend\PaymentMethodController');
 
+    //Profile Controller
+    Route::get('profile', 'Backend\ProfileController@index')->name('profile.index');
+    Route::get('create-admin', 'Backend\ProfileController@create')->name('profile.create');
+    Route::post('store', 'Backend\ProfileController@store')->name('profile.store');
+    Route::get('edit-admin/{id}', 'Backend\ProfileController@edit')->name('profile.edit');
+    Route::post('update-admin/{id}', 'Backend\ProfileController@update')->name('profile.update');
+    Route::get('delete-admin/{id}', 'Backend\ProfileController@delete')->name('profile.delete');
 });
 

@@ -54,8 +54,9 @@ Data List - Additional About Section
                                 <tr>
                                     <th style="width: 10px">SL</th>
                                     <th>Title</th>
-                                    <th>Image</th>
+                                    <th>Cover Image</th>
                                     <th>Description</th>
+                                    <th>Video Link</th>
                                     <th style="width: 20px">Actions</th>
                                 </tr>
                             </thead>
@@ -68,6 +69,7 @@ Data List - Additional About Section
                                         <img src="{{asset('backend/img/app_image/add_about_us/'.$data->cover_image)}}" style="width:60px;height:30px" alt="">
                                     </td>
                                     <td>{{ $data->description }}</td>
+                                    <td>{{ $data->video_link }}</td>
                                     <td class="d-flex" style="width: 120px">
                                         <a href="{{ route('additionalaboutus.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1">
                                         </a>

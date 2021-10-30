@@ -37,4 +37,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function selectRole(){
+
+        $all_data = User::all();
+        $arr = [];
+
+        foreach($all_data as $data){
+            $arr[$data->id] = $data->role;
+        }
+
+        return $arr;
+    }
 }

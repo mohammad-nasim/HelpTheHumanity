@@ -54,6 +54,12 @@ Update Data - Additional About Us Section
                                </textarea>
                               </div>
                           </div>
+
+                          <div class="form-group">
+                            <label for="">Video Link</label>
+                            <input type="text" class="form-control" id="" name="video_link" value="{{ $show->video_link }}">
+                          </div>
+
                         </div>
                         <!-- /.card-body -->
 
