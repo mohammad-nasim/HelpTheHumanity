@@ -7,7 +7,7 @@
           </a> -->
             <!-- For Site Title -->
             <span class="site-title">
-                <a href="index.html">H</a>
+                <a href="{{ route('webhome') }}">H</a>
             </span>
         </div>
         <nav class="primary-nav">

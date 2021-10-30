@@ -26,22 +26,25 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'Frontend\FrontendController@index')->name('webhome');
 
-//Feature Section
+//Feature Controller
 Route::get('/all-feature', 'Frontend\FeatureController@allfeature')->name('allfeature');
 Route::get('/feature/{id}', 'Frontend\FeatureController@singlefeature')->name('feature');
 
+//About-Us Controller
+Route::get('/about-us', 'Frontend\AboutUsController@aboutus')->name('about-us');
+
+//Service Controller
+Route::get('/all-service', 'Frontend\ServiceController@allservice')->name('allservice');
+Route::get('/service/{id}', 'Frontend\ServiceController@singleservice')->name('service');
+
+//Donate-Now Controller
+Route::get('/donate-now', 'Frontend\DonateNowController@donatenow')->name('donate-now');
 
 Route::get('/gallery', function () {
     return view('frontend.pages.gallery');
 });
 
-Route::get('/donate-now', function () {
-    return view('frontend.pages.donate-now');
-});
 
-Route::get('/about-us', function () {
-    return view('frontend.pages.aboutus.about-us');
-});
 
 //subfolders - services
 Route::get('/all-services', function () {

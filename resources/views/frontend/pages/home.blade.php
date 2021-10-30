@@ -67,7 +67,7 @@
                     @endforeach
                 </div>
                 <div class="hero-btn-group pt-5">
-                    <a href="" class="t-btn hero-btn-1">Learn more about us</a>
+                    <a href="{{ route('about-us') }}" class="t-btn hero-btn-1">Learn more about us</a>
                 </div>
             </div><!-- .col -->
             <div class="col-lg-6">
@@ -103,13 +103,13 @@
                     <i class="{{ $service_data->icon }}" ></i>
                     <h3>{{ $service_data->title }}</h3>
                     <p class="text-justify">{{ \Illuminate\Support\Str::limit($service_data->description, 160)  }}</p>
-                    <a href="{{ $service_data->id }}">See More <i class="icofont icofont-arrow-right"></i></a>
+                    <a href="{{ route('service',$service_data->id) }}">See More <i class="icofont icofont-arrow-right"></i></a>
                 </div>
             </div><!-- .col -->
             @endforeach
     </div>
     <div class="hero-btn-group pt-5">
-        <a href="" class="t-btn hero-btn-1">All Services</a>
+        <a href="{{ route('allservice') }}" class="t-btn hero-btn-1">All Services</a>
     </div>
 
 </section>
@@ -126,7 +126,7 @@
     <div class="container">
         <h2>{{ $donate_now->title }}</h2>
         <p>{{ $donate_now->description }}</p>
-        <a href="" class="t-btn donate-btn">DONATE NOW</a>
+        <a href="{{ route('donate-now') }}" class="t-btn donate-btn">DONATE NOW</a>
     </div>
 </section>
 <!-- End Donate Section -->

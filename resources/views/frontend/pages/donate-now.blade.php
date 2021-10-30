@@ -5,61 +5,86 @@
 @endsection
 
 @section('content')
-<section class="other-hero">
+<section class="other-hero mb-4" style="
+    background-color: #000;
+    background-image:url({{asset('backend/img/app_image/add_donate_now/'.$add_donatenow->cover_image)}});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 290px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;">
     <div class="container other-hero-text">
-        <h1>Donation</h1>
+        <h1></h1>
         <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li>Donation Details</li>
+            <li><a href="{{ route('webhome') }}">Home</a></li>
+            <li>Donate Now</li>
         </ul>
     </div>
 </section>
 <div class="container">
     <section class="donate-now" style="margin-bottom: 10px; margin-top: 40px">
         <div class="section-header">
-            <h2>OUR NEWS</h2>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes.</p>
+            <h2>Donate Now</h2>
+            <p>{{ $add_donatenow->title }}</p>
         </div>
         <!-- .section-header -->
         <div class="card text-center mb-5">
             <div class="card-header">
             </div>
             <div class="card-body">
-                <h2 class="card-title " style="padding:0px">Special title treatment</h2>
-                <h5> Cause: <strong>General</strong></h5>
-                <div class="post-thumbnail py-5"><img src="img/blog-2.jpg" alt=""></div>
-                <p class="card-text text-center">With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus delectus pariatur ratione. Provident placeat dolorem quam ea officiis. Delectus repellendus consequuntur sit dicta, ea, in placeat cum ipsa dolore voluptatum deserunt dolores explicabo. Dolorem quo architecto quaerat molestias. Minima illum numquam velit enim dolore quibusdam consectetur minus rerum placeat perferendis aliquid adipisci neque maxime quos, iusto quod consequuntur veritatis vel quam, sequi porro. Iste, tempora nisi porro nesciunt dolor magni nemo doloribus cupiditate! Aut quos molestias sed qui minus a tenetur, quo nostrum laudantium veniam labore eius cumque praesentium dolores eaque esse quam illo cum quisquam inventore? Corrupti dicta officiis debitis. Ut cupiditate ullam voluptatum sequi eveniet suscipit assumenda. Perferendis corrupti recusandae totam similique, labore quam, neque eum amet, nulla incidunt eligendi ad iusto veritatis fugiat consequatur consectetur distinctio illo? Non, officiis ad! Minima, repellendus. Ducimus magnam alias eligendi laboriosam. Nemo, hic. Animi nam odit tempore quibusdam dignissimos voluptates aliquam reprehenderit eaque, quis rerum corporis magni, vel reiciendis in quam saepe expedita aperiam sequi illum aliquid sapiente voluptatum. Facilis, cumque! Distinctio ipsum rem, deleniti similique hic tempora, blanditiis beatae molestias suscipit labore corporis veniam recusandae culpa, soluta porro praesentium voluptatibus ullam amet voluptate ea! Error sint voluptates reiciendis illum voluptate.</p>
+                <h2 class="card-title " style="padding:0px">{{ $donatenow->title }}</h2>
+                <br>
+                <span class="badge badge-danger"> <span class="h5"> Cause: {{ $donatenow->cause }}</span></span>
+                <br>
+                <br>
+                <div class="post-thumbnail py-5"><img src="{{asset('backend/img/app_image/donatenow/'.$donatenow->image)}}" alt=""></div>
+                <p class="card-text text-center">{{ $donatenow->description }}</p>
             </div>
             <div class="container">
                 <div class="donation-method " style="padding-top: 20px; margin-top: 30px; margin-bottom: 30px">
                     <div class="row d-flex justify-content-center text-center">
-                        <div class="col-12 col-md-4" style="margin-bottom: 30px">
+                        <div class="col-12 col-md-3" style="margin-bottom: 30px">
                             <div class="card" >
-                                <img class="card-img-top" src="img/test.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="{{asset('backend/img/app_image/donatenow/'.$donatenow->bkash_logo)}}" alt="Card image cap">
                                 <div class="card-body">
-                                  <h5 class="card-title " style="padding-top: 20px">Card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <br>
+                                  <p class="card-text h4">{{ $donatenow->bkash }}</p>
+                                  <a href="#" class="btn btn-danger disabled"> Reference : {{ $donatenow->reference }}</a>
                                 </div>
                               </div>
                         </div>
-                        <div class="col-12 col-md-4" style="margin-bottom: 30px">
+                        <div class="col-12 col-md-3" style="margin-bottom: 30px">
                             <div class="card" ">
-                                <img class="card-img-top" src="img/test.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="{{asset('backend/img/app_image/donatenow/'.$donatenow->rocket_logo)}}" alt="Card image cap">
                                 <div class="card-body">
-                                  <h5 class="card-title" style="padding-top: 20px">Card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <br>
+                                    <p class="card-text h4">{{ $donatenow->rocket }}</p>
+                                  <a href="#" class="btn btn-danger disabled"> Reference : {{ $donatenow->reference }}</a>
                                 </div>
                               </div>
                         </div>
-                        <div class="col-12 col-md-4" >
+                        <div class="col-12 col-md-3" >
                             <div class="card" ">
-                                <img class="card-img-top" src="img/test.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="{{asset('backend/img/app_image/donatenow/'.$donatenow->nagad_logo)}}" alt="Card image cap">
                                 <div class="card-body">
-                                  <h5 class="card-title" style="padding-top: 20px">Card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <br>
+                                    <p class="card-text h4">{{ $donatenow->nagad }}</p>
+                                  <a href="#" class="btn btn-danger disabled"> Reference : {{ $donatenow->reference }}</a>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-12 col-md-3" >
+                            <div class="card" ">
+                                <img class="card-img-top" src="{{asset('backend/img/app_image/donatenow/'.$donatenow->bank_logo)}}" alt="Card image cap">
+                                <div class="card-body">
+                                    <br>
+                                    <p class="card-text h4">{{ $donatenow->bank }}</p>
+                                  <a href="#" class="btn btn-danger disabled"> Reference : {{ $donatenow->reference }}</a>
                                 </div>
                               </div>
                         </div>
