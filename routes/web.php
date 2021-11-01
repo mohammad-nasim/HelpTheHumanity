@@ -27,21 +27,21 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'Frontend\FrontendController@index')->name('webhome');
 
 //Feature Controller
-Route::get('/all-feature', 'Frontend\FeatureController@allfeature')->name('allfeature');
+Route::get('/all-features', 'Frontend\FeatureController@allfeature')->name('allfeature');
 Route::get('/feature/{id}', 'Frontend\FeatureController@singlefeature')->name('feature');
 
 //About-Us Controller
 Route::get('/about-us', 'Frontend\AboutUsController@aboutus')->name('about-us');
 
 //Service Controller
-Route::get('/all-service', 'Frontend\ServiceController@allservice')->name('allservice');
+Route::get('/all-services', 'Frontend\ServiceController@allservice')->name('allservice');
 Route::get('/service/{id}', 'Frontend\ServiceController@singleservice')->name('service');
 
 //Donate-Now Controller
 Route::get('/donate-now', 'Frontend\DonateNowController@donatenow')->name('donate-now');
 
-//Cause Controller Controller
-Route::get('/all-cause', 'Frontend\CauseController@allcause')->name('all-cause');
+//Cause Controller
+Route::get('/all-causes', 'Frontend\CauseController@allcause')->name('all-cause');
 Route::get('/cause/{id}', 'Frontend\CauseController@singlecause')->name('cause');
 
 //Gallery Controller
@@ -50,31 +50,13 @@ Route::get('/gallery', 'Frontend\GalleryController@gallery')->name('gallery');
 //OurTeam Controller
 Route::get('/our-team', 'Frontend\OurTeamController@ourteam')->name('our-team');
 
+//Event Controller
+Route::get('/all-event', 'Frontend\EventController@allevent')->name('all-event');
+Route::get('/event/{id}', 'Frontend\EventController@singleevent')->name('event');
 
-//subfolders - services
-
-
-//subfolders - news
-Route::get('/all-news', function () {
-    return view('frontend.pages.news.all-news');
-});
-
-Route::get('/news', function () {
-    return view('frontend.pages.news.news');
-});
-
-//subfolders - features
-
-
-//subfolders - events
-Route::get('/all-events', function () {
-    return view('frontend.pages.events.all-events');
-});
-
-Route::get('/event', function () {
-    return view('frontend.pages.events.event');
-});
-
+//News Controller
+Route::get('/all-news', 'Frontend\NewsController@allnews')->name('all-news');
+Route::get('/news/{id}', 'Frontend\NewsController@singlenews')->name('news');
 
 
 

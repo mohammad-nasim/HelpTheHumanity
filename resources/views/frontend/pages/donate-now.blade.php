@@ -1,7 +1,11 @@
 @extends('frontend.master')
 
 @section('title')
-{{ 'Donate-Now' }}
+{{ 'Donate Now' }}
+@endsection
+
+@section('header')
+    @include('frontend.include.header2')
 @endsection
 
 @section('content')

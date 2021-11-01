@@ -15,15 +15,14 @@
         <nav class="primary-nav">
             <ul class="primary-nav-list nav">
                 <li class="menu-item menu-item-has-children current-menu-ancestor current-menu-parent active"><a
-                        href="#home">HOME</a>
+                        href="{{ route('webhome') }}">HOME</a>
                 </li>
-                <li class="menu-item"><a href="#about">ABOUT</a></li>
-                <li class="menu-item"><a href="#service">SERVICE</a></li>
-                <li class="menu-item"><a href="#cause">CAUSES</a></li>
-                <li class="menu-item"><a href="#gallery">GALLERY</a></li>
-                <li class="menu-item"><a href="#event">EVENT</a></li>
-                <li class="menu-item"><a href="#blog">NEWS</a></li>
-                <li class="menu-item"><a href="#contact">CONTACT</a></li>
+                <li class="menu-item"><a href="{{ route('about-us') }}">ABOUT</a></li>
+                <li class="menu-item"><a href="{{ route('allservice') }}">SERVICE</a></li>
+                <li class="menu-item"><a href="{{ route('all-cause') }}">CAUSES</a></li>
+                <li class="menu-item"><a href="{{ route('gallery') }}">GALLERY</a></li>
+                <li class="menu-item"><a href="{{ route('all-event') }}">EVENT</a></li>
+                <li class="menu-item"><a href="{{ route('all-news') }}">NEWS</a></li>
             </ul>
         </nav>
     </div><!-- .header-wrap -->

@@ -1,7 +1,11 @@
 @extends('frontend.master')
 
 @section('title')
-    {{ 'All-Causes' }}
+    {{ 'All Causes' }}
+@endsection
+
+@section('header')
+    @include('frontend.include.header2')
 @endsection
 
 @section('content')
@@ -44,7 +48,7 @@
                 <p class="card-text">{{ \Illuminate\Support\Str::limit($data->description, 260)  }}</p>
             </div>
             <div class="button mt-3">
-                <a href="{{ route('cause', $data->id) }}" class="btn btn-primary">Read Cause</a>
+                <a href="{{ route('cause', $data->id) }}" class="btn btn-primary">View Details</a>
             </div>
         </div>
         @endforeach

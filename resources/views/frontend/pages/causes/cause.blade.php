@@ -4,14 +4,37 @@
 {{ 'Cause' }}
 @endsection
 
+@section('header')
+    @include('frontend.include.header2')
+@endsection
+
 @section('content')
 <div class="content">
-
-
-    <!-- Start site-content -->
+    <section class="other-hero mb-4" style="
+    background-color: #000;
+    background-image:url({{asset('backend/img/app_image/add_cause/'.$add_cause->cover_image)}});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 290px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;">
+        <div class="container other-hero-text">
+            <h1></h1>
+            <ul class="breadcrumb">
+                <li><a href="{{ route('webhome') }}">Home</a></li>
+                <li><a href="{{ route('all-cause') }}">Causes</a></li>
+                <li>{{ $singlecause->title  }}</li>
+            </ul>
+        </div>
+    </section>
     <div class="site-content section blog-details-left-sidebar">
         <div class="container">
-            <section class="donate-now" style="margin-bottom: 30px; margin-top: 20px">
+            <section class="donate-now" style="margin-bottom: 30px; margin-top: 10px">
                 <div class="card text-center mb-5">
                     <div class="card-header">
                     </div>
@@ -51,49 +74,48 @@
                             <div class="row d-flex justify-content-center text-center">
                                 <div class="col-12 col-md-3" style="margin-bottom: 30px">
                                     <div class="card" >
-                                        <img class="card-img-top" src="{{ $singlecause->paymentmethod ? asset('backend/img/app_image/payment_method/'.$singlecause->paymentmethod->bkash_logo)  : ''  }}" alt="Card image cap">
+                                        <img class="card-img-top" src="{{ $singlecause->paymentmethod ? asset('backend/img/app_image/payment_method/'.$singlecause->paymentmethod->bkash_logo)  : ''  }}" alt="logo is not available">
                                         <div class="card-body">
 
-                                          <p class="card-text h3">{{ $singlecause->paymentmethod ? $singlecause->paymentmethod->bkash: "Empty"}}</p>
+                                          <p class="card-text h3">{{ $singlecause->paymentmethod ? $singlecause->paymentmethod->bkash: "Not Available"}}</p>
 
-                                          <a href="#" class="btn btn-danger disabled"> Reference : {{ $singlecause->paymentmethod ? $singlecause->paymentmethod->reference: "Empty" }}</a>
+                                          <a href="#" class="btn btn-danger disabled"> Reference : {{ $singlecause->paymentmethod ? $singlecause->paymentmethod->reference: "empty" }}</a>
                                         </div>
                                       </div>
                                 </div>
                                 <div class="col-12 col-md-3" style="margin-bottom: 30px">
                                     <div class="card" >
-                                        <img class="card-img-top" src="{{ $singlecause->paymentmethod ? asset('backend/img/app_image/payment_method/'.$singlecause->paymentmethod->rocket_logo)  : ''  }}" alt="Card image cap">
+                                        <img class="card-img-top" src="{{ $singlecause->paymentmethod ? asset('backend/img/app_image/payment_method/'.$singlecause->paymentmethod->rocket_logo)  : ''  }}" alt="logo is not available">
                                         <div class="card-body">
 
-                                          <p class="card-text h3">{{ $singlecause->paymentmethod ? $singlecause->paymentmethod->rocket: "Empty"}}</p>
+                                          <p class="card-text h3">{{ $singlecause->paymentmethod ? $singlecause->paymentmethod->rocket: "Not Available"}}</p>
 
-                                          <a href="#" class="btn btn-danger disabled"> Reference : {{ $singlecause->paymentmethod ? $singlecause->paymentmethod->reference: "Empty" }}</a>
+                                          <a href="#" class="btn btn-danger disabled"> Reference : {{ $singlecause->paymentmethod ? $singlecause->paymentmethod->reference: "empty" }}</a>
                                         </div>
                                       </div>
                                 </div>
                                 <div class="col-12 col-md-3" style="margin-bottom: 30px">
                                     <div class="card" >
-                                        <img class="card-img-top" src="{{ $singlecause->paymentmethod ? asset('backend/img/app_image/payment_method/'.$singlecause->paymentmethod->nagad_logo)  : ''  }}" alt="Card image cap">
+                                        <img class="card-img-top" src="{{ $singlecause->paymentmethod ? asset('backend/img/app_image/payment_method/'.$singlecause->paymentmethod->nagad_logo)  : ''  }}" alt="logo is not available">
                                         <div class="card-body">
 
-                                          <p class="card-text h3">{{ $singlecause->paymentmethod ? $singlecause->paymentmethod->nagad: "Empty"}}</p>
+                                          <p class="card-text h3">{{ $singlecause->paymentmethod ? $singlecause->paymentmethod->nagad: "Not Available"}}</p>
 
-                                          <a href="#" class="btn btn-danger disabled"> Reference : {{ $singlecause->paymentmethod ? $singlecause->paymentmethod->reference: "Empty" }}</a>
+                                          <a href="#" class="btn btn-danger disabled"> Reference : {{ $singlecause->paymentmethod ? $singlecause->paymentmethod->reference: "empty" }}</a>
                                         </div>
                                       </div>
                                 </div>
                                 <div class="col-12 col-md-3" style="margin-bottom: 30px">
                                     <div class="card" >
-                                        <img class="card-img-top" src="{{ $singlecause->paymentmethod ? asset('backend/img/app_image/payment_method/'.$singlecause->paymentmethod->bank_logo)  : ''  }}" alt="Card image cap">
+                                        <img class="card-img-top" src="{{ $singlecause->paymentmethod ? asset('backend/img/app_image/payment_method/'.$singlecause->paymentmethod->bank_logo)  : 'Not Available'  }}" alt="logo is not available">
                                         <div class="card-body">
 
-                                          <p class="card-text h3">{{ $singlecause->paymentmethod ? $singlecause->paymentmethod->bank: "Empty"}}</p>
+                                          <p class="card-text h3">{{ $singlecause->paymentmethod ? $singlecause->paymentmethod->bank: "Not Available"}}</p>
 
-                                          <a href="#" class="btn btn-danger disabled"> Reference : {{ $singlecause->paymentmethod ? $singlecause->paymentmethod->reference: "Empty" }}</a>
+                                          <a href="#" class="btn btn-danger disabled"> Reference : {{ $singlecause->paymentmethod ? $singlecause->paymentmethod->reference: "empty" }}</a>
                                         </div>
                                       </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>

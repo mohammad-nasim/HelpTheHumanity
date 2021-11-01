@@ -4,53 +4,54 @@
     {{ 'News' }}
 @endsection
 
+@section('header')
+    @include('frontend.include.header2')
+@endsection
+
 @section('content')
+<div class="content mt-5">
+    <section class="other-hero mb-4" style="
+    background-color: #000;
+    background-image:url({{asset('backend/img/app_image/add_news/'.$add_news->cover_image)}});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 290px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;">
+        <div class="container other-hero-text">
+            <h1></h1>
+            <ul class="breadcrumb">
+                <li><a href="{{ route('webhome') }}">Home</a></li>
+                <li><a href="{{ route('all-news') }}">All News</a></li>
+                <li>{{ $news->title  }}</li>
+            </ul>
+        </div>
+    </section>
     <!-- Start site-content -->
-    <div class="content">
-        <section class="other-hero">
-            <div class="container other-hero-text">
-                <h1>News</h1>
-                <ul class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li>News</li>
-                </ul>
-            </div>
-        </section>
-        <!-- End Hero Section -->
+    <div class="site-content section blog-details-left-sidebar">
+        <div class="container">
+            <main class="site-main">
+                <article class="post post-details">
+                    <header class="entry-header">
+                        <div class="post-thumbnail img-fluid"><img src="{{asset('backend/img/app_image/news/'.$news->image)}}" alt="" ></div>
+                        <div class="post-details-wrap">
+                            <div class="byline">
+                                <span><i class="icofont icofont-ui-calendar"></i>{{ Carbon\Carbon::parse( $news->created_at )->toFormattedDateString() }}</span>
+                            </div>
+                            <h2 class="entry-title">{{ $news->title }}</h2>
+                        </div><!-- .post-details-wrap -->
+                    </header>
+                    <div class="entry-content">
+                        <p>{{ $news->description }}</p>
 
-        <!-- Start site-content -->
-        <div class="site-content section blog-details-left-sidebar">
-            <div class="container">
-                <main class="site-main">
-                    <article class="post post-details">
-                        <header class="entry-header">
-                            <div class="post-thumbnail"><img src="img/blog-2.jpg" alt=""></div>
-                            <div class="post-details-wrap">
-                                <div class="byline">
-                                    <span class="posted-on"><a href="#"><i class="fa fa-calendar"></i>10 Jan 2017</a></span>
-                                </div>
-                                <h2 class="entry-title">WE BUILD SCHOOL & HOSPITAL</h2>
-                            </div><!-- .post-details-wrap -->
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-                                consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-                                arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-                            <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-                                elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-                                consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                                tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-                                Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
-                                rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-                                adipiscing sem neque sed ipsum</p>
-
-                </main><!-- .col -->
-            </div>
-            </div>
+            </main><!-- .col -->
+        </div>
         </div>
     </div>
-
-    <!-- Start site-content -->
+</div>
 @endsection

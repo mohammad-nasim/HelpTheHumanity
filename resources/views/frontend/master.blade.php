@@ -15,7 +15,8 @@
 	<!-- Page Title -->
 	<title>@yield('title') - Help The Humanity Foundation</title>
     <!-- Favicon Icon -->
-  	<link rel="icon" href="img/favicon.png">
+  	<link rel="icon" href="{{asset('backend/img/app_image/logo/favicon.png')}}">
+
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/plugins.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -54,7 +55,10 @@
     <!-- End Preloader -->
 
 	<!-- Start Site Header -->
-        @include('frontend.include.header')
+
+        @yield('header')
+
+        {{-- @include('frontend.include.header') --}}
 	<!-- End Site Header -->
 
         @yield('content')

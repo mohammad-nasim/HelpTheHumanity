@@ -12,14 +12,16 @@ class CauseController extends Controller
 {
     public function allcause(){
 
-        $this->data['allcause'] = Cause::latest()->paginate(4);
+        $this->data['allcause'] = Cause::latest()->paginate(6);
         $this->data['add_cause']    = AdditionalCause::first();
 
         return view('frontend.pages.causes.all-causes', $this->data);
     }
 
     public function singlecause($id){
+
         $this->data['singlecause'] = Cause::find($id);
+        $this->data['add_cause']    = AdditionalCause::first();
 
        // dd($test->paymentmethod());
 

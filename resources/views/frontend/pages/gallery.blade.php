@@ -4,6 +4,10 @@
 {{ 'Gallery' }}
 @endsection
 
+@section('header')
+    @include('frontend.include.header2')
+@endsection
+
 @section('content')
     <section class="other-hero mb-4" style="
         background-color: #000;

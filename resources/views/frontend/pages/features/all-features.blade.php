@@ -1,7 +1,11 @@
 @extends('frontend.master')
 
 @section('title')
-    {{ 'All-Features' }}
+    {{ 'All Features' }}
+@endsection
+
+@section('header')
+    @include('frontend.include.header2')
 @endsection
 
 @section('content')
@@ -20,7 +24,7 @@
     justify-content: center;
     align-items: center;">
         <div class="container other-hero-text">
-            <h1>All Features</h1>
+            <h1></h1>
             <ul class="breadcrumb">
                 <li><a href="{{ route('webhome') }}">Home</a></li>
                 <li>All Features</li>
@@ -44,7 +48,7 @@
                 <p class="card-text">{{ \Illuminate\Support\Str::limit($data->description, 260)  }}</p>
             </div>
             <div class="button mt-3">
-                <a href="{{ route('feature', $data->id)  }}" class="btn btn-primary">Read Feature</a>
+                <a href="{{ route('feature', $data->id)  }}" class="btn btn-primary">Read More</a>
             </div>
         </div>
         @endforeach

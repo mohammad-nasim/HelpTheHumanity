@@ -11,7 +11,7 @@ class ServiceController extends Controller
 {
     public function allservice(){
 
-        $this->data['allservice']             = Service::latest()->paginate(4);
+        $this->data['allservice']             = Service::latest()->paginate(6);
         $this->data['add_data']               = AdditionalService::first();
 
         return view('frontend.pages.services.all-services', $this->data);
@@ -19,7 +19,8 @@ class ServiceController extends Controller
 
     public function singleservice($id){
 
-        $this->data['service'] = Service::find($id);
+        $this->data['service']                = Service::find($id);
+        $this->data['add_data']               = AdditionalService::first();
 
         return view('frontend.pages.services.service', $this->data);
     }

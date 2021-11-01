@@ -41,7 +41,7 @@ Data List - Event Section
                             <h3 class="card-title"><strong>Data List</strong></h3>
                             <a target="_self"  href="{{ route('event.create') }}" class="btn btn-primary">
                             <i class="fa fa-plus"></i>
-                                Create Feature</a>
+                                Create Event</a>
                         </div>
                     </div>
                     <!-- /.card-header -->

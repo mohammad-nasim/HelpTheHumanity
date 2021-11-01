@@ -4,6 +4,10 @@
     {{ 'Home' }}
 @endsection
 
+@section('header')
+    @include('frontend.include.header')
+@endsection
+
 @section('content')
 <!-- Start Hero Section -->
 <section class="hero text-center" id="home">
@@ -13,8 +17,8 @@
             <h3>{{$herosection->slogan_1}}</h3>
             <h5>{{$herosection->slogan_2}}</h5>
             <div class="hero-btn-group">
-                <a href="" class="t-btn hero-btn-1">DONATE NOW</a>
-                <a href="" class="t-btn hero-btn-2">LEARN MORE</a>
+                <a href="{{ route('donate-now') }}" class="t-btn hero-btn-1">DONATE NOW</a>
+                <a href="#about" class="t-btn hero-btn-2">LEARN MORE</a>
             </div>
         </div>
     </div><!-- .single-slide -->
@@ -62,7 +66,8 @@
                     <div class="single-accordian">
                         <h3 class="accordian-head">{{ $aboutusdata->title }}</h3>
                         <div class="accordian-body">
-                            {{ $aboutusdata->description }}</div>
+                            <a href="{{ route('about-us') }}" class="text-justify">{{ \Illuminate\Support\Str::limit($aboutusdata->description, 200)  }}</a>
+                        </div>
                     </div><!-- .single-accordian -->
                     @endforeach
                 </div>
@@ -263,14 +268,13 @@
                             <span><i class="icofont icofont-location-pin"></i>Bangladesh</span>
                         </div>
                         <div class="event-btn-group">
-                            <a href="" class="t-btn t-btn-ex-small event-btn-1">Details</a>
-                            <a href="" class="t-btn t-btn-ex-small event-btn-2">All Events</a>
+                            <a href="{{ route('event', $event_data->id) }}" class="t-btn t-btn-ex-small event-btn-1">Details</a>
+                            <a href="{{ route('all-event') }}" class="t-btn t-btn-ex-small event-btn-2">All Events</a>
                         </div>
                     </div>
                 </div>
             </div><!-- .col -->
             @endforeach
-        </div>
     </div>
 </section>
 <!-- End Event Section -->
@@ -290,10 +294,10 @@
         flex-wrap: wrap;">
     <div class="container">
         <div class="client-logo">
-            <a href=""><img src="{{asset('backend/img/app_image/partner/'.$partner->image_one)}}" alt="" style="width:180px;height:100px"></a>
-            <a href=""><img src="{{asset('backend/img/app_image/partner/'.$partner->image_two)}}" alt="" style="width:180px;height:100px"></a>
-            <a href=""><img src="{{asset('backend/img/app_image/partner/'.$partner->image_three)}}" alt="" style="width:180px;height:100px"></a>
-            <a href=""><img src="{{asset('backend/img/app_image/partner/'.$partner->image_four)}}" alt="" style="width:180px;height:100px"></a>
+            <img src="{{asset('backend/img/app_image/partner/'.$partner->image_one)}}" alt="" style="width:180px;height:100px">
+            <img src="{{asset('backend/img/app_image/partner/'.$partner->image_two)}}" alt="" style="width:180px;height:100px">
+            <img src="{{asset('backend/img/app_image/partner/'.$partner->image_three)}}" alt="" style="width:180px;height:100px">
+            <img src="{{asset('backend/img/app_image/partner/'.$partner->image_four)}}" alt="" style="width:180px;height:100px">
         </div>
     </div>
 </div>
@@ -323,11 +327,14 @@
                     </header>
                     <div class="entry-content">
                         <p class="text-justify">{{ \Illuminate\Support\Str::limit($news_data->description, 160)  }}</p>
-                          <a href="blog-details-1.html" class="t-btn t-btn-ex-small read-more-btn" target="_blank">Read More</a>
+                          <a href="{{ route('news', $news_data->id) }}" class="t-btn t-btn-ex-small read-more-btn" target="_blank">Read More</a>
                     </div>
                 </div><!-- .post -->
             </div><!-- .col -->
             @endforeach
+        </div>
+        <div class="hero-btn-group pt-5">
+            <a href="{{ route('all-news') }}" class="t-btn donate-btn">See More</a>
         </div>
     </div>
 </section>

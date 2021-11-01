@@ -4,10 +4,34 @@
 {{ 'Service' }}
 @endsection
 
+@section('header')
+    @include('frontend.include.header2')
+@endsection
+
 @section('content')
-<!-- Start Hero Section -->
 <div class="content">
-    <!-- End Hero Section -->
+    <section class="other-hero mb-4" style="
+    background-color: #000;
+    background-image:url({{asset('backend/img/app_image/add_service/'.$add_data->cover_image)}});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 290px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;">
+        <div class="container other-hero-text">
+            <h1></h1>
+            <ul class="breadcrumb">
+                <li><a href="{{ route('webhome') }}">Home</a></li>
+                <li><a href="{{ route('allservice') }}">Services</a></li>
+                <li>{{ $service->title  }}</li>
+            </ul>
+        </div>
+    </section>
 
     <!-- Start site-content -->
     <div class="site-content section blog-details-left-sidebar">
