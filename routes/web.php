@@ -44,13 +44,11 @@ Route::get('/donate-now', 'Frontend\DonateNowController@donatenow')->name('donat
 Route::get('/all-cause', 'Frontend\CauseController@allcause')->name('all-cause');
 Route::get('/cause/{id}', 'Frontend\CauseController@singlecause')->name('cause');
 
+//Gallery Controller
+Route::get('/gallery', 'Frontend\GalleryController@gallery')->name('gallery');
 
-
-
-Route::get('/gallery', function () {
-    return view('frontend.pages.gallery');
-});
-
+//OurTeam Controller
+Route::get('/our-team', 'Frontend\OurTeamController@ourteam')->name('our-team');
 
 
 //subfolders - services
@@ -78,11 +76,6 @@ Route::get('/event', function () {
 });
 
 
-
-//Our Team
-Route::get('/ourteam', function(){
-    return view('frontend.pages.ourteam');
-});
 
 
 

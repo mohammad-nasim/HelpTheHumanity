@@ -11,10 +11,6 @@
     <!-- Start site-content -->
     <div class="site-content section blog-details-left-sidebar">
         <div class="container">
-            <div class="section-header">
-                <h2>OUR NEWS</h2>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes.</p>
-            </div>
             <section class="donate-now" style="margin-bottom: 30px; margin-top: 20px">
                 <div class="card text-center mb-5">
                     <div class="card-header">
@@ -30,6 +26,25 @@
                         </div>
 
                         <p class="card-text text-center">{{ $singlecause->description }} </p>
+                    </div>
+                    <br>
+                    <div class="row pt-5 mt-5">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 ">
+                            <div class="donate-status">
+                                <div class="status">
+                                    <span>RAISED</span>
+                                    <span>TARGET</span>
+                                </div>
+                                <div class="status-bar "><div class="wow fadeInLeft"  data-wow-duration="1.2s" data-wow-delay="0.1s" style="width: 80%"></div></div>
+                                <div class="status">
+                                    <span>{{ $singlecause->raised }} Tk</span>
+                                    <span>{{ $singlecause->target }} Tk</span>
+                                </div>
+                            </div><!-- .donate-status -->
+                        </div>
+                        <div class="col-md-3"></div>
+
                     </div>
                     <div class="container">
                         <div class="donation-method " style="padding-top: 20px; margin-top: 30px; margin-bottom: 30px">

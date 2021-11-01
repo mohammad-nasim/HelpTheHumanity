@@ -186,7 +186,7 @@
             @endforeach
         </div><!-- .portfolio -->
         <div class="hero-btn-group pt-5">
-            <a href="" class="t-btn donate-btn">All Photos</a>
+            <a href="{{ route('gallery') }}" class="t-btn donate-btn">All Photos</a>
         </div>
     </div><!-- .container -->
 </section>
@@ -236,11 +236,10 @@
             @endforeach
         </div>
         <div class="hero-btn-group pt-5">
-            <a href="" class="t-btn donate-btn">See More</a>
+            <a href="{{ route('our-team') }}" class="t-btn donate-btn">See More</a>
         </div>
     </div>
 </section>
-
 <!-- End Team Section -->
 
 <!-- Start Event Section -->

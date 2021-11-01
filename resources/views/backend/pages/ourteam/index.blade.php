@@ -41,7 +41,7 @@ Data List - Our Team Section
                             <h3 class="card-title"><strong>Data List</strong></h3>
                             <a target="_self"  href="{{ route('ourteam.create') }}" class="btn btn-primary">
                             <i class="fa fa-plus"></i>
-                                Create Feature</a>
+                                Create Member</a>
                         </div>
                     </div>
                     <!-- /.card-header -->
