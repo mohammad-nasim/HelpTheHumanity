@@ -15,10 +15,10 @@ class CreateDonateNowsTable extends Migration
     {
         Schema::create('donate_nows', function (Blueprint $table) {
             $table->id();
-            $table->string('cause');
-            $table->string('title');
-            $table->string('image');
-            $table->text('description');
+            $table->string('cause')->nullable();
+            $table->string('title')->nullable();
+            $table->string('image')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

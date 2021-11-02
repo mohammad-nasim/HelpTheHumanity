@@ -15,11 +15,11 @@ class CreateFootersTable extends Migration
     {
         Schema::create('footers', function (Blueprint $table) {
             $table->id();
-            $table->string('footer_text');
-            $table->string('link_one');
-            $table->string('link_two');
-            $table->string('link_three');
-            $table->string('link_four');
+            $table->string('footer_text')->nullable();
+            $table->string('link_one')->nullable();
+            $table->string('link_two')->nullable();
+            $table->string('link_three')->nullable();
+            $table->string('link_four')->nullable();
             $table->timestamps();
         });
     }

@@ -15,10 +15,10 @@ class CreateFeaturesTable extends Migration
     {
         Schema::create('features', function (Blueprint $table) {
             $table->id();
-            $table->string('icon');
-            $table->string('title');
-            $table->string('image');
-            $table->text('description');
+            $table->string('icon')->nullable();
+            $table->string('title')->nullable();
+            $table->string('image')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

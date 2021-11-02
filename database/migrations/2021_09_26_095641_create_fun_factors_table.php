@@ -15,10 +15,10 @@ class CreateFunFactorsTable extends Migration
     {
         Schema::create('fun_factors', function (Blueprint $table) {
             $table->id();
-            $table->string('icon');
-            $table->string('counter');
-            $table->string('project');
-            $table->string('bg_image');
+            $table->string('icon')->nullable();
+            $table->string('counter')->nullable();
+            $table->string('project')->nullable();
+            $table->string('bg_image')->nullable();
             $table->timestamps();
         });
     }

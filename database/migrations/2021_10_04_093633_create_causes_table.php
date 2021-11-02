@@ -15,12 +15,12 @@ class CreateCausesTable extends Migration
     {
         Schema::create('causes', function (Blueprint $table) {
             $table->id();
-            $table->string('cause');
-            $table->string('title');
-            $table->string('image');
-            $table->text('description');
-            $table->string('raised');
-            $table->string('target');
+            $table->string('cause')->nullable();
+            $table->string('title')->nullable();
+            $table->string('image')->nullable();
+            $table->text('description')->nullable();
+            $table->string('raised')->nullable();
+            $table->string('target')->nullable();
             $table->timestamps();
         });
     }
