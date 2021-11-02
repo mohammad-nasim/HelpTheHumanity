@@ -49,13 +49,6 @@
                     </div>
 
                     <div class="row px-3 mb-4">
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input id="chk1"
-                            class="form-check-input custom-control-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} >
-                                
-                                <label for="chk1"
-                                class="custom-control-label text-sm">Remember me</label>
-                        </div>
                         <a href="{{ route('password.request') }}"
                           class="ml-auto mb-0 text-sm">Forgot Password?
                         </a>
@@ -66,7 +59,7 @@
                     </div>
 
                     <div class="row mb-4 px-3">
-                        <small class="font-weight-bold">Don't have an account? 
+                        <small class="font-weight-bold">Don't have an account?
                         <a href="{{ url('register')}}" class="text-danger ">Register</a>
                         </small>
                     </div>
@@ -74,7 +67,7 @@
             </div>
         </div>
         <div class="bg-blue py-4">
-            <div class="row px-3"> <small class="ml-4 ml-sm-5 mb-2">Copyright &copy; 2019. All rights reserved.</small>
+            <div class="row px-3"> <small class="ml-4 ml-sm-5 mb-2">Copyright &copy; Help The Humanity Foundation 2021-22. All rights reserved.</small>
                 <div class="social-contact ml-4 ml-sm-auto"> <span class="fa fa-facebook mr-4 text-sm"></span> <span
                         class="fa fa-google-plus mr-4 text-sm"></span> <span class="fa fa-linkedin mr-4 text-sm"></span>
                     <span class="fa fa-twitter mr-4 mr-sm-5 text-sm"></span> </div>

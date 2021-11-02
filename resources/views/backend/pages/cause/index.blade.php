@@ -19,11 +19,11 @@ Data List - Cause Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 lead">Create Cause </h1>
+                <h1 class="m-0 lead"> Cause Section </h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="{{ route('webhome') }}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                     <li class="breadcrumb-item active">Cause Section</li>
                 </ol>
             </div><!-- /.col -->
@@ -68,7 +68,7 @@ Data List - Cause Section
                                     <td>
                                         <img src="{{asset('backend/img/app_image/cause/'.$data->image)}}" style="width:60px;height:30px" alt="">
                                     </td>
-                                    <td>{{ $data->description }}</td>
+                                    <td><p class="text-justify">{{ \Illuminate\Support\Str::limit($data->description, 160)  }}</p></td>
                                     <td>{{ $data->raised }} TK</td>
                                     <td>{{ $data->target }} TK</td>
                                     <td class="d-flex" style="width: 120px">

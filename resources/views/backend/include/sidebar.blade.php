@@ -11,11 +11,8 @@
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
-                <img src="{{ asset('backend/img/app_image/profile_pictures/'.Auth::user()->image ) }}" class="img-circle elevation-2">
-            </div>
             <div class="info">
-                <a href="{{ route('profile.index') }}" class="d-block">{{ Auth::user()->name }}</a>
+                <a href="{{ route('profile.index') }}" class="d-block"> <i class="fas fa-user text-light"></i> Profile : <strong class="text-light"> {{ Auth::user()->name }} </strong></a>
             </div>
         </div>
 
@@ -26,7 +23,7 @@
                with font-awesome or any other icon font library -->
                 <li class="nav-item  ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fab fa-audible"></i>
                         <p>
                             Hero Section
                             <i class="right fas fa-angle-left"></i>
@@ -66,7 +63,7 @@
                 </li>
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-address-card"></i>
                         <p>
                             About Us Section
                             <i class="right fas fa-angle-left"></i>
@@ -89,7 +86,7 @@
                 </li>
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-cogs"></i>
                         <p>
                             Service Section
                             <i class="right fas fa-angle-left"></i>
@@ -112,7 +109,7 @@
                 </li>
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-file-invoice-dollar"></i>
                         <p>
                             Payment Method
                             <i class="right fas fa-angle-left"></i>
@@ -129,7 +126,7 @@
                 </li>
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-hand-holding-usd"></i>
                         <p>
                             Donate Now Section
                             <i class="right fas fa-angle-left"></i>
@@ -154,7 +151,7 @@
                 </li>
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="far fa-building"></i>
                         <p>
                             Cause Section
                             <i class="right fas fa-angle-left"></i>
@@ -177,10 +174,9 @@
                         </li>
                     </ul>
                 </li>
-
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-images"></i>
                         <p>
                             Gallery Section
                             <i class="right fas fa-angle-left"></i>
@@ -203,7 +199,7 @@
                 </li>
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="far fa-laugh-wink"></i>
                         <p>
                             Fun Factor Section
                             <i class="right fas fa-angle-left"></i>
@@ -220,7 +216,7 @@
                 </li>
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-users-cog"></i>
                         <p>
                             Our Team Section
                             <i class="right fas fa-angle-left"></i>
@@ -243,7 +239,7 @@
                 </li>
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-calendar-check"></i>
                         <p>
                             Event Section
                             <i class="right fas fa-angle-left"></i>
@@ -266,7 +262,7 @@
                 </li>
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-handshake"></i>
                         <p>
                             Partner Section
                             <i class="right fas fa-angle-left"></i>
@@ -283,7 +279,7 @@
                 </li>
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-newspaper"></i>
                         <p>
                             News Section
                             <i class="right fas fa-angle-left"></i>
@@ -308,7 +304,8 @@
                 </li>
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-address-book"></i>
+
                         <p>
                             Contact Section
                             <i class="right fas fa-angle-left"></i>
@@ -331,7 +328,7 @@
                 </li>
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="fas fa-hourglass-end"></i>
                         <p>
                             Footer Section
                             <i class="right fas fa-angle-left"></i>

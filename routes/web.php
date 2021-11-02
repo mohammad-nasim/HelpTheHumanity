@@ -82,9 +82,8 @@ Route::get('/register2', function(){
 Route::post('message', 'Backend\MsgController@store')->name('contact.message');
 
 Route::group(['prefix' => 'admin/' ,'middleware' => 'auth'], function(){
-    Route::get('dashboard', function(){
-        return view('backend.pages.dashboard');
-    });
+
+    Route::get('dashboard', 'Backend\DashboardController@dashboard')->name('dashboard');
 
     Route::resource('herosection', 'Backend\HeroSectionController');
 

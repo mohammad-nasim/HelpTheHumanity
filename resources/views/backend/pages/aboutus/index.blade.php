@@ -23,7 +23,7 @@ Data List - About Us
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="{{ route('webhome') }}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                     <li class="breadcrumb-item active">About Us Section</li>
                 </ol>
             </div><!-- /.col -->
@@ -64,7 +64,7 @@ Data List - About Us
                                     <td>
                                         <img src="{{asset('backend/img/app_image/about_us/'.$data->image)}}" style="width:60px;height:30px" alt="">
                                     </td>
-                                    <td>{{ $data->description }}</td>
+                                    <td><p class="text-justify">{{ \Illuminate\Support\Str::limit($data->description, 160)  }}</p></td>
                                     <td class="d-flex" style="width: 120px">
                                         <a href="{{ route('aboutus.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
 

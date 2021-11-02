@@ -24,6 +24,7 @@
                 <li class="menu-item"><a href="#event">EVENT</a></li>
                 <li class="menu-item"><a href="#blog">NEWS</a></li>
                 <li class="menu-item"><a href="#contact">CONTACT</a></li>
+                <li class="menu-item"><a href="{{ route('login') }}">Login</a></li>
             </ul>
         </nav>
     </div><!-- .header-wrap -->

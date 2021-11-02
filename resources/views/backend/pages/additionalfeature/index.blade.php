@@ -23,7 +23,7 @@ Data List - Additional Features Section
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="{{ route('webhome') }}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                     <li class="breadcrumb-item active">Additional Features Section</li>
                 </ol>
             </div><!-- /.col -->

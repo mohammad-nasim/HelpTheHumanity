@@ -23,7 +23,7 @@ Data List - News Section
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="{{ route('webhome') }}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                     <li class="breadcrumb-item active">News Section</li>
                 </ol>
             </div><!-- /.col -->
@@ -65,7 +65,7 @@ Data List - News Section
                                     <td>
                                         <img src="{{asset('backend/img/app_image/news/'.$data->image)}}" style="width:60px;height:30px" alt="">
                                     </td>
-                                    <td>{{ $data->description }}</td>
+                                    <td><p class="text-justify">{{ \Illuminate\Support\Str::limit($data->description, 160)  }}</p></td>
 
                                     <td>{{ Carbon\Carbon::parse( $data->post_time )->toFormattedDateString() }}
                                     </td>
