@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -17,7 +18,7 @@ class ProfileController extends Controller
     //Create Admins
     public function create()
     {
-        $this->data['selectRole'] = User::selectRole();
+
         return view('backend.pages.profile.create', $this->data);
     }
 
@@ -30,20 +31,10 @@ class ProfileController extends Controller
             'name'        => $request->name,
             'email'       => $request->email,
             'role'        => $request->role,
-            'password'    => $request->password,
+            'password'    => Hash::make($request->password)
 
         ]);
 
-        if($request->has('image')){
-            $image = $request->image;
-            $image_new_name = date('YmdHi').$image->getClientOriginalName();
-            $image->move(public_path('backend/img/app_image/profile_pictures'), $image_new_name);
-
-            $data->image = $image_new_name;
-        }
-        else{
-            echo "Not ulpaddd";
-        }
 
         if($data->save()){
             //Session::flash('Success', 'Data Insert Successful');
@@ -56,8 +47,6 @@ class ProfileController extends Controller
     public function edit($id)
     {
         $this->data['show'] = User::find($id);
-        $this->data['role'] = User::selectRole();
-
         return view('backend.pages.profile.edit', $this->data);
     }
 
@@ -71,9 +60,10 @@ class ProfileController extends Controller
 
         if($request->file('image')){
 
-            $data->name           = $request->name;
-            $data->email          = $request->email;
-
+            $data->name              = $request->name;
+            $data->email             = $request->email;
+            $data->role              = $request->role;
+            $data->password          = Hash::make($request->password);
 
             $file = $request->file('image');
             @unlink(public_path('backend/img/app_image/profile_pictures/'.$data->image));
@@ -86,6 +76,8 @@ class ProfileController extends Controller
 
             $data->name           = $request->name;
             $data->email          = $request->email;
+            $data->role           = $request->role;
+            $data->password       = Hash::make($request->password);
 
         }
 

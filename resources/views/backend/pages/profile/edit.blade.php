@@ -42,6 +42,13 @@ Update Data - Admin Data
                                 <input type="email" class="form-control" name="email" value="{{ $show->email }}" >
                             </div>
 
+                            @if (Auth::user()->role == 'Admin')
+                            <div class="form-group">
+                                <label for="">Role (Admin 0r Editor)</label>
+                                <input type="text" class="form-control" name="role" value="{{ $show->role }}" >
+                            </div>
+                            @endif
+
                             <div class="form-group">
                                 <div class="mb-4">
                                     <label for="">Previous Image</label><br>
@@ -51,6 +58,11 @@ Update Data - Admin Data
                                   <label for="exampleFormControlFile1">Upload Image </label>
                                   <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
                                 </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Change Your Password</label>
+                                <input type="text" class="form-control" name="password" placeholder="Password">
                             </div>
                         </div>
                         <!-- /.card-body -->

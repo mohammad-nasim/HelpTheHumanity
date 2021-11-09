@@ -69,18 +69,18 @@
                     </div>
                     <!-- ./col -->
                     <div class="col-lg-3 col-6">
-                      <!-- small box -->
-                      <div class="small-box bg-danger">
-                        <div class="inner">
-                          <h3>{{ $team }}</h3>
+                        <!-- small box -->
+                        <div class="small-box bg-danger">
+                          <div class="inner">
+                            <h3>{{ $team }}</h3>
 
-                          <p>Team Members</p>
+                            <p>Total Events</p>
+                          </div>
+                          <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                          </div>
+                          <a href="{{ route('ourteam.index') }}" class="small-box-footer">More about Team <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="icon">
-                          <i class="ion ion-pie-graph"></i>
-                        </div>
-                        <a href="{{ route('ourteam.index') }}" class="small-box-footer">More about Team <i class="fas fa-arrow-circle-right"></i></a>
-                      </div>
                     </div>
                     <!-- ./col -->
                   </div>

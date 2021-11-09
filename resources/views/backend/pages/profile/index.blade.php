@@ -51,15 +51,15 @@ Profile - Admin
                                     <div class="card card-widget widget-user">
                                       <!-- Add the bg color to the header using any of the bg-* classes -->
                                       <div class="widget-user-header bg-info">
-                                        <h3 class="widget-user-username">Admin Profile</h3>
+                                        <h3 class="widget-user-username">{{ Auth::user()->name }}'s Profile</h3>
                                         <span></span>
                                       </div>
-                                      <div class="widget-user-image mb-5">
-                                        <img class="profile-user-img img-fluid img-circle" src="{{ asset('backend/img/app_image/profile_pictures/'.Auth::user()->image ) }}" alt="User profile picture">
+                                      <div class="widget-user-image mb-5" >
+                                        <img class="profile-user-img img-fluid " style="width: 100px; height: 100px; border-radius: 50%;" src="{{ asset('backend/img/app_image/profile_pictures/'.Auth::user()->image ) }}" alt="User profile picture">
                                       </div>
                                       <div class="card-footer">
                                         <div class="row">
-                                          <div class="col-sm-4 border-right">
+                                          <div class="col-sm-3 border-right">
                                             <div class="description-block">
                                               <h5 class="description-header"><i class="fas fa-user"></i></h5>
                                               <span class="description-text">{{ Auth::user()->name }}</span>
@@ -67,7 +67,7 @@ Profile - Admin
                                             <!-- /.description-block -->
                                           </div>
                                           <!-- /.col -->
-                                          <div class="col-sm-4 border-right">
+                                          <div class="col-sm-3 border-right">
                                             <div class="description-block">
                                               <h5 class="description-header"><i class="fa fa-envelope" aria-hidden="true"></i></h5>
                                               <span class="description-text">{{ Auth::user()->email }}</span>
@@ -76,14 +76,28 @@ Profile - Admin
                                             <!-- /.description-block -->
                                           </div>
                                           <!-- /.col -->
-                                          <div class="col-sm-4">
+                                          <div class="col-sm-3">
                                             <div class="description-block">
                                               <h5 class="description-header"><i class="fa fa-tasks" aria-hidden="true"></i></h5>
-                                              <span class="description-text">Admin</span>
+                                              <span class="description-text">{{ Auth::user()->role }}</span>
                                             </div>
                                             <!-- /.description-block -->
                                           </div>
                                           <!-- /.col -->
+                                          <div class="col-sm-3">
+                                            <div class="description-block">
+                                            @if ( Auth::user()->role == 'Admin')
+                                              <a href="{{ route('profile.create') }}" class="btn btn-danger">
+                                                <i class="fas fa-user-plus"></i> Create Admin
+                                              </a>
+                                            @else
+                                                <a href="{{ route('dashboard') }}" class="btn btn-secondary">
+                                                <i class="fas fa-user-plus"></i> Back To Dashboard
+                                                </a>
+                                            @endif
+                                            </div>
+                                            <!-- /.description-block -->
+                                          </div>
                                         </div>
                                         <!-- /.row -->
                                       </div>
@@ -115,7 +129,8 @@ Profile - Admin
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
-                        <table class="table table-striped">
+                        <div class="table-responsive">
+                        <table class="table table-striped ">
                             <thead>
                                 <tr>
                                     <th style="width: 10px">SL</th>
@@ -135,23 +150,38 @@ Profile - Admin
                                         $data->name
 
                                         }}
+
+                                        @if ($data->email == Auth::user()->email)
+                                        <span class="badge badge-pill badge-success">Active</span>
+                                        @endif
                                     </td>
                                     <td>{{ $data->email }}</td>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/profile_pictures/'.$data->image)}}" width="50px;height:50px" alt="">
+                                        <img src="{{asset('backend/img/app_image/profile_pictures/'.$data->image)}}" style="width: 50px; height:50px" alt="">
                                     </td>
                                     <td class="d-flex" style="width: 120px">
 
+                                        @if (Auth::user()->role != 'Admin' )
+                                            @if ($data->email == Auth::user()->email)
+                                            <a href="{{ route('profile.edit',$data->id) }}" class="btn btn-sm btn-success fa fa-edit text-white mr-1"></a>
+
+                                            <a href="{{ route('profile.delete',$data->id) }}" onclick="return confirm('Are you sure you want to delete this item')" class="btn btn-sm btn-danger text-white mr-1">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                            @endif
+                                        @else
                                         <a href="{{ route('profile.edit',$data->id) }}" class="btn btn-sm btn-success fa fa-edit text-white mr-1"></a>
 
                                         <a href="{{ route('profile.delete',$data->id) }}" onclick="return confirm('Are you sure you want to delete this item')" class="btn btn-sm btn-danger text-white mr-1">
                                             <i class="fa fa-trash"></i>
                                         </a>
+                                        @endif
                                     </td>
                                 </tr>
                                 @endforeach
                             </tbody>
                         </table>
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>
