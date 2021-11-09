@@ -79,8 +79,7 @@
                 <div class="video-section">
                     <!-- For Youtube -->
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" width="816" height="459" src="{{ $add_aboutus->video_link }}" allowfullscreen>
-                        </iframe>
+                        <iframe width="560" height="315" src="{{ $add_aboutus->video_link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                   <!-- For Vimeo -->
                     <!-- <div class="embed-responsive embed-responsive-16by9">

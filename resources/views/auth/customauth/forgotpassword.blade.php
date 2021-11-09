@@ -20,7 +20,7 @@ Reset Password
                 <div class="card2 card border-0 px-4 py-5">
                     <div class="row px-3 mb-4">
                         <div>
-                            <h3><strong class="reset-text">Reset</strong> Password!</h3>
+                            <h3>Get a <strong class="reset-text">Password </strong>Reset Link</h3>
                             <br>
                         </div>
                     </div>
@@ -50,7 +50,7 @@ Reset Password
                         </div>
                     </form>
                     <div class="row mb-4 px-3">
-                        <h6 class="font-weight-bold">Already have an account ? 
+                        <h6 class="font-weight-bold">Already have an account ?
                         <a href={{ url('login')}} class="text-danger ">Login</a>
                         </h6>
                     </div>

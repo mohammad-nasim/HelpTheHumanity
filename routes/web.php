@@ -65,17 +65,17 @@ Route::get('/news/{id}', 'Frontend\NewsController@singlenews')->name('news');
 
 //CustomAuthConfig
 
-Route::get('/login2', function(){
-    return view('auth.customauth.login');
-});
+// Route::get('/login2', function(){
+//     return view('auth.customauth.login');
+// });
 
-Route::get('/forgotpass', function(){
-    return view('auth.customauth.forgotpassword');
-});
+// Route::get('/forgotpass', function(){
+//     return view('auth.customauth.forgotpassword');
+// });
 
-Route::get('/register2', function(){
-    return view('auth.customauth.register');
-});
+// Route::get('/register2', function(){
+//     return view('auth.customauth.register');
+// });
 
 
 //Backend-Contact
