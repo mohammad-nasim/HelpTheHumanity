@@ -51,12 +51,15 @@ Create Data - Hero Section
                               </div>
                           </div>
 
-                          <div class="form-group">
-                              <label for="">Description</label>
-                              <div class="form-group">
-                               <textarea name="description" class="form-control" id="" cols="30" rows="10"></textarea>
-                              </div>
-                          </div>
+                            <div class="form-group">
+                                <label for="">Description</label>
+                                <div class="form-group">
+                                    <textarea name="description" class="form-control" id="summernote">
+
+                                    </textarea>
+                                </div>
+                            </div>
+
                         </div>
                         <!-- /.card-body -->
 
@@ -76,8 +79,4 @@ Create Data - Hero Section
 </div>
 @endsection
 
-@section('js')
-<script>
-    $('#form-id')[0].reset();
-</script>
-@endsection
+

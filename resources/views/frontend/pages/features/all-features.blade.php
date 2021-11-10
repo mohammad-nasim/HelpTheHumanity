@@ -34,7 +34,7 @@
 
     <div class="container mt-5" style="padding-top: 30px">
         <div class="section-header ">
-            <h2>{{ $add_data->title }}</h2>
+            <h2>Features</h2>
             <p>{{ $add_data->description }}</p>
         </div><!-- .section-header -->
     </div>

@@ -20,7 +20,7 @@ Create a new password!
                 <div class="card2 card border-0 px-4 py-5">
                     <div class="row px-3 mb-4">
                         <div>
-                            <h3><strong class="reset-text">Reset</strong> Password!</h3>
+                            <h3 class="text-center"><strong class="reset-text">Reset</strong> Password!</h3>
                             <br>
                         </div>
                     </div>

@@ -22,6 +22,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="css/adminlte.min.css">
+  <!-- Summer Note -->
+  <link rel="stylesheet" href="css/summernote-bs4.min.css">
 
   <!-- Toastr -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-
@@ -84,6 +86,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="js/adminlte.min.js"></script>
+  <!-- Summer Note -->
+<script src="js/summernote-bs4.min.js"></script>
+
+<script>
+    $('#summernote').summernote({
+      placeholder: 'Write Here..',
+      tabsize: 2,
+      height: 300
+    });
+</script>
 
 <!-- Additonal Js -->
 @yield('js')
@@ -95,6 +107,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<!-- Suummer Note  -->
 
 <script>
     @if(Session::has('message'))

@@ -12,7 +12,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="info">
-                <a href="{{ route('profile.index') }}" class="d-block"> <i class="fas fa-user-shield"></i>  : <strong class="text-light"> {{ Auth::user()->name }} </strong></a>
+                <a class="h4" href="{{ route('profile.index') }}" class="d-block"> <i class="fas fa-user-shield"></i>  : <strong class="text-light"> {{ Auth::user()->name }} </strong></a>
             </div>
         </div>
 

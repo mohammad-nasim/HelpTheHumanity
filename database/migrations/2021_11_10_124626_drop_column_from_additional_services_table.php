@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddColumnToAdditionalAboutUsTable extends Migration
+class DropColumnFromAdditionalServicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddColumnToAdditionalAboutUsTable extends Migration
      */
     public function up()
     {
-        Schema::table('additional_about_us', function (Blueprint $table) {
-            //$table->string('video_link')->nullable()->after('description');
+        Schema::table('additional_services', function (Blueprint $table) {
+            $table->dropColumn('title');
         });
     }
 
@@ -25,8 +25,8 @@ class AddColumnToAdditionalAboutUsTable extends Migration
      */
     public function down()
     {
-        Schema::table('additional_about_us', function (Blueprint $table) {
-            //
+        Schema::table('additional_services', function (Blueprint $table) {
+            $table->string('title');
         });
     }
 }

@@ -25,22 +25,22 @@ View Single Data - Feature Section
                         <div class=" table-responsive">
                            <table class="table table-striped">
                                 <tr>
-                                    <th >Image : </th>
+                                    <th style="width: 15%">Image : </th>
                                     <td>
                                         <img src="{{asset('backend/img/app_image/feature_section/'.$show->image)}}" style="width:230px;height:150px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Icon: </th>
+                                    <th style="width: 15%">Icon: </th>
                                     <td>{{ $show->icon}}</td>
                                 </tr>
                                 <tr>
-                                    <th >Title : </th>
+                                    <th style="width: 15%">Title : </th>
                                     <td>{{ $show->title }}</td>
                                 </tr>
                                 <tr>
-                                    <th >Description : </th>
-                                    <td>{{ $show->description }}</td>
+                                    <th style="width: 15%">Description : </th>
+                                    <td>{!! $show->description !!}</td>
                                 </tr>
                            </table>
                         </div>
