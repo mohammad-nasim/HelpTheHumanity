@@ -40,6 +40,11 @@ Data List - Additional Features Section
                         <div class="d-flex justify-content-between ">
                             <h3 class="card-title"><strong>Data List</strong>
                             </h3>
+                            @foreach ( $alldata as $key => $data )
+                            <a target="_self"  href="{{ route('additionalfeature.edit',$data->id) }}" class="btn btn-success">
+                            <i class="fa fa-plus"></i>
+                                Update Data</a>
+                            @endforeach
                         </div>
                     </div>
                     <!-- /.card-header -->
@@ -49,7 +54,7 @@ Data List - Additional Features Section
                                 <tr>
                                     <th style="width: 10px">SL</th>
                                     <th>Title</th>
-                                    <th>Image</th>
+                                    <th>Cover Image</th>
                                     <th style="width: 20px">Actions</th>
                                 </tr>
                             </thead>
@@ -63,8 +68,6 @@ Data List - Additional Features Section
                                     </td>
                                     <td class="d-flex" style="width: 120px">
                                         <a href="{{ route('additionalfeature.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
-
-                                        <a href="{{ route('additionalfeature.edit',$data->id) }}" class="btn btn-sm btn-success fa fa-edit text-white mr-1"></a>
                                     </td>
                                 </tr>
                                 @endforeach

@@ -19,7 +19,7 @@ Data List - Additional About Section
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 lead">Addtion About Us Section</h1>
+                <h1 class="m-0 lead">Addtional About Us Section</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -40,6 +40,11 @@ Data List - Additional About Section
                         <div class="d-flex justify-content-between ">
                             <h3 class="card-title"><strong>Data List</strong>
                             </h3>
+                            @foreach ( $alldata as $key => $data )
+                            <a target="_self"  href="{{ route('additionalaboutus.edit',$data->id) }}" class="btn btn-success">
+                            <i class="fa fa-plus"></i>
+                                Update Data</a>
+                            @endforeach
                         </div>
                     </div>
                     <!-- /.card-header -->
@@ -67,8 +72,6 @@ Data List - Additional About Section
                                     <td class="d-flex" style="width: 120px">
                                         <a href="{{ route('additionalaboutus.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1">
                                         </a>
-
-                                        <a href="{{ route('additionalaboutus.edit',$data->id) }}" class="btn btn-sm btn-success fa fa-edit text-white mr-1"></a>
                                     </td>
                                 </tr>
                                 @endforeach

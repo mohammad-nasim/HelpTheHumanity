@@ -40,6 +40,11 @@ Data List - Additional Service Section
                         <div class="d-flex justify-content-between ">
                             <h3 class="card-title"><strong>Data List</strong>
                             </h3>
+                            @foreach ( $alldata as $key => $data )
+                            <a target="_self"  href="{{ route('additionalservice.edit',$data->id) }}" class="btn btn-success">
+                            <i class="fa fa-plus"></i>
+                                Update Data</a>
+                            @endforeach
                         </div>
                     </div>
                     <!-- /.card-header -->
@@ -63,7 +68,6 @@ Data List - Additional Service Section
                                     </td>
                                     <td class="d-flex" style="width: 120px">
                                         <a href="{{ route('additionalservice.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
-                                        <a href="{{ route('additionalservice.edit',$data->id) }}" class="btn btn-sm btn-success fa fa-edit text-white mr-1"></a>
                                     </td>
                                 </tr>
                                 @endforeach
