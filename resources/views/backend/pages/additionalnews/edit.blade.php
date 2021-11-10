@@ -31,10 +31,14 @@ Update Data - Additional News
                         @csrf
                         @method('put')
                         <div class="card-body">
-                          <div class="form-group">
-                            <label for="">Title</label>
-                            <input type="text" class="form-control" id="" name="title" value="{{ $show->title }}">
-                          </div>
+                            <div class="form-group">
+                                <label for="">Title</label>
+                                <div class="form-group">
+                                 <textarea name="title" class="form-control" id="" cols="30" rows="10">
+                                  {{ $show->title }}
+                                 </textarea>
+                                </div>
+                              </div>
                           <div class="form-group">
                             <div class="mb-4">
                                 <label for="">Previous Image</label><br>
