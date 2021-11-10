@@ -32,10 +32,6 @@ View Single Data - Feature Section
                                 </tr>
                                 <tr>
                                     <th >Title : </th>
-                                    <td>{{ $show->title }}</td>
-                                </tr>
-                                <tr>
-                                    <th >Description : </th>
                                     <td>{{ $show->description }}</td>
                                 </tr>
                            </table>

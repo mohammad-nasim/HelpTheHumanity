@@ -50,7 +50,6 @@ Data List - Additional Features Section
                                     <th style="width: 10px">SL</th>
                                     <th>Title</th>
                                     <th>Image</th>
-                                    <th>Description</th>
                                     <th style="width: 20px">Actions</th>
                                 </tr>
                             </thead>
@@ -58,11 +57,10 @@ Data List - Additional Features Section
                                 @foreach ( $alldata as $key => $data )
                                 <tr>
                                     <td>{{ $key+1 }}</td>
-                                    <td>{{ $data->title }}</td>
+                                    <td>{{ $data->description }}</td>
                                     <td>
                                         <img src="{{asset('backend/img/app_image/add_feature_section/'.$data->cover_image)}}" style="width:60px;height:30px" alt="">
                                     </td>
-                                    <td>{{ $data->description }}</td>
                                     <td class="d-flex" style="width: 120px">
                                         <a href="{{ route('additionalfeature.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
 

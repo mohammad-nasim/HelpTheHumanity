@@ -81,7 +81,6 @@ class AdditionalFeatureController extends Controller
 
         if($request->file('image')){
 
-            $data->title     = $request->title;
             $data->description     = $request->description;
 
             $file = $request->file('image');
@@ -94,7 +93,6 @@ class AdditionalFeatureController extends Controller
 
         }
         else{
-            $data->title     = $request->title;
             $data->description     = $request->description;
         }
 

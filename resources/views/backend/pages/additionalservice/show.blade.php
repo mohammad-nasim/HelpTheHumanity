@@ -32,10 +32,6 @@ View Single Data - Additional Services
                                 </tr>
                                 <tr>
                                     <th >Title : </th>
-                                    <td>{{ $show->title }}</td>
-                                </tr>
-                                <tr>
-                                    <th >Description : </th>
                                     <td>{{ $show->description }}</td>
                                 </tr>
                            </table>

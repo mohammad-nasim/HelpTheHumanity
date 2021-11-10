@@ -32,10 +32,6 @@ Update Data - Additional About Us Section
                         @method('put')
                         <div class="card-body">
                           <div class="form-group">
-                            <label for="">Title</label>
-                            <input type="text" class="form-control" id="" name="title" value="{{ $show->title }}">
-                          </div>
-                          <div class="form-group">
                             <div class="mb-4">
                                 <label for="">Previous Image</label><br>
                                 <img src="{{asset('backend/img/app_image/add_about_us/'.$show->cover_image)}}" style="width:360px;height:180px" alt="">
@@ -47,7 +43,7 @@ Update Data - Additional About Us Section
                           </div>
 
                           <div class="form-group">
-                              <label for="">Description</label>
+                              <label for="">Title</label>
                               <div class="form-group">
                                <textarea name="description" class="form-control" id="" cols="30" rows="10">
                                 {{ $show->description }}
