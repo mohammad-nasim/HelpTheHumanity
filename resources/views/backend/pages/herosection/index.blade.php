@@ -61,8 +61,8 @@ Data List - Hero Section
                                 <tr>
                                     <td>{{ $key+1 }}</td>
                                     <td>{{ $data->title }}</td>
-                                    <td>{{ substr($data->slogan_1, 0, 29) }}</td>
-                                    <td>{{ $data->slogan_2 }}</td>
+                                    <td>{{ Str::substr($data->slogan_1 ,0, 20) }}</td>
+                                    <td>{{ Str::substr($data->slogan_2 ,0, 20)  }}</td>
                                     <td>
                                         <img src="{{asset('backend/img/app_image/hero_section/'.$data->image_1)}}" style="width:60px;height:30px" alt="">
                                     </td>

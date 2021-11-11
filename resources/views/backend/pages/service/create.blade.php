@@ -10,7 +10,7 @@ Create Data - Service Section
         <div class="row mb-2">
             <div class="col-12 d-flex justify-content-between ">
                 <h1 class="m-0 lead">Create Service </h1>
-                <a href="{{ route('feature.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left" ></i> Back</a>
+                <a href="{{ route('service.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left" ></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
