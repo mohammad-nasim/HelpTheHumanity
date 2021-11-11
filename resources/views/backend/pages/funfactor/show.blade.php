@@ -26,36 +26,36 @@ View Single Data - FunFactor Section
                         @if ($show->id == '1')
                             <table class="table table-striped">
                                     <tr>
-                                        <th >Background Image : </th>
+                                        <th style="width: 20%" >Background Image : </th>
                                         <td>
-                                            <img src="{{asset('backend/img/app_image/fun_factor/'.$show->bg_image)}}" style="width:230px;height:150px" alt="">
+                                            <img src="{{asset('backend/img/app_image/fun_factor/'.$show->bg_image)}}" style="width:400px;height:250px" alt="">
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th >Icon: </th>
+                                        <th style="width: 20%" >Icon: </th>
                                         <td>{{ $show->icon}}</td>
                                     </tr>
                                     <tr>
-                                        <th >Counter : </th>
+                                        <th style="width: 20%" >Counter : </th>
                                         <td>{{ $show->counter }}</td>
                                     </tr>
                                     <tr>
-                                        <th >Projects : </th>
+                                        <th style="width: 20%" >Projects : </th>
                                         <td>{{ $show->project }}</td>
                                     </tr>
                             </table>
                         @else
                             <table class="table table-striped">
                                     <tr>
-                                        <th >Icon: </th>
+                                        <th style="width: 20%" >Icon: </th>
                                         <td>{{ $show->icon}}</td>
                                     </tr>
                                     <tr>
-                                        <th >Counter : </th>
+                                        <th style="width: 20%" >Counter : </th>
                                         <td>{{ $show->counter }}</td>
                                     </tr>
                                     <tr>
-                                        <th >Projects : </th>
+                                        <th style="width: 20%" >Projects : </th>
                                         <td>{{ $show->project }}</td>
                                     </tr>
                             </table>

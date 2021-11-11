@@ -39,7 +39,7 @@ Update Data - News Section
                           <div class="form-group">
                             <div class="mb-4">
                                 <label for="">Previous Image</label><br>
-                                <img src="{{asset('backend/img/app_image/news/'.$show->image)}}" style="width:360px;height:180px" alt="">
+                                <img src="{{asset('backend/img/app_image/news/'.$show->image)}}" style="width:300px;height:150px" alt="">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlFile1">Update Image </label>
@@ -47,12 +47,12 @@ Update Data - News Section
                               </div>
                           </div>
                           <div class="form-group">
-                              <label for="">Description</label>
-                              <div class="form-group">
-                               <textarea name="description" class="form-control" id="" cols="30" rows="10">
-                                {{ $show->description }}
-                               </textarea>
-                              </div>
+                            <label for="">Description</label>
+                            <div class="form-group">
+                             <textarea name="description" class="form-control" id="summernote" cols="30" rows="10">
+                              {!! $show->description !!}
+                             </textarea>
+                            </div>
                           </div>
                         </div>
                         <!-- /.card-body -->

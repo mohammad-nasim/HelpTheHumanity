@@ -73,7 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">Help The Humanity Foundation</a>.</strong> All rights reserved.
+    Copyright &copy; 2022-2023 <a href="{{ route('webhome') }}"> <strong> Help The Humanity Foundation</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->

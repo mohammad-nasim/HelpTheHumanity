@@ -46,40 +46,42 @@ Data List - Gallery
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th style="width:">SL</th>
-                                    <th>Image</th>
-                                    <th style="width: " class="text-right">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ( $alldata as $key => $data )
-                                <tr>
-                                    <td>{{ $key+1 }}</td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/gallery/'.$data->images)}}" style="width:200px;height:100px" alt="">
-                                    </td>
-                                    <td class="d-flex justify-content-end  " style="">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width:">SL</th>
+                                        <th>Image</th>
+                                        <th style="width: " class="text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ( $alldata as $key => $data )
+                                    <tr>
+                                        <td>{{ $key+1 }}</td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/gallery/'.$data->images)}}" style="width:200px;height:100px" alt="">
+                                        </td>
+                                        <td class="d-flex justify-content-end  " style="">
 
-                                         {{-- <a href="{{ route('herosection.destroy', $data->id) }}" class="fa fa-trash text-danger"></a> --}}
+                                            {{-- <a href="{{ route('herosection.destroy', $data->id) }}" class="fa fa-trash text-danger"></a> --}}
 
-                                         <form action="{{ route('gallery.destroy', $data->id) }}" method="POST" >
-                                            @csrf
-                                            @method('DELETE')
+                                            <form action="{{ route('gallery.destroy', $data->id) }}" method="POST" >
+                                                @csrf
+                                                @method('DELETE')
 
-                                            <button type="submit" class="btn btn-sm btn-danger"
+                                                <button type="submit" class="btn btn-sm btn-danger"
 
-                                            onclick="return confirm('Are you sure you want to delete this item')"">
-                                                <i class=" fa fa-trash text-white"> Delete</i>
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                                onclick="return confirm('Are you sure you want to delete this item')"">
+                                                    <i class=" fa fa-trash text-white"> Delete</i>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                         <div class="d-flex justify-content-center">
                             {{ $alldata->links() }}
                         </div>

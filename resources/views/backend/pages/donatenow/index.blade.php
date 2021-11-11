@@ -69,7 +69,7 @@ Data List - Donate Now Section
                                     <td>
                                         <img src="{{asset('backend/img/app_image/donatenow/'.$data->image)}}" style="width:60px;height:30px" alt="">
                                     </td>
-                                    <td>{{ $data->description }}</td>
+                                    <td>{!! Illuminate\Support\Str::limit($data->description, 300)  !!}</td>
                                     <td class="d-flex" style="width: 120px">
                                         <a href="{{ route('donatenow.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1">
                                         </a>

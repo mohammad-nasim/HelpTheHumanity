@@ -47,11 +47,12 @@ Create Data - Event Section
                             <input type="date" class="form-control" id="" name="date">
                           </div>
                           <div class="form-group">
-                              <label for="">Description</label>
-                              <div class="form-group">
-                               <textarea name="description" class="form-control" id="" cols="30" rows="10"></textarea>
-                              </div>
-                          </div>
+                            <label for="">Description</label>
+                            <div class="form-group">
+                                <textarea name="description" class="form-control" id="summernote">
+                                </textarea>
+                            </div>
+                           </div>
                         </div>
                         <!-- /.card-body -->
 

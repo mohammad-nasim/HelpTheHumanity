@@ -48,6 +48,7 @@ Data List - Payment Method Section
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
+                        <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -93,6 +94,7 @@ Data List - Payment Method Section
                                 @endforeach
                             </tbody>
                         </table>
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>

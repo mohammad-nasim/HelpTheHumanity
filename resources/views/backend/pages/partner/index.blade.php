@@ -49,49 +49,51 @@ Data List - Partner Section
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th style="width: 10px">SL</th>
-                                    <th>Background Image</th>
-                                    <th>Logo 1</th>
-                                    <th>Logo 2</th>
-                                    <th>Logo 3</th>
-                                    <th>Logo 4</th>
-                                    <th style="width: 20px">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ( $alldata as $key => $data )
-                                <tr>
-                                    <td>
-                                        {{ $data->id+1 }}
-                                    </td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/partner/'.$data->bg_image)}}" style="width:60px;height:30px" alt="">
-                                    </td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/partner/'.$data->image_one)}}" style="width:60px;height:30px" alt="">
-                                    </td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/partner/'.$data->image_two)}}" style="width:60px;height:30px" alt="">
-                                    </td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/partner/'.$data->image_three)}}" style="width:60px;height:30px" alt="">
-                                    </td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/partner/'.$data->image_four)}}" style="width:60px;height:30px" alt="">
-                                    </td>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">SL</th>
+                                        <th>Background Image</th>
+                                        <th>Logo 1</th>
+                                        <th>Logo 2</th>
+                                        <th>Logo 3</th>
+                                        <th>Logo 4</th>
+                                        <th style="width: 20px">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ( $alldata as $key => $data )
+                                    <tr>
+                                        <td>
+                                            {{ $data->id+1 }}
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/partner/'.$data->bg_image)}}" style="width:60px;height:30px" alt="">
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/partner/'.$data->image_one)}}" style="width:60px;height:30px" alt="">
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/partner/'.$data->image_two)}}" style="width:60px;height:30px" alt="">
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/partner/'.$data->image_three)}}" style="width:60px;height:30px" alt="">
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/partner/'.$data->image_four)}}" style="width:60px;height:30px" alt="">
+                                        </td>
 
 
-                                    <td class="d-flex" style="width: 120px">
-                                        <a href="{{ route('partner.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
+                                        <td class="d-flex" style="width: 120px">
+                                            <a href="{{ route('partner.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
 
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>

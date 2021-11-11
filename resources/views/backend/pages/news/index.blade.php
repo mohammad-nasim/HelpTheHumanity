@@ -46,50 +46,52 @@ Data List - News Section
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th style="width: 10px">SL</th>
-                                    <th>Title</th>
-                                    <th>Image</th>
-                                    <th>Description</th>
-                                    <th>Created At</th>
-                                    <th style="width: 20px">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ( $alldata as $key => $data )
-                                <tr>
-                                    <td>{{ $key+1 }}</td>
-                                    <td>{{ $data->title }}</td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/news/'.$data->image)}}" style="width:60px;height:30px" alt="">
-                                    </td>
-                                    <td><p class="text-justify">{{ \Illuminate\Support\Str::limit($data->description, 160)  }}</p></td>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">SL</th>
+                                        <th>Title</th>
+                                        <th>Image</th>
+                                        <th>Description</th>
+                                        <th>Created At</th>
+                                        <th style="width: 20px">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ( $alldata as $key => $data )
+                                    <tr>
+                                        <td>{{ $key+1 }}</td>
+                                        <td>{{ $data->title }}</td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/news/'.$data->image)}}" style="width:60px;height:30px" alt="">
+                                        </td>
+                                        <td><p class="text-justify">{!! Illuminate\Support\Str::limit($data->description, 280)  !!}</p></td>
 
-                                    <td>{{ Carbon\Carbon::parse( $data->post_time )->toFormattedDateString() }}
-                                    </td>
+                                        <td>{{ Carbon\Carbon::parse( $data->post_time )->toFormattedDateString() }}
+                                        </td>
 
-                                    <td class="d-flex" style="width: 120px">
-                                        <a href="{{ route('news.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
+                                        <td class="d-flex" style="width: 120px">
+                                            <a href="{{ route('news.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
 
-                                        <a href="{{ route('news.edit',$data->id) }}" class="btn btn-sm btn-success fa fa-edit text-white mr-1"></a>
+                                            <a href="{{ route('news.edit',$data->id) }}" class="btn btn-sm btn-success fa fa-edit text-white mr-1"></a>
 
-                                         <form action="{{ route('news.destroy', $data->id) }}" method="POST" >
-                                            @csrf
-                                            @method('DELETE')
+                                            <form action="{{ route('news.destroy', $data->id) }}" method="POST" >
+                                                @csrf
+                                                @method('DELETE')
 
-                                            <button type="submit" class="btn btn-sm btn-danger"
+                                                <button type="submit" class="btn btn-sm btn-danger"
 
-                                            onclick="return confirm('Are you sure you want to delete this item')"">
-                                                <i class=" fa fa-trash text-white"></i>
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                                onclick="return confirm('Are you sure you want to delete this item')"">
+                                                    <i class=" fa fa-trash text-white"></i>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>

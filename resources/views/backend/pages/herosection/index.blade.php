@@ -43,54 +43,43 @@ Data List - Hero Section
                         </div>
                     </div>
                     <!-- /.card-header -->
-                    <div class="card-body p-0">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th style="width: 10px">SL</th>
-                                    <th>Title</th>
-                                    <th>Slogan One</th>
-                                    <th>Slogan Two</th>
-                                    <th>Background Image One</th>
-                                    <th>Background Image Two</th>
-                                    <th style="width: 20px">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ( $alldata as $key => $data )
-                                <tr>
-                                    <td>{{ $key+1 }}</td>
-                                    <td>{{ $data->title }}</td>
-                                    <td>{{ Str::substr($data->slogan_1 ,0, 20) }}</td>
-                                    <td>{{ Str::substr($data->slogan_2 ,0, 20)  }}</td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/hero_section/'.$data->image_1)}}" style="width:60px;height:30px" alt="">
-                                    </td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/hero_section/'.$data->image_2)}}" style="width:60px;height:30px" alt="">
-                                    </td>
-                                    <td class="d-flex" style="width: 120px">
-                                        <a href="{{ route('herosection.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
+                    <div class="card-body p-0 ">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">SL</th>
+                                        <th>Title</th>
+                                        <th>Slogan One</th>
+                                        <th>Slogan Two</th>
+                                        <th>Background Image One</th>
+                                        <th>Background Image Two</th>
+                                        <th style="width: 20px">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ( $alldata as $key => $data )
+                                    <tr>
+                                        <td>{{ $key+1 }}</td>
+                                        <td>{{ $data->title }}</td>
+                                        <td>{{ Str::substr($data->slogan_1 ,0, 20) }}</td>
+                                        <td>{{ Str::substr($data->slogan_2 ,0, 20)  }}</td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/hero_section/'.$data->image_1)}}" style="width:60px;height:30px" alt="">
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/hero_section/'.$data->image_2)}}" style="width:60px;height:30px" alt="">
+                                        </td>
+                                        <td class="d-flex" style="width: 120px">
+                                            <a href="{{ route('herosection.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
 
-                                        <a href="{{ route('herosection.edit',$data->id) }}" class="btn btn-sm btn-success fa fa-edit text-white mr-1"></a>
-
-                                         {{-- <a href="{{ route('herosection.destroy', $data->id) }}" class="fa fa-trash text-danger"></a> --}}
-{{--
-                                         <form action="{{ route('herosection.destroy', $data->id) }}" method="POST" >
-                                            @csrf
-                                            @method('DELETE')
-
-                                            <button type="submit" class="btn btn-sm btn-danger"
-
-                                            onclick="return confirm('Are you sure you want to delete this item')"">
-                                                <i class=" fa fa-trash text-white"></i>
-                                            </button>
-                                        </form> --}}
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                            <a href="{{ route('herosection.edit',$data->id) }}" class="btn btn-sm btn-success fa fa-edit text-white mr-1"></a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>

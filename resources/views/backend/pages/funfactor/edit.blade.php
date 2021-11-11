@@ -50,7 +50,7 @@ Update Data - FunFactor Section
                           <div class="form-group">
                             <div class="mb-4">
                                 <label for="">Previous Image</label><br>
-                                <img src="{{asset('backend/img/app_image/fun_factor/'.$show->bg_image)}}" style="width:360px;height:180px" alt="">
+                                <img src="{{asset('backend/img/app_image/fun_factor/'.$show->bg_image)}}" style="width:270px;height:160px" alt="">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlFile1">Update Image </label>

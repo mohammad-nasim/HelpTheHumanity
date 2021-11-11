@@ -34,7 +34,7 @@ Create Data - Event Section
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="">Cause</label>
-                                <input type="text" class="form-control" name="cause" placeholder="Enter Title">
+                                <input type="text" class="form-control" name="cause" placeholder="Enter Cause">
                             </div>
 
                             <div class="form-group">
@@ -48,9 +48,11 @@ Create Data - Event Section
                             </div>
 
                             <div class="form-group">
-                              <label for="">Description</label>
-                              <div class="form-group">
-                               <textarea name="description" class="form-control" id="" cols="30" rows="10"></textarea>
+                                <label for="">Description</label>
+                                <div class="form-group">
+                                    <textarea name="description" class="form-control" id="summernote">
+                                    </textarea>
+                                </div>
                             </div>
 
                             <div class="row">

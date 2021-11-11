@@ -25,23 +25,23 @@ View Single Data - News Section
                         <div class=" table-responsive">
                            <table class="table table-striped">
                                 <tr>
-                                    <th >Image : </th>
+                                    <th style="width: 20%" >Image : </th>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/news/'.$show->image)}}" style="width:230px;height:150px" alt="">
+                                        <img src="{{asset('backend/img/app_image/news/'.$show->image)}}" style="width:400px;height:250px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Title: </th>
+                                    <th style="width: 20%" >Title: </th>
                                     <td>{{ $show->title}}</td>
                                 </tr>
                                 <tr>
-                                    <th >Date : </th>
+                                    <th style="width: 20%" >Date : </th>
                                     <td>{{ Carbon\Carbon::parse( $show->post_time )->toFormattedDateString() }}
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Description : </th>
-                                    <td>{{ $show->description }}</td>
+                                    <th style="width: 20%" >Description : </th>
+                                    <td> {!! $show->description !!}  </td>
                                 </tr>
                            </table>
                         </div>

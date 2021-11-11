@@ -33,7 +33,7 @@ Update Data - Partners
                         <div class="form-group mb-5">
                             <div class="mb-4">
                                 <label for="">Background Image</label><br>
-                                <img src="{{asset('backend/img/app_image/partner/'.$show->bg_image)}}" style="width:360px;height:180px" alt="">
+                                <img src="{{asset('backend/img/app_image/partner/'.$show->bg_image)}}" style="width:310px;height:150px" alt="">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlFile1">Update Background Image </label>
@@ -46,7 +46,7 @@ Update Data - Partners
                                 <div class="form-group  ">
                                     <div class="mb-4 ">
                                         <label for="">Previous Logo 1</label><br>
-                                        <img src="{{asset('backend/img/app_image/partner/'.$show->image_one)}}" style="width:310px;height:180px" alt="">
+                                        <img src="{{asset('backend/img/app_image/partner/'.$show->image_one)}}" style="width:300px;height:150px" alt="">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlFile1">Update Image </label>
@@ -58,7 +58,7 @@ Update Data - Partners
                                 <div class="form-group">
                                     <div class="mb-4 ml-1 ">
                                         <label for="">Previous Logo 2</label><br>
-                                        <img src="{{asset('backend/img/app_image/partner/'.$show->image_two)}}" style="width:310px;height:180px" alt="">
+                                        <img src="{{asset('backend/img/app_image/partner/'.$show->image_two)}}" style="width:300px;height:150px" alt="">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlFile1">Update Image </label>
@@ -72,7 +72,7 @@ Update Data - Partners
                                 <div class="form-group">
                                     <div class="mb-4 ">
                                         <label for="">Previous Logo 3</label><br>
-                                        <img src="{{asset('backend/img/app_image/partner/'.$show->image_three)}}" style="width:310px;height:180px" alt="">
+                                        <img src="{{asset('backend/img/app_image/partner/'.$show->image_three)}}" style="width:300px;height:150px" alt="">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlFile1">Update Image </label>
@@ -84,7 +84,7 @@ Update Data - Partners
                                 <div class="form-group">
                                     <div class="mb-4 ml-1">
                                         <label for="">Previous Logo 4</label><br>
-                                        <img src="{{asset('backend/img/app_image/partner/'.$show->image_four)}}" style="width:310px;height:180px" alt="">
+                                        <img src="{{asset('backend/img/app_image/partner/'.$show->image_four)}}" style="width:300px;height:150px" alt="">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlFile1">Update Image </label>

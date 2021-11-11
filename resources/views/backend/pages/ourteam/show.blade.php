@@ -25,29 +25,29 @@ View Single Data - Our Team Section
                         <div class=" table-responsive">
                            <table class="table table-striped">
                                 <tr>
-                                    <th >Image : </th>
+                                    <th style="width: 20%" >Image : </th>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/our_team/'.$show->image)}}" style="width:230px;height:150px" alt="">
+                                        <img src="{{asset('backend/img/app_image/our_team/'.$show->image)}}" style="width:400px;height:250px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Name: </th>
+                                    <th style="width: 20%" >Name: </th>
                                     <td>{{ $show->name}}</td>
                                 </tr>
                                 <tr>
-                                    <th >Position: </th>
+                                    <th style="width: 20%" >Position: </th>
                                     <td>{{ $show->position}}</td>
                                 </tr>
                                 <tr>
-                                    <th >Link One : </th>
+                                    <th style="width: 20%" >Link One : </th>
                                     <td>{{ $show->linkone }}</td>
                                 </tr>
                                 <tr>
-                                    <th >Link Two : </th>
+                                    <th style="width: 20%" >Link Two : </th>
                                     <td>{{ $show->linktwo }}</td>
                                 </tr>
                                 <tr>
-                                    <th >Link Three : </th>
+                                    <th style="width: 20%" >Link Three : </th>
                                     <td>{{ $show->linkthree }}</td>
                                 </tr>
                            </table>

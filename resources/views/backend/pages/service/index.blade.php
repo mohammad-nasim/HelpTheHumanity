@@ -46,6 +46,7 @@ Data List - Service Section
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
+                        <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -66,7 +67,7 @@ Data List - Service Section
                                     <td>
                                         <img src="{{asset('backend/img/app_image/service/'.$data->image)}}" style="width:60px;height:30px" alt="">
                                     </td>
-                                    <td><p class="text-justify">{{ \Illuminate\Support\Str::limit($data->description, 160)  }}</p></td>
+                                    <td><p class="text-justify">{!! Illuminate\Support\Str::limit($data->description, 300)  !!}</p></td>
                                     <td class="d-flex" style="width: 120px">
                                         <a href="{{ route('service.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
 
@@ -89,6 +90,7 @@ Data List - Service Section
                                 @endforeach
                             </tbody>
                         </table>
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>

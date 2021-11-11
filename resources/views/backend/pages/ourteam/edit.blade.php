@@ -42,7 +42,7 @@ Update Data - Our Team Section
                             <div class="form-group">
                                 <div class="mb-4">
                                     <label for="">Previous Image</label><br>
-                                    <img src="{{asset('backend/img/app_image/our_team/'.$show->image)}}" style="width:360px;height:180px" alt="">
+                                    <img src="{{asset('backend/img/app_image/our_team/'.$show->image)}}" style="width:260px;height:130px" alt="">
                                 </div>
                               <div class="form-group">
                                   <label for="exampleFormControlFile1">Upload Image </label>

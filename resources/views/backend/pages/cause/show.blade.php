@@ -25,29 +25,29 @@ View Single Data - Cause Section
                         <div class=" table-responsive">
                            <table class="table table-striped">
                                 <tr>
-                                    <th >Image : </th>
+                                    <th style="width: 20%" >Image : </th>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/cause/'.$show->image)}}" style="width:230px;height:150px" alt="">
+                                        <img src="{{asset('backend/img/app_image/cause/'.$show->image)}}" style="width:400px;height:250px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Cause: </th>
+                                    <th style="width: 20%" >Cause: </th>
                                     <td>{{ $show->cause}}</td>
                                 </tr>
                                 <tr>
-                                    <th >Title: </th>
+                                    <th style="width: 20%" >Title: </th>
                                     <td>{{ $show->title}}</td>
                                 </tr>
                                 <tr>
-                                    <th >Description : </th>
-                                    <td>{{ $show->description }}</td>
+                                    <th style="width: 20%" >Description : </th>
+                                    <td> {!! $show->description !!} </td>
                                 </tr>
                                 <tr>
-                                    <th >Raised : </th>
+                                    <th style="width: 20%" >Raised : </th>
                                     <td>{{ $show->raised }} TK</td>
                                 </tr>
                                 <tr>
-                                    <th >Target : </th>
+                                    <th style="width: 20%" >Target : </th>
                                     <td>{{ $show->target }} Tk</td>
                                 </tr>
 

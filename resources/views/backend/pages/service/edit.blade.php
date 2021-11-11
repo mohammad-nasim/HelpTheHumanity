@@ -51,13 +51,14 @@ Update Data - Service Section
                           </div>
 
                           <div class="form-group">
-                              <label for="">Description</label>
-                              <div class="form-group">
-                               <textarea name="description" class="form-control" id="" cols="30" rows="10">
-                                {{ $show->description }}
-                               </textarea>
-                              </div>
+                            <label for="">Description</label>
+                            <div class="form-group">
+                             <textarea name="description" class="form-control" id="summernote" cols="30" rows="10">
+                              {!! $show->description !!}
+                             </textarea>
+                            </div>
                           </div>
+
                         </div>
                         <!-- /.card-body -->
 

@@ -25,22 +25,22 @@ View Single Data - DonateNow
                         <div class=" table-responsive">
                            <table class="table table-striped">
                                 <tr>
-                                    <th >Image : </th>
+                                    <th style="width: 20%" >Image : </th>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/donatenow/'.$show->image)}}" style="width:230px;height:150px" alt="">
+                                        <img src="{{asset('backend/img/app_image/donatenow/'.$show->image)}}" style="width:400px;height:250px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Cause : </th>
+                                    <th style="width: 20%" >Cause : </th>
                                     <td>{{ $show->cause }}</td>
                                 </tr>
                                 <tr>
-                                    <th >Title : </th>
+                                    <th style="width: 20%" >Title : </th>
                                     <td>{{ $show->title }}</td>
                                 </tr>
                                 <tr>
-                                    <th >Description : </th>
-                                    <td>{{ $show->description }}</td>
+                                    <th style="width: 20%" >Description : </th>
+                                    <td>{!! $show->description !!}  </td>
                                 </tr>
                                 <hr>
                            </table>
@@ -54,34 +54,35 @@ View Single Data - DonateNow
                     <div class="card-body">
                         <div class=" table-responsive">
                            <table class="table table-striped">
-                            <tr>
-                                <th >Reference : </th>
-                                <td>{{ $show->reference }}</td>
-
-                            </tr>
                                 <tr>
-                                    <th >Bkash Number : </th>
+                                    <th style="width: 20%" >Reference : </th>
+                                    <td>{{ $show->reference }}</td>
+                                    <td></td>
+
+                                </tr>
+                                <tr>
+                                    <th style="width: 20%" >Bkash Number : </th>
                                     <td>{{ $show->bkash }}</td>
                                     <td>
                                         <img src="{{asset('backend/img/app_image/donatenow/'.$show->bkash_logo)}}" style="width:100px;height:50px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Rocket Number : </th>
+                                    <th style="width: 20%" >Rocket Number : </th>
                                     <td>{{ $show->rocket }}</td>
                                     <td>
                                         <img src="{{asset('backend/img/app_image/donatenow/'.$show->rocket_logo)}}" style="width:100px;height:50px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Nagad Number : </th>
+                                    <th style="width: 20%" >Nagad Number : </th>
                                     <td>{{ $show->nagad }}</td>
                                     <td>
                                         <img src="{{asset('backend/img/app_image/donatenow/'.$show->nagad_logo)}}" style="width:100px;height:50px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Bank : </th>
+                                    <th style="width: 20%" >Bank : </th>
                                     <td>{{ $show->bank }}</td>
                                     <td>
                                         <img src="{{asset('backend/img/app_image/donatenow/'.$show->bank_logo)}}" style="width:100px;height:50px" alt="">
