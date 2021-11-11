@@ -54,8 +54,17 @@ Profile - Admin
                                         <h3 class="widget-user-username">{{ Auth::user()->name }}'s Profile</h3>
                                         <span></span>
                                       </div>
+
+
+
                                       <div class="widget-user-image mb-5" >
-                                        <img class="profile-user-img img-fluid " style="width: 100px; height: 100px; border-radius: 50%;" src="{{ asset('backend/img/app_image/profile_pictures/'.Auth::user()->image ) }}" alt="User profile picture">
+                                        @if (Auth::user()->image == null)
+                                        <img class="profile-user-img img-fluid " style="width: 100px; height: 100px; border-radius: 50%;" src=" {{ asset('backend/img/app_image/profile_pictures/default.png') }}" alt="User profile picture">
+                                        @else
+                                        <img class="profile-user-img img-fluid " style="width: 100px; height: 100px; border-radius: 50%;" src=" {{ asset('backend/img/app_image/profile_pictures/'.Auth::user()->image ) }}" alt="User profile picture">
+
+                                        @endif
+
                                       </div>
                                       <div class="card-footer">
                                         <div class="row">
@@ -157,7 +166,11 @@ Profile - Admin
                                     </td>
                                     <td>{{ $data->email }}</td>
                                     <td>
+                                        @if ($data->image == null)
+                                        <img src="{{asset('backend/img/app_image/profile_pictures/default.png')}}" style="width: 50px; height:50px" alt="">
+                                        @else
                                         <img src="{{asset('backend/img/app_image/profile_pictures/'.$data->image)}}" style="width: 50px; height:50px" alt="">
+                                        @endif
                                     </td>
                                     <td class="d-flex" style="width: 120px">
 
