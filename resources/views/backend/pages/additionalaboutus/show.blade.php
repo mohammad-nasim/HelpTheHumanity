@@ -25,17 +25,17 @@ View Single Data - Additional About Us
                         <div class=" table-responsive">
                            <table class="table table-striped">
                                 <tr>
-                                    <th >Image : </th>
+                                    <th style="width: 20%" >Cover Image : </th>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/add_about_us/'.$show->cover_image)}}" style="width:230px;height:150px" alt="">
+                                        <img src="{{asset('backend/img/app_image/add_about_us/'.$show->cover_image)}}" style="width:400px;height:250px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Title : </th>
+                                    <th style="width: 20%" >Title : </th>
                                     <td>{{ $show->description }}</td>
                                 </tr>
                                 <tr>
-                                    <th >Video Link : </th>
+                                    <th style="width: 20%" >Video Link : </th>
                                     <td>{{ $show->video_link }}</td>
                                 </tr>
                            </table>

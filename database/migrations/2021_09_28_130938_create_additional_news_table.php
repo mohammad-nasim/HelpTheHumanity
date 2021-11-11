@@ -15,7 +15,7 @@ class CreateAdditionalNewsTable extends Migration
     {
         Schema::create('additional_news', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
+            $table->text('title')->nullable();
             $table->string('cover_image')->nullable();
             $table->timestamps();
         });

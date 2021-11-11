@@ -15,8 +15,7 @@ class CreateAdditionalAboutUsTable extends Migration
     {
         Schema::create('additional_about_us', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->string('cover_image')->nullable();
             $table->timestamps();
         });

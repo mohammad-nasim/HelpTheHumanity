@@ -15,8 +15,7 @@ class CreateAdditionalServicesTable extends Migration
     {
         Schema::create('additional_services', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->string('cover_image')->nullable();
             $table->timestamps();
         });

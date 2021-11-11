@@ -15,7 +15,7 @@ class CreateAdditionalDonateNowsTable extends Migration
     {
         Schema::create('additional_donate_nows', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
+            $table->text('title')->nullable();
             $table->string('bg_image')->nullable();
             $table->string('cover_image')->nullable();
             $table->timestamps();

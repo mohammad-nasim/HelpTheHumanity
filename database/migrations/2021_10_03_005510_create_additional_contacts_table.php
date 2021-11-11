@@ -15,7 +15,7 @@ class CreateAdditionalContactsTable extends Migration
     {
         Schema::create('additional_contacts', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
+            $table->text('title')->nullable();
             $table->timestamps();
         });
     }

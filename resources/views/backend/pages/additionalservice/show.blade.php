@@ -9,7 +9,7 @@ View Single Data - Additional Services
     <div class="container-fluid">
         <div class="row mb-2 ">
             <div class="col-12 d-flex justify-content-between ">
-                <h1 class="m-0 lead">View Additiona Data</h1>
+                <h1 class="m-0 lead">View Additional Data</h1>
                 <a href="{{ route('additionalservice.index') }}" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> Back</a>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -25,13 +25,13 @@ View Single Data - Additional Services
                         <div class=" table-responsive">
                            <table class="table table-striped">
                                 <tr>
-                                    <th >Image : </th>
+                                    <th style="width: 20%" >Cover Image : </th>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/add_service/'.$show->cover_image)}}" style="width:230px;height:150px" alt="">
+                                        <img src="{{asset('backend/img/app_image/add_service/'.$show->cover_image)}}" style="width:400px;height:250px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th >Title : </th>
+                                    <th style="width: 20%" >Title : </th>
                                     <td>{{ $show->description }}</td>
                                 </tr>
                            </table>

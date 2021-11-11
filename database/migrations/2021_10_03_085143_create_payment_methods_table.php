@@ -15,7 +15,6 @@ class CreatePaymentMethodsTable extends Migration
     {
         Schema::create('payment_methods', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('donate_now_id')->nullable();
             $table->bigInteger('cause_id')->nullable();
             $table->string('bkash')->nullable();
             $table->string('rocket')->nullable();
