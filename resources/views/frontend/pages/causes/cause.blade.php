@@ -48,7 +48,7 @@
                             <img src="{{asset('backend/img/app_image/cause/'.$singlecause->image)}}" alt="">
                         </div>
 
-                        <p class="card-text text-center">{{ $singlecause->description }} </p>
+                        <p class="card-text text-center">{!! $singlecause->description !!} </p>
                     </div>
                     <br>
                     <div class="row pt-5 mt-5">

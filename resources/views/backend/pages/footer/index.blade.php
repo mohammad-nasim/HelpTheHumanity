@@ -49,36 +49,38 @@ Data List - Footer Section
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th style="width: 10px">SL</th>
-                                    <th>Footer Text</th>
-                                    <th>Link One</th>
-                                    <th>Link Two</th>
-                                    <th>Link Three</th>
-                                    <th>Link Four</th>
-                                    <th>Action</th>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">SL</th>
+                                        <th>Footer Text</th>
+                                        <th>Link One</th>
+                                        <th>Link Two</th>
+                                        <th>Link Three</th>
+                                        <th>Link Four</th>
+                                        <th>Action</th>
 
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ( $alldata as $key => $data )
-                                <tr>
-                                    <td>{{ $key+1 }}</td>
-                                    <td>{{ $data->footer_text }}</td>
-                                    <td>{{ $data->link_one }}</td>
-                                    <td>{{ $data->link_two }}</td>
-                                    <td>{{ $data->link_three }}</td>
-                                    <td>{{ $data->link_four }}</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ( $alldata as $key => $data )
+                                    <tr>
+                                        <td>{{ $key+1 }}</td>
+                                        <td>{{ $data->footer_text }}</td>
+                                        <td>{{ $data->link_one }}</td>
+                                        <td>{{ $data->link_two }}</td>
+                                        <td>{{ $data->link_three }}</td>
+                                        <td>{{ $data->link_four }}</td>
 
-                                    <td class="d-flex" style="width: 120px">
-                                        <a href="{{ route('footer.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                        <td class="d-flex" style="width: 120px">
+                                            <a href="{{ route('footer.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>

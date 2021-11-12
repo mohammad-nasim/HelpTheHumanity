@@ -39,12 +39,13 @@
                 <div class="single-feature">
                     <i class="{{ $feature_data->icon }}"></i>
                     <h3>{{ $feature_data->title }}</h3>
-                    <p class="text-justify">{{ \Illuminate\Support\Str::limit($feature_data->description, 160)  }}</p>
+                    <p class="text-justify">{!! Illuminate\Support\Str::limit($feature_data->description, 160)  !!}</p>
                     <a href="{{ route('feature', $feature_data->id)  }}">See More <i class="icofont icofont-arrow-right"></i></a>
                 </div>
             </div><!-- .col -->
             @endforeach
         </div>
+        <br>
         <div class="hero-btn-group pt-5">
             <a href="{{ route('allfeature') }}" class="t-btn hero-btn-1">All Features</a>
         </div>
@@ -66,11 +67,12 @@
                     <div class="single-accordian">
                         <h3 class="accordian-head">{{ $aboutusdata->title }}</h3>
                         <div class="accordian-body">
-                            <a href="{{ route('about-us') }}" class="text-justify">{{ \Illuminate\Support\Str::limit($aboutusdata->description, 200)  }}</a>
+                            <a href="{{ route('about-us') }}" class="text-justify">{!! Illuminate\Support\Str::limit($aboutusdata->description, 200)  !!}</a>
                         </div>
                     </div><!-- .single-accordian -->
                     @endforeach
                 </div>
+                <br>
                 <div class="hero-btn-group pt-5">
                     <a href="{{ route('about-us') }}" class="t-btn hero-btn-1">Learn more about us</a>
                 </div>
@@ -81,11 +83,6 @@
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe width="560" height="315" src="{{ $add_aboutus->video_link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                  <!-- For Vimeo -->
-                    <!-- <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" width="816" height="458" src="https://player.vimeo.com/video/172077385?title=0&byline=0&portrait=0&color=EE5A3F&autoplay=0&loop=0&wmode=transparent" allowfullscreen>
-                        </iframe>
-                    </div> -->
                 </div>
             </div><!-- .col -->
         </div>
@@ -106,12 +103,13 @@
                 <div class="single-feature">
                     <i class="{{ $service_data->icon }}" ></i>
                     <h3>{{ $service_data->title }}</h3>
-                    <p class="text-justify">{{ \Illuminate\Support\Str::limit($service_data->description, 160)  }}</p>
+                    <p class="text-justify">{!! Illuminate\Support\Str::limit($service_data->description, 160)  !!}</p>
                     <a href="{{ route('service',$service_data->id) }}">See More <i class="icofont icofont-arrow-right"></i></a>
                 </div>
             </div><!-- .col -->
             @endforeach
     </div>
+    <br>
     <div class="hero-btn-group pt-5">
         <a href="{{ route('allservice') }}" class="t-btn hero-btn-1">All Services</a>
     </div>
@@ -129,7 +127,7 @@
         background-attachment: fixed;">
     <div class="container">
         <h2>{{ $donate_now->title }}</h2>
-        <p>{{ $donate_now->description }}</p>
+        <p>{!! $donate_now->description !!}</p>
         <a href="{{ route('donate-now') }}" class="t-btn donate-btn">DONATE NOW</a>
     </div>
 </section>
@@ -147,8 +145,8 @@
             <div class="col-sm-4">
                 <div class="single-cause">
                     <img src="{{asset('backend/img/app_image/cause/'.$cause_data->image)}}" class="cause-thumb image-fluid" alt="" >
-                    <h3>{{ $cause_data->title }}</h3>
-                    <p class="text-justify">{{ \Illuminate\Support\Str::limit($cause_data->description, 160)  }}</p>
+                    <h3 class="text-dark">{{ $cause_data->title }}</h3>
+                    <p class="text-justify">{!! Illuminate\Support\Str::limit($cause_data->description, 160)  !!}</p>
                     <div class="donate-status">
                         <div class="status">
                             <span>RAISED</span>
@@ -165,6 +163,8 @@
             </div><!-- .col -->
             @endforeach
         </div>
+        <br>
+        <br>
         <div class="hero-btn-group pt-5">
             <a href="{{ route('all-cause') }}" class="t-btn donate-btn">All Causes</a>
         </div>
@@ -189,6 +189,8 @@
             </div><!-- .portfolio-item -->
             @endforeach
         </div><!-- .portfolio -->
+        <br>
+        <br>
         <div class="hero-btn-group pt-5">
             <a href="{{ route('gallery') }}" class="t-btn donate-btn">All Photos</a>
         </div>
@@ -239,6 +241,8 @@
             </div><!-- .col -->
             @endforeach
         </div>
+        <br>
+        <br>
         <div class="hero-btn-group pt-5">
             <a href="{{ route('our-team') }}" class="t-btn donate-btn">See More</a>
         </div>
@@ -261,7 +265,7 @@
                     <div class="event-thumb"><img src="{{asset('backend/img/app_image/event/'.$event_data->image)}}" alt=""></div>
                     <div class="event-details">
                         <h3>{{ $event_data->title }}</h3>
-                        <p class="text-justify">{{ \Illuminate\Support\Str::limit($event_data->description, 160)  }}</p>
+                        <p class="text-justify">{!! \Illuminate\Support\Str::limit($event_data->description, 160)  !!}</p>
                         <div class="event-location">
                             <span><i class="icofont icofont-ui-calendar"></i>{{ Carbon\Carbon::parse( $event_data->date )->toFormattedDateString() }}</span>
                             <span><i class="icofont icofont-location-pin"></i>Bangladesh</span>
@@ -325,13 +329,15 @@
                           </div><!-- .post-details-wrap -->
                     </header>
                     <div class="entry-content">
-                        <p class="text-justify">{{ \Illuminate\Support\Str::limit($news_data->description, 160)  }}</p>
+                        <p class="text-justify">{!! \Illuminate\Support\Str::limit($news_data->description, 350)  !!}</p>
                           <a href="{{ route('news', $news_data->id) }}" class="t-btn t-btn-ex-small read-more-btn" target="_blank">Read More</a>
                     </div>
                 </div><!-- .post -->
             </div><!-- .col -->
             @endforeach
         </div>
+        <br>
+        <br>
         <div class="hero-btn-group pt-5">
             <a href="{{ route('all-news') }}" class="t-btn donate-btn">See More</a>
         </div>

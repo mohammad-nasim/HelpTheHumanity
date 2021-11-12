@@ -25,7 +25,7 @@ Create Data - Service Section
                         <div class="d-flex justify-content-between">
                             <span class=" text-dark strong"><strong>Insert Data</strong></span>
 
-                            <span class=" text-dark strong"><a href="https://fontawesome.com/v5.15/icons"><strong>Click me for select an Icon <i class="fas fa-toolbox"></i></strong> </a></span>
+                            <span class=" text-dark strong"><a href="https://fontawesome.com/v5.15/icons"><strong>Select an Icon <i class="fas fa-toolbox"></i></strong> </a></span>
                         </div>
                     </div>
                     <!-- /.card-header -->

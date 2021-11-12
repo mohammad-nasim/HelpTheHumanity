@@ -46,48 +46,50 @@ Data List - Contact Section
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0 ">
-                        <table class="table table-dark">
-                            <thead>
-                                <tr>
-                                    <th style="width: 10px">SL</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Message</th>
-                                    <th style="width: 20px">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ( $alldata as $key => $data )
-                                <tr>
-                                    <td>{{ $key+1 }}</td>
-                                    <td>{{ $data->first_name }}</td>
-                                    <td>{{ $data->last_name }}</td>
-                                    <td>{{ $data->email }}</td>
-                                    <td>{{ $data->phone }}</td>
-                                    <td>{{ $data->message }}</td>
+                        <div class="table-responsive">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">SL</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Message</th>
+                                        <th style="width: 20px">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ( $alldata as $key => $data )
+                                    <tr>
+                                        <td>{{ $key+1 }}</td>
+                                        <td>{{ $data->first_name }}</td>
+                                        <td>{{ $data->last_name }}</td>
+                                        <td>{{ $data->email }}</td>
+                                        <td>{{ $data->phone }}</td>
+                                        <td>{{ $data->message }}</td>
 
 
-                                    <td class="d-flex" style="width: 120px">
-                                        <a href="{{ route('contact.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
+                                        <td class="d-flex" style="width: 120px">
+                                            <a href="{{ route('contact.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1"></a>
 
 
-                                         <form action="{{ route('contact.destroy', $data->id) }}" method="POST" >
-                                            @csrf
-                                            @method('DELETE')
+                                            <form action="{{ route('contact.destroy', $data->id) }}" method="POST" >
+                                                @csrf
+                                                @method('DELETE')
 
-                                            <button type="submit" class="btn btn-sm btn-danger"
+                                                <button type="submit" class="btn btn-sm btn-danger"
 
-                                            onclick="return confirm('Are you sure you want to delete this item')"">
-                                                <i class=" fa fa-trash text-white"></i>
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                                onclick="return confirm('Are you sure you want to delete this item')"">
+                                                    <i class=" fa fa-trash text-white"></i>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>

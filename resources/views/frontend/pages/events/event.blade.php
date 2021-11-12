@@ -47,7 +47,7 @@
                         </div><!-- .post-details-wrap -->
                     </header>
                     <div class="entry-content">
-                        <p>{{ $event->description }}</p>
+                        <p>{!! $event->description !!}</p>
 
             </main><!-- .col -->
         </div>

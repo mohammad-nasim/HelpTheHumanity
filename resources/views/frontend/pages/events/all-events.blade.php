@@ -42,10 +42,10 @@
     <div class="container" style="padding-top: 30px; margin-bottom: 30px ">
         @foreach ($allevent as $data )
         <div class="card mb-3 " style="margin: 0 auto; margin-bottom:30px">
-            <img class="card-img-top" src="{{asset('backend/img/app_image/event/'.$data->image)}}" alt="Card image cap">
+            <img class="card-img-top" src="{{asset('backend/img/app_image/event/'.$data->image)}}" alt="Card image cap" style="width: 366px;height:244px">
             <div class="card-body " style="padding-top: 20px">
                 <h5 class="card-title ">{{ $data->title }}</h5>
-                <p class="card-text">{{ \Illuminate\Support\Str::limit($data->description, 260)  }}</p>
+                <p class="card-text">{!! Illuminate\Support\Str::limit($data->description, 260)  !!}</p>
             </div>
             <div class="button mt-3">
                 <a href="{{ route('event', $data->id) }}" class="btn btn-primary">Read More</a>

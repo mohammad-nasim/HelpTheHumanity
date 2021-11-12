@@ -39,13 +39,13 @@ View Single Data - Hero Section
                                 <tr>
                                     <th >Slider Image One : </th>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/hero_section/'.$show->image_1)}}" style="width:230px;height:150px" alt="">
+                                        <img src="{{asset('backend/img/app_image/hero_section/'.$show->image_1)}}" style="width:400px;height:250px" alt="">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th >Slider Image Two: </th>
                                     <td>
-                                        <img src="{{asset('backend/img/app_image/hero_section/'.$show->image_2)}}" style="width:230px;height:150px" alt="">
+                                        <img src="{{asset('backend/img/app_image/hero_section/'.$show->image_2)}}" style="width:400px;height:250px" alt="">
                                     </td>
                                 </tr>
                            </table>

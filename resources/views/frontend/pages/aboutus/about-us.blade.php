@@ -52,14 +52,16 @@
                             <div class="post-details-wrap">
                                 <h2 class="entry-title text-center">{{ $data->title }}</h2>
                             </div><!-- .post-details-wrap -->
-                            <div class="post-thumbnail">
+                            <div class="post-thumbnail ">
                                 @if ($data->image)
-                                <img src="{{asset('backend/img/app_image/about_us/'.$data->image)}}" alt="" style="width: 600px; height: 400px">
+                                <img src="{{asset('backend/img/app_image/about_us/'.$data->image)}}" alt="" style="width: 600px; height: 400px; margin-left: auto;
+                                margin-right: auto;
+                                display: block;" class="ml-auto">
                                 @else
                                 @endif
                             </div>
                         </header>
-                        <p>{{ $data->description }}</p>
+                        <p>{!! $data->description !!}</p>
 
                     </div>
                     @endforeach

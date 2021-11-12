@@ -24,7 +24,7 @@ Update Data - Feature Section
                         <div class="d-flex justify-content-between">
                             <span class=" text-dark strong"><strong>Update Data</strong></span>
 
-                            <span class=" text-dark strong"><a href="https://fontawesome.com/v5.15/icons"><strong>Click me for select an Icon <i class="fas fa-toolbox"></i></strong> </a></span>
+                            <span class=" text-dark strong"><a href="https://fontawesome.com/v5.15/icons"><strong>Select an Icon <i class="fas fa-toolbox"></i></strong> </a></span>
                         </div>
 
                     </div>
@@ -47,7 +47,7 @@ Update Data - Feature Section
                           <div class="form-group">
                             <div class="mb-4">
                                 <label for="">Previous Image</label><br>
-                                <img src="{{asset('backend/img/app_image/feature_section/'.$show->image)}}" style="width:360px;height:180px" alt="">
+                                <img src="{{asset('backend/img/app_image/feature_section/'.$show->image)}}" style="width:280px;height:150px" alt="">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlFile1">Update Image </label>

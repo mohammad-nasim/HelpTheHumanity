@@ -38,7 +38,7 @@ Update Data - Feature Section
                           <div class="form-group">
                             <div class="mb-4">
                                 <label for="">Previous Image</label><br>
-                                <img src="{{asset('backend/img/app_image/about_us/'.$show->image)}}" style="width:360px;height:180px" alt="">
+                                <img src="{{asset('backend/img/app_image/about_us/'.$show->image)}}" style="width:290px;height:140px" alt="">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlFile1">Update Image </label>

@@ -47,7 +47,7 @@
                 <br>
                 <br>
                 <div class="post-thumbnail py-5"><img src="{{asset('backend/img/app_image/donatenow/'.$donatenow->image)}}" alt=""></div>
-                <p class="card-text text-center">{{ $donatenow->description }}</p>
+                <p class="card-text text-center">{!! $donatenow->description !!}</p>
             </div>
             <div class="container">
                 <div class="donation-method " style="padding-top: 20px; margin-top: 30px; margin-bottom: 30px">
@@ -87,7 +87,7 @@
                                 <img class="card-img-top" src="{{asset('backend/img/app_image/donatenow/'.$donatenow->bank_logo)}}" alt="Card image cap">
                                 <div class="card-body">
                                     <br>
-                                    <p class="card-text h4">{{ $donatenow->bank }}</p>
+                                    <p class="card-text h4">{!! $donatenow->bank !!}</p>
                                   <a href="#" class="btn btn-danger disabled"> Reference : {{ $donatenow->reference }}</a>
                                 </div>
                               </div>

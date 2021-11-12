@@ -49,35 +49,37 @@ Data List - Donate Now Section
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th style="width: 10px">SL</th>
-                                    <th>Cause</th>
-                                    <th>Title</th>
-                                    <th>Image</th>
-                                    <th>Description</th>
-                                    <th style="width: 20px">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ( $alldata as $key => $data )
-                                <tr>
-                                    <td>{{ $key+1 }}</td>
-                                    <td>{{ $data->cause }}</td>
-                                    <td>{{ $data->title }}</td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/donatenow/'.$data->image)}}" style="width:60px;height:30px" alt="">
-                                    </td>
-                                    <td>{!! Illuminate\Support\Str::limit($data->description, 300)  !!}</td>
-                                    <td class="d-flex" style="width: 120px">
-                                        <a href="{{ route('donatenow.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1">
-                                        </a>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">SL</th>
+                                        <th>Cause</th>
+                                        <th>Title</th>
+                                        <th>Image</th>
+                                        <th>Description</th>
+                                        <th style="width: 20px">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ( $alldata as $key => $data )
+                                    <tr>
+                                        <td>{{ $key+1 }}</td>
+                                        <td>{{ $data->cause }}</td>
+                                        <td>{{ $data->title }}</td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/donatenow/'.$data->image)}}" style="width:60px;height:30px" alt="">
+                                        </td>
+                                        <td>{!! Illuminate\Support\Str::limit($data->description, 300)  !!}</td>
+                                        <td class="d-flex" style="width: 120px">
+                                            <a href="{{ route('donatenow.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
 
@@ -96,33 +98,35 @@ Data List - Donate Now Section
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th style="width: 10px">SL</th>
-                                    <th>Bkash</th>
-                                    <th>Rocket</th>
-                                    <th>Nagad</th>
-                                    <th>Bank</th>
-                                    <th style="width: 20px">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ( $alldata as $key => $data )
-                                <tr>
-                                    <td>{{ $key+1 }}</td>
-                                    <td>{{ $data->bkash }}</td>
-                                    <td>{{ $data->rocket }}</td>
-                                    <td>{{ $data->nagad }}</td>
-                                    <td>{{ $data->bank }}</td>
-                                    <td class="d-flex" style="width: 120px">
-                                        <a href="{{ route('donatenow.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1">
-                                        </a>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">SL</th>
+                                        <th>Bkash</th>
+                                        <th>Rocket</th>
+                                        <th>Nagad</th>
+                                        <th>Bank</th>
+                                        <th style="width: 20px">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ( $alldata as $key => $data )
+                                    <tr>
+                                        <td>{{ $key+1 }}</td>
+                                        <td>{{ $data->bkash }}</td>
+                                        <td>{{ $data->rocket }}</td>
+                                        <td>{{ $data->nagad }}</td>
+                                        <td>{{ $data->bank }}</td>
+                                        <td class="d-flex" style="width: 120px">
+                                            <a href="{{ route('donatenow.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>
@@ -140,41 +144,43 @@ Data List - Donate Now Section
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th style="width: 10px">SL</th>
-                                    <th>Bkash Logo</th>
-                                    <th>Rocket Logo</th>
-                                    <th>Nagad Logo</th>
-                                    <th>Bank Logo</th>
-                                    <th style="width: 20px">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ( $alldata as $key => $data )
-                                <tr>
-                                    <td>{{ $key+1 }}</td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/donatenow/'.$data->bkash_logo)}}" style="width:60px;height:30px" alt="">
-                                    </td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/donatenow/'.$data->rocket_logo)}}" style="width:60px;height:30px" alt="">
-                                    </td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/donatenow/'.$data->nagad_logo)}}" style="width:60px;height:30px" alt="">
-                                    </td>
-                                    <td>
-                                        <img src="{{asset('backend/img/app_image/donatenow/'.$data->bank_logo)}}" style="width:60px;height:30px" alt="">
-                                    </td>
-                                    <td class="d-flex" style="width: 120px">
-                                        <a href="{{ route('donatenow.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1">
-                                        </a>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">SL</th>
+                                        <th>Bkash Logo</th>
+                                        <th>Rocket Logo</th>
+                                        <th>Nagad Logo</th>
+                                        <th>Bank Logo</th>
+                                        <th style="width: 20px">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ( $alldata as $key => $data )
+                                    <tr>
+                                        <td>{{ $key+1 }}</td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/donatenow/'.$data->bkash_logo)}}" style="width:60px;height:30px" alt="">
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/donatenow/'.$data->rocket_logo)}}" style="width:60px;height:30px" alt="">
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/donatenow/'.$data->nagad_logo)}}" style="width:60px;height:30px" alt="">
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('backend/img/app_image/donatenow/'.$data->bank_logo)}}" style="width:60px;height:30px" alt="">
+                                        </td>
+                                        <td class="d-flex" style="width: 120px">
+                                            <a href="{{ route('donatenow.show', $data->id) }}" class=" btn btn-sm btn-primary fa fa-eye mr-1">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>

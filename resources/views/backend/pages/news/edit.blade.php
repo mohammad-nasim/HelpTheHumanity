@@ -39,7 +39,7 @@ Update Data - News Section
                           <div class="form-group">
                             <div class="mb-4">
                                 <label for="">Previous Image</label><br>
-                                <img src="{{asset('backend/img/app_image/news/'.$show->image)}}" style="width:300px;height:150px" alt="">
+                                <img src="{{asset('backend/img/app_image/news/'.$show->image)}}" style="width:270px;height:150px" alt="">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlFile1">Update Image </label>

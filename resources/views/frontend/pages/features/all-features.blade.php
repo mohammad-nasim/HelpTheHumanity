@@ -45,7 +45,7 @@
             <img class="card-img-top" style="width: 366px;height:244px" src="{{asset('backend/img/app_image/feature_section/'.$data->image)}}" alt="Card image cap" width="366px" height="244px">
             <div class="card-body " style="padding-top: 20px">
                 <h5 class="card-title ">{{ $data->title }}</h5>
-                <p class="card-text">{{ \Illuminate\Support\Str::limit($data->description, 260)  }}</p>
+                <p class="card-text">{!! Illuminate\Support\Str::limit($data->description, 350)  !!}</p>
             </div>
             <div class="button mt-3">
                 <a href="{{ route('feature', $data->id)  }}" class="btn btn-primary">Read More</a>

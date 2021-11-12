@@ -47,7 +47,7 @@
                         </div><!-- .post-details-wrap -->
                     </header>
                     <div class="entry-content">
-                        <p>{{ $news->description }}</p>
+                        <p>{!! $news->description !!}</p>
 
             </main><!-- .col -->
         </div>
