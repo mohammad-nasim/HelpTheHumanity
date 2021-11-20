@@ -44,7 +44,8 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        return view('auth.customauth.register');
+        //return view('auth.customauth.register');
+
     }
     /**
      * Get a validator for an incoming registration request.

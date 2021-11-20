@@ -59,9 +59,6 @@
                     </div>
 
                     <div class="row mb-4 px-3">
-                        <small class="font-weight-bold">Don't have an account?
-                        <a href="{{ url('register')}}" class="text-danger ">Register</a>
-                        </small>
                     </div>
                 </div>
             </div>

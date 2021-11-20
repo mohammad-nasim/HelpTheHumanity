@@ -161,7 +161,7 @@ Profile - Admin
                                         }}
 
                                         @if ($data->email == Auth::user()->email)
-                                        <span class="badge badge-pill badge-success">Active</span>
+                                        <span class="badge badge-pill badge-success">Online</span>
                                         @endif
                                     </td>
                                     <td>{{ $data->email }}</td>

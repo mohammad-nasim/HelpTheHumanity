@@ -189,8 +189,7 @@
             </div><!-- .portfolio-item -->
             @endforeach
         </div><!-- .portfolio -->
-        <br>
-        <br>
+
         <div class="hero-btn-group pt-5">
             <a href="{{ route('gallery') }}" class="t-btn donate-btn">All Photos</a>
         </div>
@@ -241,8 +240,7 @@
             </div><!-- .col -->
             @endforeach
         </div>
-        <br>
-        <br>
+
         <div class="hero-btn-group pt-5">
             <a href="{{ route('our-team') }}" class="t-btn donate-btn">See More</a>
         </div>
